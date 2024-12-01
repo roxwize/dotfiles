@@ -17,7 +17,7 @@ in
                 TERM = "kitty";
             };
             file = {
-                ".background-image".source = ../assets/wallpapers/transmit.jpg;
+                ".background-image".source = ../assets/wallpapers/bleh.png;
                 ".twmrc".source = ../configs/twm;
                 ".config/i3/config".source = ../configs/i3;
             };

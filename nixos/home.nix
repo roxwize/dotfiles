@@ -12,7 +12,9 @@ in
         home = {
             stateVersion = "24.11";
             file = {
-                ".twmrc".source = ../.twmrc;
+                ".background-image".source = ../assets/wallpapers/transmit.jpg;
+                ".twmrc".source = ../configs/.twmrc;
+                ".config/i3/config".source = ../configs/.i3config;
             };
         };
 

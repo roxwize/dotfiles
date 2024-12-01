@@ -55,7 +55,9 @@ menu "System"
 menu "Applications"
 {
   "Applications"      f.title
+  "Dolphin"           !"dolphin&"
   "Konsole"           !"konsole&"
   "Firefox"           !"firefox&"
+  "Kate"              !"kate&"
   "VSCodium"          !"codium&"
 }

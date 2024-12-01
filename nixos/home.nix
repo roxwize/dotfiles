@@ -11,10 +11,15 @@ in
     home-manager.users.rae = {
         home = {
             stateVersion = "24.11";
+            sessionVariables = {
+                BROWSER = "firefox";
+                EDITOR = "hx";
+                TERM = "kitty";
+            };
             file = {
                 ".background-image".source = ../assets/wallpapers/transmit.jpg;
-                ".twmrc".source = ../configs/.twmrc;
-                ".config/i3/config".source = ../configs/.i3config;
+                ".twmrc".source = ../configs/twm;
+                ".config/i3/config".source = ../configs/i3;
             };
         };
 

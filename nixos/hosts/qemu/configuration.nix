@@ -84,6 +84,7 @@
         gparted
         hyfetch
         imagemagick
+        kitty
         xclip
         yt-dlp
         # text editors

@@ -188,3 +188,28 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
 }
+
+## colors
+# target                 title   bg      text    indicator  border
+client.focused           #b4befe #1e1e2e #cdd6f4 #f5e0dc    #b4befe
+client.focused_inactive  #6c7086 #1e1e2e #cdd6f4 #f5e0dc    #6c7086
+client.unfocused         #6c7086 #1e1e2e #cdd6f4 #f5e0dc    #6c7086
+client.urgent            #fab387 #1e1e2e #fab387 #6c7086    #fab387
+client.placeholder       #6c7086 #1e1e2e #cdd6f4 #6c7086    #6c7086
+client.background        #1e1e2e
+
+# bar
+bar {
+  colors {
+    background         #1e1e2e
+    statusline         #cdd6f4
+    focused_statusline #cdd6f4
+    focused_separator  #1e1e2e
+
+    # target           border  bg      text
+    focused_workspace  #1e1e2e #cba6f7 #11111b
+    active_workspace   #1e1e2e #585b70 #cdd6f4
+    inactive_workspace #1e1e2e #1e1e2e #cdd6f4
+    urgent_workspace   #1e1e2e #f38ba8 #11111b
+  }
+}

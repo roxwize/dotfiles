@@ -44,6 +44,7 @@
             xkb.layout = "us";
             windowManager = {
                 i3.enable = true;
+                twm.enable = true;
             };
         };
         displayManager = {

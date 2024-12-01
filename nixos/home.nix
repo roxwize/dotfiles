@@ -9,7 +9,12 @@ in
     ];
 
     home-manager.users.rae = {
-        home.stateVersion = "24.11";
+        home = {
+            stateVersion = "24.11";
+            file = {
+                ".twmrc".source = ../.twmrc;
+            };
+        };
 
         programs = {
             git = {
@@ -17,21 +22,6 @@ in
                 userName = "roxwize";
                 userEmail = "rae@roxwize.xyz";
             };
-#             plasma = {
-#                 enable = true;
-#                 panels = [
-#                     {
-#                         location = "top";
-#                         height = 32;
-#                         widgets = [
-#                             "org.kde.plasma.kickoff"
-#                             "org.kde.plasma.icontasks"
-#                             "org.kde.plasma.marginsseparator"
-#                             "org.kde.plasma.digitalclock"
-#                         ];
-#                     }
-#                 ];
-#             };
         };
     };
 }

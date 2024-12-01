@@ -1,0 +1,61 @@
+AutoRelativeResize
+DontMoveOff
+NoBackingStore
+NoCaseSensitive
+NoDefaults
+NoGrabServer
+NoHighLight
+NoTitleHighlight
+OpaqueMove
+ShowIconManager
+SortIconManager
+BorderWidth 1
+NoMenuShadows
+ButtonIndent 0
+TitlePadding 4
+IconDirectory "~/.twm/icons/"
+LeftTitleButton "resize.xbm"    = f.resize
+LeftTitleButton "wmenu.xbm"     = f.nop
+RightTitleButton "minimize.xbm" = f.iconify
+RightTitleButton "close.xbm"    = f.delete
+Color {
+  BorderColor           "#0d8778"
+  DefaultBackground     "#0d8778"
+  DefaultForeground     "#ffffff"
+  TitleBackground       "#0d8778"
+  TitleForeground       "#ffffff"
+  MenuTitleBackground   "#b52f62"
+  MenuTitleForeground   "#ffffff"
+  MenuBackground        "#b52f62"
+  MenuForeground        "#ffffff"
+  MenuBorderColor       "#b52f62"
+  IconManagerBackground "#b52f62"
+  IconManagerForeground "#ffffff"
+}
+# window actions
+Button1 =   : root   : f.menu "TwmWindows"
+Button1 =   : title  : f.function "raise-lower-move"
+Button3 =   : root   : f.menu "System"
+Button3 = s : window : f.resize        # SHIFT+MOUSE3 to resize
+Function "raise-lower-move" { f.move f.raiselower }
+# menus
+menu "System"
+{
+  "System"            f.title
+  "Icon manager"      f.showiconmgr
+  "Restart twm"       f.restart
+  "Take screenshot"   !"flameshot gui&"
+  ""                  f.nop
+  "Applications"      f.menu "Applications"
+  "Processes"         !"kitty btop&"
+  ""                  f.nop
+  "Shutdown"          !"shutdown now&"
+  "Restart"           !"reboot&"
+}
+menu "Applications"
+{
+  "Applications"      f.title
+  "Konsole"           !"konsole&"
+  "Firefox"           !"firefox&"
+  "VSCodium"          !"codium&"
+}

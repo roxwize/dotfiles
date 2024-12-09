@@ -13,11 +13,10 @@ in
             stateVersion = "24.11";
             sessionVariables = {
                 BROWSER = "firefox";
-                EDITOR = "hx";
                 TERM = "kitty";
             };
             file = {
-                ".background-image".source = ../assets/wallpapers/bleh.png;
+                ".background-image".source = ../assets/wallpapers/2kki_rainyapartments.png;
                 ".twmrc".source = ../configs/twm;
                 ".config/i3/config".source = ../configs/i3;
             };
@@ -28,6 +27,12 @@ in
                 enable = true;
                 userName = "roxwize";
                 userEmail = "rae@roxwize.xyz";
+            };
+            neovim = {
+                enable = true;
+                plugins = with pkgs.vimPlugins; [
+                    vim-wakatime
+                ];
             };
         };
     };

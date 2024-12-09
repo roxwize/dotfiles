@@ -44,6 +44,7 @@
             xkb.layout = "us";
             windowManager = {
                 i3.enable = true;
+                openbox.enable = true;
                 twm.enable = true;
             };
         };
@@ -89,8 +90,10 @@
         yt-dlp
         # text editors
         helix
+        neovim
         vscodium
         # misc
+        polybar
         uxn
     ];
 

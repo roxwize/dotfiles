@@ -69,6 +69,17 @@
         printing.enable = true;
     };
 
+	fonts = {
+		enableDefaultPackages = true;
+		packages = with pkgs; [
+			noto-fonts
+			noto-fonts-cjk-sans
+			noto-fonts-emoji
+			fira-code
+			gohufont
+		];
+	};
+
     users.users.rae = {
         isNormalUser = true;
         extraGroups = [ "wheel" ];
@@ -89,7 +100,6 @@
         xclip
         yt-dlp
         # text editors
-        helix
         neovim
         vscodium
         # misc

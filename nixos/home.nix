@@ -16,14 +16,13 @@ in
                 TERM = "kitty";
             };
             file = {
-                ".background-image".source = ../assets/wallpapers/2kki_rainyapartments.png;
                 ".twmrc".source = ../configs/twm;
-                ".config/i3/config".source = ../configs/i3;
-
-                ".config/openbox/autostart".source = ../configs/openbox/autostart;
-                ".config/openbox/rc.xml".source = ../configs/openbox/rc.xml;
             };
         };
+		xdg.configFile = {
+			"i3/config".source = ../configs/i3;
+			"openbox".source = ../configs/openbox;
+		};
 
         programs = {
             git = {

@@ -3,7 +3,7 @@
 	<keyboard>
 		<keybind key="A-d">
 			<action name="Execute">
-				<command>rofi -show drun</command>
+				<command>rofi -show combi -modes combi -combi-modes "window,drun,run"</command>
 			</action>
 		</keybind>
 	</keyboard>

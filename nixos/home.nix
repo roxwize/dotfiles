@@ -54,14 +54,21 @@ in
             polybar = {
                 enable = true;
                 script = "polybar &";
-                settings = {
+                settings = 
+                let
+                    background = "#00000000";
+                    foreground = "#fff";
+                    color0 = "#ff3b1c32";
+                    color1 = "#ff6a1e55";
+                    color2 = "#ffa64d79";
+                in {
                     "global/wm" = {
                         margin-top = 2;
                         margin-bottom = 2;
                     };
                     "bar/top" = {
-                        background = "#00000000";
-                        foreground = "#fff";
+                        background = background;
+                        foreground = foreground;
                         width = "100%";
                         height = 32;
                         font-0 = "GohuFont:style=Regular:size=14;3";
@@ -76,14 +83,14 @@ in
                     "module/cpu" = {
                         type = "internal/cpu";
                         label = "CPU: %percentage%%";
-                        label-background = "#ff3b1c32";
+                        label-background = color0;
                         label-padding = 2;
                         interval = 2;
                     };
                     "module/memory" = {
                         type = "internal/memory";
                         label = "RAM: %percentage_used%%";
-                        label-background = "#ff6a1e55";
+                        label-background = color1;
                         label-padding = 2;
                         interval = 2;
                     };
@@ -95,7 +102,7 @@ in
                         type = "internal/date";
                         date = "%b %d %y";
                         time = "%I:%M %p";
-                        label-background = "#ffa64d79";
+                        label-background = color2;
                         label-padding = 2;
                         interval = 5;
                     };

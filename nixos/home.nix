@@ -58,9 +58,9 @@ in
                 let
                     background = "#00000000";
                     foreground = "#fff";
-                    color0 = "#ff3b1c32";
-                    color1 = "#ff6a1e55";
-                    color2 = "#ffa64d79";
+                    color0 = "#ffd9eafd";
+                    color1 = "#ffbcccdc";
+                    color2 = "#ff9aa6b2";
                 in {
                     "global/wm" = {
                         margin-top = 2;
@@ -68,7 +68,7 @@ in
                     };
                     "bar/top" = {
                         background = background;
-                        foreground = foreground;
+                        foreground = "#000";
                         width = "100%";
                         height = 32;
                         font-0 = "GohuFont:style=Regular:size=14;3";

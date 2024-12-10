@@ -94,6 +94,7 @@
         ffmpeg
         git
         gparted
+		hsetroot
         hyfetch
         imagemagick
         kitty

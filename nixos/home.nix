@@ -21,6 +21,7 @@ in
                 ".config/i3/config".source = ../configs/i3;
 
 				".config/openbox/autostart".source = ../configs/openbox/autostart;
+				".config/openbox/rc.xml".source = ../configs/openbox/rc.xml;
             };
         };
 
@@ -77,6 +78,7 @@ in
 						label = "CPU: %percentage%%";
 						label-background = "#ff3b1c32";
 						interval = 2;
+						format-padding = 1pt;
 		    		};
 		    		"module/memory" = {
                         type = "internal/memory";

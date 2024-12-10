@@ -50,7 +50,7 @@
         };
         displayManager = {
             sddm.enable = true;
-            defaultSession = "plasmax11";
+            defaultSession = "none+openbox";
         };
         desktopManager = {
             plasma6.enable = true;

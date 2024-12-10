@@ -53,11 +53,11 @@ in
 				script = "polybar &";
 				settings = {
 		    		"global/wm" = {
-						font-0 = "GohuFont:style=Regular;antialias=false";
                         margin-top = 5;
 						margin-bottom = 5;
 		    		};
 		    		"bar/top" = {
+						font-0 = "GohuFont:style=Regular:size=14;antialias=false";
                         modules-left = "cpu memory";
 		        		modules-center = "xwindow";
 		        		modules-right = "date";

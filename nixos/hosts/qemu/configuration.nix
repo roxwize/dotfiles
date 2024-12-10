@@ -99,6 +99,7 @@
         kitty
         xclip
         yt-dlp
+		zellij
         # text editors
         neovim
         vscodium

@@ -5,7 +5,7 @@ in
 {
     imports = [
         "${home-manager}/nixos"
-#         "${plasma-manager}/modules"
+        #         "${plasma-manager}/modules"
     ];
 
     home-manager.users.rae = {
@@ -20,8 +20,8 @@ in
                 ".twmrc".source = ../configs/twm;
                 ".config/i3/config".source = ../configs/i3;
 
-				".config/openbox/autostart".source = ../configs/openbox/autostart;
-				".config/openbox/rc.xml".source = ../configs/openbox/rc.xml;
+                ".config/openbox/autostart".source = ../configs/openbox/autostart;
+                ".config/openbox/rc.xml".source = ../configs/openbox/rc.xml;
             };
         };
 
@@ -33,72 +33,74 @@ in
             };
             kitty = {
                 enable = true;
-				font.name = "Fira Code";
+                font.name = "Fira Code";
                 #theme = "Catppuccin-Latte";
             };
             neovim = {
                 enable = true;
-				defaultEditor = true;
-				vimAlias = true;
+                defaultEditor = true;
+                vimAlias = true;
                 plugins = with pkgs.vimPlugins; [
                     vim-wakatime
                 ];
-				extraLuaConfig = ''
-                	vim.opt["tabstop"] = 4
-		    		vim.opt["shiftwidth"] = 4
-				'';
+                extraLuaConfig = ''
+                    vim.opt["tabstop"] = 4
+                    vim.opt["shiftwidth"] = 4
+                '';
             };
         };
 
-		services = {
+        services = {
             polybar = {
                 enable = true;
-				script = "polybar &";
-				settings = {
-		    		"global/wm" = {
+                script = "polybar &";
+                settings = {
+                    "global/wm" = {
                         margin-top = 2;
-						margin-bottom = 2;
-		    		};
-		    		"bar/top" = {
-						background = "#00000000";
-						foreground = "#fff";
-						width = "100%";
-						height = 32;
-						font-0 = "GohuFont:style=Regular:size=14;3";
+                        margin-bottom = 2;
+                    };
+                    "bar/top" = {
+                        background = "#00000000";
+                        foreground = "#fff";
+                        width = "100%";
+                        height = 32;
+                        font-0 = "GohuFont:style=Regular:size=14;3";
                         modules-left = "cpu memory";
-		        		modules-center = "xwindow";
-		        		modules-right = "date";
-						module-margin = 1;
-						offset-y = 16;
-						padding = 2;
-		    		};
+                        modules-center = "xwindow";
+                        modules-right = "date";
+                        module-margin = 1;
+                        offset-y = 14;
+                        padding = 2;
+                    };
 
-		   			"module/cpu" = {
+                    "module/cpu" = {
                         type = "internal/cpu";
-						label = "CPU: %percentage%%";
-						label-background = "#ff3b1c32";
-						interval = 2;
-						format-padding = "1pt";
-		    		};
-		    		"module/memory" = {
+                        label = "CPU: %percentage%%";
+                        label-background = "#ff3b1c32";
+                        label-padding = 2;
+                        interval = 2;
+                    };
+                    "module/memory" = {
                         type = "internal/memory";
-						label = "RAM: %percentage_used%%";
-						label-background = "#ff6a1e55";
-						interval = 2;
-		    		};
-		    		"module/xwindow" = {
+                        label = "RAM: %percentage_used%%";
+                        label-background = "#ff6a1e55";
+                        label-padding = 2;
+                        interval = 2;
+                    };
+                    "module/xwindow" = {
                         type = "internal/xwindow";
-						label-active-font = 0;
-		    		};
-		    		"module/date" = {
+                        label-active-font = 0;
+                    };
+                    "module/date" = {
                         type = "internal/date";
-						date = "%b %d %y";
-						time = "%I:%M %p";
-						label-background = "#ffa64d79";
-						interval = 5;
-		    		};
-				};
-	    	};
-		};
+                        date = "%b %d %y";
+                        time = "%I:%M %p";
+                        label-background = "#ffa64d79";
+                        label-padding = 2;
+                        interval = 5;
+                    };
+                };
+            };
+        };
     };
 }

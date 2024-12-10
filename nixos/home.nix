@@ -19,6 +19,8 @@ in
                 ".background-image".source = ../assets/wallpapers/2kki_rainyapartments.png;
                 ".twmrc".source = ../configs/twm;
                 ".config/i3/config".source = ../configs/i3;
+
+				".config/openbox/autostart".source = ../configs/openbox/autostart;
             };
         };
 
@@ -53,24 +55,33 @@ in
 				script = "polybar &";
 				settings = {
 		    		"global/wm" = {
-                        margin-top = 5;
-						margin-bottom = 5;
+                        margin-top = 2;
+						margin-bottom = 2;
 		    		};
 		    		"bar/top" = {
-						font-0 = "GohuFont:style=Regular:size=14;antialias=false";
+						background = "#00000000";
+						foreground = "#fff";
+						width = "100%";
+						height = 32;
+						font-0 = "GohuFont:style=Regular:size=14;3";
                         modules-left = "cpu memory";
 		        		modules-center = "xwindow";
 		        		modules-right = "date";
+						module-margin = 1;
+						offset-y = 16;
+						padding = 2;
 		    		};
 
 		   			"module/cpu" = {
                         type = "internal/cpu";
 						label = "CPU: %percentage%%";
+						label-background = "#ff3b1c32";
 						interval = 2;
 		    		};
 		    		"module/memory" = {
                         type = "internal/memory";
 						label = "RAM: %percentage_used%%";
+						label-background = "#ff6a1e55";
 						interval = 2;
 		    		};
 		    		"module/xwindow" = {
@@ -81,6 +92,7 @@ in
                         type = "internal/date";
 						date = "%b %d %y";
 						time = "%I:%M %p";
+						label-background = "#ffa64d79";
 						interval = 5;
 		    		};
 				};

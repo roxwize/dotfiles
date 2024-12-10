@@ -97,6 +97,7 @@
         hyfetch
         imagemagick
         kitty
+		nitrogen
         xclip
         yt-dlp
 		zellij
@@ -105,7 +106,9 @@
         vscodium
         # misc
         polybar
+		rofi
         uxn
+		xcompmgr
     ];
 
     # Open ports in the firewall.

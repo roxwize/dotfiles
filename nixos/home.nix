@@ -78,7 +78,7 @@ in
 						label = "CPU: %percentage%%";
 						label-background = "#ff3b1c32";
 						interval = 2;
-						format-padding = 1pt;
+						format-padding = "1pt";
 		    		};
 		    		"module/memory" = {
                         type = "internal/memory";

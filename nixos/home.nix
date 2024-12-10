@@ -74,7 +74,7 @@ in
                         font-0 = "GohuFont:style=Regular:size=14;3";
                         modules-left = "cpu memory";
                         modules-center = "xwindow";
-                        modules-right = "date";
+                        modules-right = "battery date";
                         module-margin = 1;
                         offset-y = 14;
                         padding = 2;
@@ -98,11 +98,20 @@ in
                         type = "internal/xwindow";
                         label-active-font = 0;
                     };
+					"module/battery" = {
+						type = "internal/battery";
+						battery = "BAT0";
+						adapter = "ADP1";
+						label-charging = "BAT: %percentage%%++";
+						label-discharging = "BAT: %percentage%%";
+						label-background = color1;
+						label-padding = 2;
+					};
                     "module/date" = {
                         type = "internal/date";
                         date = "%b %d %y";
                         time = "%I:%M %p";
-                        label-background = color2;
+                        label-background = color0;
                         label-padding = 2;
                         interval = 5;
                     };

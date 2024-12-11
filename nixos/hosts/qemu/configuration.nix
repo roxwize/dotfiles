@@ -69,16 +69,16 @@
         printing.enable = true;
     };
 
-	fonts = {
-		enableDefaultPackages = true;
-		packages = with pkgs; [
-			noto-fonts
-			noto-fonts-cjk-sans
-			noto-fonts-emoji
-			fira-code
-			gohufont
-		];
-	};
+    fonts = {
+        enableDefaultPackages = true;
+        packages = with pkgs; [
+            noto-fonts
+            noto-fonts-cjk-sans
+            noto-fonts-emoji
+            fira-code
+            gohufont
+        ];
+    };
 
     users.users.rae = {
         isNormalUser = true;
@@ -94,22 +94,22 @@
         ffmpeg
         git
         gparted
-		hsetroot
+        hsetroot
         hyfetch
         imagemagick
         kitty
-		nitrogen
+        nitrogen
         xclip
         yt-dlp
-		zellij
+        zellij
         # text editors
         neovim
         vscodium
         # misc
         polybar
-		rofi
+        rofi
         uxn
-		xcompmgr
+        xcompmgr
     ];
 
     # Open ports in the firewall.

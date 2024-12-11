@@ -5,7 +5,6 @@ in
 {
     imports = [
         "${home-manager}/nixos"
-        #         "${plasma-manager}/modules"
     ];
 
     home-manager.users.rae = {
@@ -19,10 +18,10 @@ in
                 ".twmrc".source = ../configs/twm;
             };
         };
-		xdg.configFile = {
-			"i3/config".source = ../configs/i3;
-			"openbox".source = ../configs/openbox;
-		};
+        xdg.configFile = {
+            "i3/config".source = ../configs/i3;
+            "openbox".source = ../configs/openbox;
+        };
 
         programs = {
             git = {
@@ -78,15 +77,15 @@ in
                         offset-y = 14;
                         padding = 2;
                     };
-					"bar/tray" = {
-						background = color0;
-						foreground = "#000";
-						bottom = "true";
-						width = "100%";
-						height = 32;
-						font-0 = "GohuFont:style=Regular:size=14;3";
-						modules-left = "tray";
-					};
+                    "bar/tray" = {
+                        background = color0;
+                        foreground = "#000";
+                        bottom = "true";
+                        width = "100%";
+                        height = 32;
+                        font-0 = "GohuFont:style=Regular:size=14;3";
+                        modules-left = "tray";
+                    };
 
                     "module/cpu" = {
                         type = "internal/cpu";
@@ -106,15 +105,15 @@ in
                         type = "internal/xwindow";
                         label-active-font = 0;
                     };
-					"module/battery" = {
-						type = "internal/battery";
-						battery = "BAT0";
-						adapter = "ADP1";
-						label-charging = "BAT: %percentage%%++";
-						label-discharging = "BAT: %percentage%%";
-						label-background = color1;
-						label-padding = 2;
-					};
+                    "module/battery" = {
+                        type = "internal/battery";
+                        battery = "BAT0";
+                        adapter = "ADP1";
+                        label-charging = "BAT: %percentage%%++";
+                        label-discharging = "BAT: %percentage%%";
+                        label-background = color1;
+                        label-padding = 2;
+                    };
                     "module/date" = {
                         type = "internal/date";
                         date = "%b %d %y";
@@ -123,10 +122,10 @@ in
                         label-padding = 2;
                         interval = 5;
                     };
-					"module/tray" = {
-						type = "internal/tray";
-						tray-spacing = "8px";
-					};
+                    "module/tray" = {
+                        type = "internal/tray";
+                        tray-spacing = "8px";
+                    };
                 };
             };
         };

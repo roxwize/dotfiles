@@ -55,11 +55,11 @@ in
                 script = "polybar &";
                 settings = 
                 let
-                    background = "#00000000";
+                    background = "#0000";
                     foreground = "#fff";
-                    color0 = "#ffd9eafd";
-                    color1 = "#ffbcccdc";
-                    color2 = "#ff9aa6b2";
+                    color0 = "#d9eafd";
+                    color1 = "#bcccdc";
+                    color2 = "#9aa6b2";
                 in {
                     "global/wm" = {
                         margin-top = 2;
@@ -78,6 +78,15 @@ in
                         offset-y = 14;
                         padding = 2;
                     };
+					"bar/tray" = {
+						background = color0;
+						foreground = "#000";
+						bottom = "true";
+						width = "100%";
+						height = 32;
+						font-0 = "GohuFont:style=Regular:size=14;3";
+						modules-left = "tray";
+					};
 
                     "module/cpu" = {
                         type = "internal/cpu";
@@ -114,6 +123,10 @@ in
                         label-padding = 2;
                         interval = 5;
                     };
+					"module/tray" = {
+						type = "internal/tray";
+						tray-spacing = "8px";
+					};
                 };
             };
         };

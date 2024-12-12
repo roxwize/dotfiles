@@ -47,14 +47,17 @@
                 openbox.enable = true;
                 twm.enable = true;
             };
+            desktopManager = {
+                xfce.enable = true;
+            };
         };
         displayManager = {
             sddm.enable = true;
             defaultSession = "none+openbox";
         };
-        desktopManager = {
-            plasma6.enable = true;
-        };
+        # desktopManager = {
+        #     plasma6.enable = true;
+        # };
 
         # Touchpad support
         libinput.enable = true;

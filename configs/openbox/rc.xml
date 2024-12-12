@@ -52,4 +52,13 @@
             </action>
         </keybind>
     </keyboard>
+    <mouse>
+        <context name="Root">
+            <mousebind button="Right" action="Click">
+                <action name="ShowMenu">
+                    <menu>root</menu>
+                </action>
+            </mousebind>
+        </context>
+    </mouse>
 </openbox_config>

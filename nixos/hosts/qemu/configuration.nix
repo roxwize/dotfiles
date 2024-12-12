@@ -3,6 +3,7 @@
     imports = [
         ./hardware-configuration.nix
         ../../home.nix
+        ../../packages.nix
     ];
 
     boot.loader = {
@@ -92,32 +93,6 @@
         hashedPassword = "$y$j9T$YPq.Kl8rss1JmJ5Vg6cHE/$2kdfzCkkhaO.I4u714EQnS/ZFert5byisiRVxtC.9G2";
         shell = pkgs.fish;
     };
-
-    environment.systemPackages = with pkgs; [
-        # system tools
-        bat
-        btop
-        ffmpeg
-        git
-        gparted
-        hyfetch
-        imagemagick
-        kitty
-        xclip
-        yt-dlp
-        zellij
-        # text editors
-        neovim
-        vscodium
-        # X11
-        hsetroot
-        nitrogen
-        polybar
-        rofi
-        xcompmgr
-        # misc
-        uxn
-    ];
 
     # Open ports in the firewall.
     # networking.firewall.allowedTCPPorts = [ ... ];

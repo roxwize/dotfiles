@@ -71,20 +71,11 @@ in
                         height = 32;
                         font-0 = "GohuFont:style=Regular:size=14;3";
                         modules-left = "cpu memory";
-                        modules-center = "xwindow";
+                        modules-center = "xworkspaces";
                         modules-right = "battery date";
                         module-margin = 1;
                         offset-y = 14;
                         padding = 2;
-                    };
-                    "bar/tray" = {
-                        background = color0;
-                        foreground = "#000";
-                        bottom = "true";
-                        width = "100%";
-                        height = 32;
-                        font-0 = "GohuFont:style=Regular:size=14;3";
-                        modules-left = "tray";
                     };
 
                     "module/cpu" = {
@@ -105,6 +96,20 @@ in
                         type = "internal/xwindow";
                         label-active-font = 0;
                     };
+                    "module/xworkspaces" = {
+                        type = "internal/xworkspaces";
+                        enable-scroll = false;
+                        label-active = "%name%";
+                        label-active-background = color2;
+                        label-active-padding = 1;
+                        label-occupied = "%name%";
+                        label-occupied-padding = 1;
+                        label-empty = "%name%";
+                        label-empty-padding = 1;
+                        label-urgent = "%name%";
+                        label-urgent-background = color0;
+                        label-urgent-padding = 1;
+                    };
                     "module/battery" = {
                         type = "internal/battery";
                         battery = "BAT0";
@@ -121,10 +126,6 @@ in
                         label-background = color0;
                         label-padding = 2;
                         interval = 5;
-                    };
-                    "module/tray" = {
-                        type = "internal/tray";
-                        tray-spacing = "8px";
                     };
                 };
             };

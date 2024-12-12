@@ -1,4 +1,3 @@
 hsetroot -cover ~/.dotfiles/assets/wallpapers/kendal.png
 xcompmgr &
-polybar top & 
-polybar tray &
+polybar top &

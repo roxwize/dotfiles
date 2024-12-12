@@ -94,22 +94,23 @@
         ffmpeg
         git
         gparted
-        hsetroot
         hyfetch
         imagemagick
         kitty
-        nitrogen
         xclip
         yt-dlp
         zellij
         # text editors
         neovim
         vscodium
-        # misc
+        # X11
+        hsetroot
+        nitrogen
         polybar
         rofi
-        uxn
         xcompmgr
+        # misc
+        uxn
     ];
 
     # Open ports in the firewall.

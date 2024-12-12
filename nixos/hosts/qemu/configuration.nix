@@ -48,12 +48,15 @@
                 twm.enable = true;
             };
             desktopManager = {
-                xfce.enable = true;
+                xfce = {
+                    enable = true;
+                    noDesktop = true;
+                };
             };
         };
         displayManager = {
             sddm.enable = true;
-            defaultSession = "none+openbox";
+            defaultSession = "xfce+openbox";
         };
         # desktopManager = {
         #     plasma6.enable = true;

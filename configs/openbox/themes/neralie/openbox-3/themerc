@@ -1,0 +1,36 @@
+# Window geometry
+padding.width: 1
+padding.height: 1
+border.width: 0
+window.client.padding.width: 1
+window.client.padding.height: 1
+window.handle.width: 0
+
+# Menu geometry
+menu.border.width: 0
+
+# Border colors
+window.active.client.color: #9aa6b2
+
+# Active window
+window.active.title.bg: Solid Flat
+window.active.title.bg.color: #9aa6b2
+
+window.active.label.bg: Parentrelative
+window.active.label.text.color: #f8fafc
+
+window.active.button.unpressed.bg: Solid Flat
+window.active.button.unpressed.bg.color: #bcccdc
+
+window.active.button.pressed.bg: Solid Flat
+window.active.button.pressed.bg.color: #d9eafd
+
+# Menus
+menu.separator.color: #f8fafc
+
+menu.items.bg: Solid Flat
+menu.items.bg.color: #9aa6b2
+
+menu.items.active.bg: Solid Flat
+menu.items.active.bg.color: #bcccdc
+menu.items.active.text.color: #f8fafc

@@ -1,9 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <openbox_config xmlns="http://openbox.org/3.4/rc" xmlns:xi="http://www.w3.org/2001/XInclude">
     <resistance>
-        <strength>10</strength>
-        <screen_edge_strength>20</screen_edge_strength>
+        <strength>20</strength>
+        <screen_edge_strength>40</screen_edge_strength>
     </resistance>
+    <theme>
+        <name>neralie</name>
+        <titleLayout>LIMC</titleLayout>
+        <font place="ActiveWindow">
+            <name>GohuFont</name>
+            <size>14</size>
+        </font>
+        <font place="InactiveWindow">
+            <name>GohuFont</name>
+            <size>14</size>
+        </font>
+        <font place="MenuHeader">
+            <name>GohuFont</name>
+            <size>14</size>
+        </font>
+        <font place="MenuItem">
+            <name>GohuFont</name>
+            <size>14</size>
+        </font>
+        <font place="OnScreenDisplay">
+            <name>GohuFont</name>
+            <size>14</size>
+        </font>
+    </theme>
     <desktops>
         <number>4</number>
         <firstdesk>1</firstdesk>
@@ -53,6 +77,72 @@
         </keybind>
     </keyboard>
     <mouse>
+        <context name="Frame">
+            <mousebind button="A-Left" action="Press">
+                <action name="Focus"/>
+            </mousebind>
+            <mousebind button="A-Left" action="Click">
+                <action name="Raise"/>
+            </mousebind>
+            <mousebind button="A-Left" action="Drag">
+                <action name="Move"/>
+            </mousebind>
+            <mousebind button="A-Right" action="Drag">
+                <action name="Resize"/>
+            </mousebind>
+        </context>
+
+        <context name="Titlebar">
+            <mousebind button="Left" action="Press">
+                <action name="Focus"/>
+            </mousebind>
+            <mousebind button="Left" action="Click">
+                <action name="Raise"/>
+            </mousebind>
+            <mousebind button="Left" action="Drag">
+                <action name="Move"/>
+            </mousebind>
+            <mousebind button="Right" action="Drag">
+                <action name="Resize"/>
+            </mousebind>
+            <mousebind button="A-Left" action="Press">
+                <action name="Focus"/>
+            </mousebind>
+            <mousebind button="A-Left" action="Click">
+                <action name="Raise"/>
+            </mousebind>
+            <mousebind button="A-Left" action="Drag">
+                <action name="Move"/>
+            </mousebind>
+            <mousebind button="A-Right" action="Drag">
+                <action name="Resize"/>
+            </mousebind>
+        </context>
+
+        <context name="Iconify">
+            <mousebind button="Left" action="Click">
+                <action name="Iconify"/>
+            </mousebind>
+        </context>
+
+        <context name="Maximize">
+            <mousebind button="Left" action="Click">
+                <action name="ToggleMaximizeFull"/>
+            </mousebind>
+            <mousebind button="Middle" action="Click">
+                <action name="ToggleMaximizeVert"/>
+            </mousebind>
+            <mousebind button="Right" action="Click">
+                <action name="ToggleMaximizeHorz"/>
+            </mousebind>
+        </context>
+
+        <context name="Close">
+            <mousebind button="Left" action="Click">
+                <action name="Close"/>
+            </mousebind>
+        </context>
+
         <context name="Root">
             <mousebind button="Right" action="Click">
                 <action name="ShowMenu">

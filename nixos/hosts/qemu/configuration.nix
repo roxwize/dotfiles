@@ -44,7 +44,6 @@
             enable = true;
             xkb.layout = "us";
             windowManager = {
-                i3.enable = true;
                 openbox.enable = true;
                 twm.enable = true;
             };
@@ -56,8 +55,15 @@
             };
         };
         displayManager = {
-            sddm.enable = true;
-            defaultSession = "xfce+openbox";
+            sddm = {
+                enable = true;
+                settings = {
+                    Autologin = {
+                        User = "rae";
+                        Session = "xfce+openbox";
+                    };
+                };
+            };
         };
         # desktopManager = {
         #     plasma6.enable = true;

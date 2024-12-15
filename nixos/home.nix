@@ -16,10 +16,10 @@ in
             };
             file = {
                 ".twmrc".source = ../configs/twm;
+                ".local/share/themes".source = ../configs/openbox/themes;
             };
         };
         xdg.configFile = {
-            "i3/config".source = ../configs/i3;
             "openbox".source = ../configs/openbox;
         };
 
@@ -72,7 +72,7 @@ in
                         font-0 = "GohuFont:style=Regular:size=14;3";
                         modules-left = "cpu memory";
                         modules-center = "xworkspaces";
-                        modules-right = "battery date";
+                        modules-right = "battery audio date";
                         module-margin = 1;
                         offset-y = 14;
                         padding = 2;
@@ -109,6 +109,9 @@ in
                         label-urgent = "%name%";
                         label-urgent-background = color0;
                         label-urgent-padding = 1;
+                    };
+                    "module/audio" = {
+                        type = "internal/pulseaudio";
                     };
                     "module/battery" = {
                         type = "internal/battery";

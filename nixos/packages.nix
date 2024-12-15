@@ -19,7 +19,7 @@
         # X11
         hsetroot
         nitrogen
-        polybar
+        polybarFull
         rofi
         xcompmgr
         xdotool

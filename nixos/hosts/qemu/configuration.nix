@@ -6,6 +6,8 @@
         ../../packages.nix
     ];
 
+    nixpkgs.config.allowUnfree = true;
+
     boot.loader = {
         # efi.efiSysMountPoint = "/boot/efi";
         grub = {
@@ -30,6 +32,7 @@
     };
 
     programs = {
+        dconf.enable = true;
         firefox.enable = true;
         fish.enable = true;
         gnupg.agent = {
@@ -47,12 +50,6 @@
                 openbox.enable = true;
                 twm.enable = true;
             };
-            desktopManager = {
-                xfce = {
-                    enable = true;
-                    noDesktop = true;
-                };
-            };
         };
         displayManager = {
             sddm = {
@@ -60,7 +57,7 @@
                 settings = {
                     Autologin = {
                         User = "rae";
-                        Session = "xfce+openbox";
+                        Session = "none+openbox";
                     };
                 };
             };

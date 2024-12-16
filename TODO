@@ -1,1 +1,4 @@
 [ ] Get PulseAudio sound controls on polybar to work
+[x] Add desktop switching to windows (context menu?)
+[ ] Decide on an icon theme (flat-remix-icon-theme or pantheon.elementary-icon-theme?)
+[ ] Use XDG???

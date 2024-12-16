@@ -10,20 +10,34 @@ window.handle.width: 0
 menu.border.width: 0
 
 # Border colors
-window.active.client.color: #9aa6b2
+window.active.client.color: #bcccdc
+window.inactive.client.color: #9aa6b2
 
 # Active window
 window.active.title.bg: Solid Flat
-window.active.title.bg.color: #9aa6b2
+window.active.title.bg.color: #bcccdc
 
 window.active.label.bg: Parentrelative
-window.active.label.text.color: #f8fafc
+window.active.label.text.color: #000000
 
 window.active.button.unpressed.bg: Solid Flat
-window.active.button.unpressed.bg.color: #bcccdc
+window.active.button.unpressed.bg.color: #d9eafd
 
 window.active.button.pressed.bg: Solid Flat
-window.active.button.pressed.bg.color: #d9eafd
+window.active.button.pressed.bg.color: #f8fafc
+
+# Inactive window
+window.inactive.title.bg: Solid Flat
+window.inactive.title.bg.color: #9aa6b2
+
+window.inactive.label.bg: Parentrelative
+window.inactive.label.text.color: #f8fafc
+
+window.inactive.button.unpressed.bg: Solid Flat
+window.inactive.button.unpressed.bg.color: #bcccdc
+
+window.inactive.button.pressed.bg: Solid Flat
+window.inactive.button.pressed.bg.color: #d9eafd
 
 # Menus
 menu.separator.color: #f8fafc

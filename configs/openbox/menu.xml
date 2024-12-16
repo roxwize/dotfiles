@@ -17,6 +17,12 @@
             </action>
         </item>
         <separator/>
+        <item label="Set Wallpaper">
+            <action name="Execute">
+                <command>nitrogen ~/.dotfiles/assets/wallpapers</command>
+            </action>
+        </item>
+        <separator/>
         <item label="Restart">
             <action name="Execute">
                 <command>reboot now</command>

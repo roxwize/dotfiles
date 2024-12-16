@@ -11,6 +11,11 @@
                 <command>kitty</command>
             </action>
         </item>
+        <item label="Dolphin">
+            <action name="Execute">
+                <command>dolphin</command>
+            </action>
+        </item>
         <item label="VSCodium">
             <action name="Execute">
                 <command>codium</command>

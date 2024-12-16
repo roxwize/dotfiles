@@ -9,6 +9,7 @@
         gparted
         hyfetch
         imagemagick
+        kdePackages.dolphin
         kitty
         maim
         monitor

@@ -33,6 +33,12 @@
             </action>
         </item>
         <separator/>
+        <item label="Logout">
+            <action name="Execute">
+                <command>loginctl kill-session 1</command>
+                <prompt>Really close all applications and log out?</prompt>
+            </action>
+        </item>
         <item label="Restart">
             <action name="Execute">
                 <command>shutdown -r now</command>

@@ -32,7 +32,7 @@ in
             kitty = {
                 enable = true;
                 font.name = "Fira Code";
-                #theme = "Catppuccin-Latte";
+                theme = "Aquarium Light"; # or Base2Tone Meadow Dark
             };
             neovim = {
                 enable = true;

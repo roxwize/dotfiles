@@ -10,9 +10,9 @@
         hyfetch
         imagemagick
         kitty
+        maim
         monitor
         xclip
-        xfce.xfce4-taskmanager
         yt-dlp
         zellij
         # text editors
@@ -23,7 +23,6 @@
         nitrogen
         polybarFull
         rofi
-        themechanger
         xcompmgr
         xdotool
         xorg.xev

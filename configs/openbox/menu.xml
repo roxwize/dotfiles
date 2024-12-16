@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openbox_menu xmlns="http://openbox.org/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://openbox.org/ file:///usr/share/openbox/menu.xsd">
     <menu id="root" label="Menu">
-        <item label="Browser">
+        <item label="Firefox">
             <action name="Execute">
                 <command>firefox</command>
             </action>
         </item>
-        <item label="Terminal">
+        <item label="kitty">
             <action name="Execute">
                 <command>kitty</command>
             </action>
         </item>
+        <item label="VSCodium">
+            <action name="Execute">
+                <command>codium</command>
+            </action>
+        </item>
         <item label="Task Manager">
             <action name="Execute">
-                <command>xfce4-taskmanager</command>
+                <command>com.github.stsdc.monitor</command>
             </action>
         </item>
         <separator/>
@@ -25,7 +30,7 @@
         <separator/>
         <item label="Restart">
             <action name="Execute">
-                <command>reboot now</command>
+                <command>shutdown -r now</command>
                 <prompt>Really shutdown the computer?</prompt>
             </action>
         </item>

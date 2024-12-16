@@ -35,7 +35,7 @@
         <separator/>
         <item label="Logout">
             <action name="Execute">
-                <command>loginctl kill-session 1</command>
+                <command>loginctl kill-user rae</command>
                 <prompt>Really close all applications and log out?</prompt>
             </action>
         </item>

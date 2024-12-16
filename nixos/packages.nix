@@ -29,7 +29,6 @@
         xorg.xev
         xorg.xwininfo
         # gtk
-        flat-remix-icon-theme
         posy-cursors
         pantheon.elementary-gtk-theme
         # misc

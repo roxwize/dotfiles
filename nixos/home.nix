@@ -137,7 +137,6 @@ in
         gtk = {
             enable = true;
             cursorTheme.name = "Posy's Cursor";
-            iconTheme.name = "Flat-Remix-Cyan-Light";
             theme.name = "io.elementary.stylesheet.blueberry";
         };
     };

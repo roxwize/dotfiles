@@ -11,9 +11,9 @@
                 <command>kitty</command>
             </action>
         </item>
-        <item label="Dolphin">
+        <item label="File Browser">
             <action name="Execute">
-                <command>dolphin</command>
+                <command>io.elementary.files</command>
             </action>
         </item>
         <item label="VSCodium">

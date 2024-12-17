@@ -134,6 +134,18 @@ in
             };
         };
 
+        dconf.settings = {
+            "net/launchpad/plank/docks/dock1" = {
+                dock-items = ["firefox.dockitem" "io.elementary.terminal.dockitem" "codium.dockitem" "io.elementary.settings.dockitem"];
+            };
+            "org/gnome/desktop/background" = {
+                picture-uri = "file://" + builtins.toString /home/rae/.dotfiles/assets/wallpapers/kendal.png;
+            };
+            "org/gnome/desktop/wm/preferences" = {
+                button-layout = ":minimize,maximize,close";
+            };
+        };
+
         gtk = {
             enable = true;
             cursorTheme.name = "Posy's Cursor";

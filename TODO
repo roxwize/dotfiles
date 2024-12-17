@@ -3,4 +3,6 @@
 [ ] Decide on an icon theme (flat-remix-icon-theme or pantheon.elementary-icon-theme?)
 [ ] Use XDG???
 [ ] Add Mousepad (xfce) maybe
-
+[ ] Make setting your wallpaper like. Global across everything because you
+    do it with hsetroot on Openbox startup but not anywhere else (minus
+    changing it with dconf)

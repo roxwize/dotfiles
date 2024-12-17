@@ -50,6 +50,9 @@
                 openbox.enable = true;
                 twm.enable = true;
             };
+            desktopManager = {
+                pantheon.enable = true;
+            };
         };
         displayManager = {
             sddm = {

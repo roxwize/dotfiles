@@ -4,6 +4,7 @@
         # system tools
         bat
         btop
+        dconf-editor
         ffmpeg
         git
         gparted

@@ -8,6 +8,7 @@
         ffmpeg
         git
         gparted
+        home-manager
         hyfetch
         imagemagick
         kitty

@@ -77,6 +77,4 @@
         hashedPassword = "$y$j9T$YPq.Kl8rss1JmJ5Vg6cHE/$2kdfzCkkhaO.I4u714EQnS/ZFert5byisiRVxtC.9G2";
         shell = pkgs.fish;
     };
-
-    system.copySystemConfiguration = true;
 }

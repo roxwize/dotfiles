@@ -2,6 +2,7 @@
 {
     home = {
         stateVersion = "24.11";
+        username = "rae";
         sessionVariables = {
             BROWSER = "firefox";
             TERM = "kitty";

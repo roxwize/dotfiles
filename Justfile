@@ -12,10 +12,10 @@ clean:
     nix-collect-garbage -d
     nix store optimise
 
+# commit local changes and push to upstream
 push:
-    git status
     @git add .
-    @git commit -m "~"
+    git commit -m "~"
     git push
 
 # run `switch` on default host

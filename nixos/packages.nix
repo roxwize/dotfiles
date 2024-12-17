@@ -20,7 +20,7 @@
         # development
         just
         ## language servers
-        nixd
+        nil
         # text editors
         neovim
         vscodium

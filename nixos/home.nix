@@ -32,6 +32,7 @@
             defaultEditor = true;
             vimAlias = true;
             plugins = with pkgs.vimPlugins; [
+                vim-just
                 vim-wakatime
             ];
             extraLuaConfig = ''

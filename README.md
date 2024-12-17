@@ -6,10 +6,16 @@ this is rae's nixOS config meow
 
 # installation
 
-extract it into your home directory as `~/.dotfiles/` ALTHough in hindsight this is a suuuuper shitty place to put the config files so it may change in the futur...
+theoretically:
 
-And Then You Must `ln -s ~/.dotfiles/nixos/hosts/[host]/configuration.nix` into your `/etc/nixos/`...
+```sh
+git clone https://github.com/roxwize/dotfiles
+cd dotfiles/nixos
+sudo nixos-rebuild switch --flake '.#[hostname]'
+```
 
-# openbox hotkeys
+# usage
+
+## openbox hotkeys
 
 I Dont Remember

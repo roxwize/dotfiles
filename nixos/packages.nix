@@ -17,6 +17,10 @@
         xclip
         yt-dlp
         zellij
+        # development
+        just
+        ## language servers
+        nixd
         # text editors
         neovim
         vscodium

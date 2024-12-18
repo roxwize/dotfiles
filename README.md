@@ -9,6 +9,7 @@ this is rae's nixOS config meow
 theoretically:
 
 ```sh
+nix-shell -p git just
 git clone https://github.com/roxwize/dotfiles
 cd dotfiles/nixos
 just switch [hostname]

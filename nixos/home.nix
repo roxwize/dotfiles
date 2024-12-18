@@ -43,7 +43,30 @@
                         name = "NUR search";
                         url = "https://nur.nix-community.org/";
                     }
+                    {
+                        name = "NixOS wiki";
+                        url = "https://nixos.wiki/";
+                    }
                 ];
+                search = {
+                    default = "DuckDuckGo";
+                    engines = {
+                        "Nix packages" = {
+                            urls = [{
+                                template = "https://search.nixos.org/packages";
+                                params = [
+                                    { name = "type"; value = "packages"; }
+                                    { name = "query"; value = "{searchTerms}"; }
+                                ];
+                            }];
+                            icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
+                        };
+
+                        "Bing".metaData.hidden = true;
+                    };
+                    order = [ "DuckDuckGo" "Nix packages" ];
+                    force = true;
+                };
             };
         };
         git = {

@@ -12,3 +12,4 @@
 [x] Consider using flakes
 [x] Use just?
 [ ] Are you managing package overlays properly (check home.nix FIXME and https://nixos-and-flakes.thiscute.world/nixpkgs/overlays)
+ +- [ ] https://github.com/notusknot/dotfiles-nix/blob/a034dcb6daff31ce50cdbc74a5972b1ef56ef3d7/overlays/apple-color-emoji.nix

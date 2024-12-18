@@ -15,3 +15,4 @@
  +- [ ] Just put it in your base.nix config and see if it comes across to home
  |      manager or if you have to import it into both
  +- [ ] https://github.com/notusknot/dotfiles-nix/blob/a034dcb6daff31ce50cdbc74a5972b1ef56ef3d7/overlays/apple-color-emoji.nix
+[ ] Use pass <https://www.passwordstore.org/>? (See also https://elvishjerricco.github.io/2018/06/24/secure-declarative-key-management.html)

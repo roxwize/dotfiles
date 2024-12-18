@@ -26,9 +26,11 @@
             profiles.default = {
                 isDefault = true;
                 extensions = with pkgs.nur.repos.rycee.firefox-addons; [
+                    canvasblocker
                     privacy-badger
                     stylus
                     ublock-origin
+                    violentmonkey
                 ];
                 bookmarks = [
                     {

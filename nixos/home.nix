@@ -30,6 +30,20 @@
                     ublock-origin
                     violentmonkey
                 ];
+                settings = {
+                    "browser.newtabpage.activity-stream.default.sites" = "https://en.wikipedia.org/";
+                    "browser.newtabpage.activity-stream.discoverystream.enabled" = false;
+                    "browser.newtabpage.activity-stream.feeds.telemetry" = false;
+                    "browser.newtabpage.activity-stream.improvesearch.topSiteSearchShortcuts.havePinned" = "";
+                    "browser.newtabpage.activity-stream.newtabWallpapers.wallpaper" = "dark-beach";
+                    "browser.newtabpage.activity-stream.showSponsored" = false;
+                    "browser.newtabpage.activity-stream.showSponsoredTopSites" = false;
+                    "browser.newtabpage.activity-stream.telemetry" = false;
+                    "browser.newtabpage.activity-stream.topSitesRows" = 2;
+                    "datareporting.healthreport.uploadEnabled" = false;
+                    "font.name.monospace.x-western" = "Fira Code";
+                    "layout.css.prefers-color-scheme.content-override" = 0;
+                };
                 bookmarks = [
                     {
                         name = "NixOS search";

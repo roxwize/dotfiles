@@ -27,6 +27,7 @@
                 isDefault = true;
                 extensions = with pkgs.nur.repos.rycee.firefox-addons; [
                     canvasblocker
+                    catppuccin-gh-file-explorer
                     privacy-badger
                     stylus
                     ublock-origin

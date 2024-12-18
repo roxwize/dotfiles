@@ -1,8 +1,5 @@
-{ pkgs, inputs, ... }:
+{ pkgs, ... }:
 {
-    # FIXME is this the correct way to manage this??
-    nixpkgs.overlays = [ inputs.nur.overlays.default ];
-
     home = {
         stateVersion = "24.11";
         username = "rae";

@@ -20,6 +20,7 @@
                 specialArgs = { inherit inputs; };
                 modules = [
                     ./hosts/qemu/configuration.nix
+                    (import ./overlays)
                 ];
             };
         };
@@ -27,7 +28,10 @@
         homeConfigurations.rae = home-manager.lib.homeManagerConfiguration {
             pkgs = nixpkgs.legacyPackages.x86_64-linux;
             extraSpecialArgs = { inherit inputs; };
-            modules = [ ./home.nix ];
+            modules = [
+                ./home.nix
+                (import ./overlays)
+            ];
         };
     };
 }

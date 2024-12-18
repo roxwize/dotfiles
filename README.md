@@ -18,4 +18,12 @@ sudo nixos-rebuild switch --flake '.#[hostname]'
 
 ## openbox hotkeys
 
-I Dont Remember
+**Ctrl+Right click** on a titlebar to open the window's menu<br>
+**Alt+C** over a window to do the same thing
+
+**Alt+D** to open the application menu
+
+**Alt+Left arrow** to go to the previous desktop
+**Alt+Right arrow** to go to the next desktop
+**Alt+[1-4]** to go to a specific desktop
+

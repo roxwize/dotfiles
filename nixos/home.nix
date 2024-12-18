@@ -39,6 +39,10 @@
                         name = "Home Manager search";
                         url = "https://home-manager-options.extranix.com/";
                     }
+                    {
+                        name = "NUR search";
+                        url = "https://nur.nix-community.org/";
+                    }
                 ];
             };
         };

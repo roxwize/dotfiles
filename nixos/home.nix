@@ -1,5 +1,8 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 {
+    # FIXME is this the correct way to manage this??
+    nixpkgs.overlays = [ inputs.nur.overlays.default ];
+
     home = {
         stateVersion = "24.11";
         username = "rae";
@@ -22,6 +25,21 @@
             enable = true;
             profiles.default = {
                 isDefault = true;
+                extensions = with pkgs.nur.repos.rycee.firefox-addons; [
+                    privacy-badger
+                    stylus
+                    ublock-origin
+                ];
+                bookmarks = [
+                    {
+                        name = "NixOS search";
+                        url = "https://search.nixos.org/packages";
+                    }
+                    {
+                        name = "Home Manager search";
+                        url = "https://home-manager-options.extranix.com/";
+                    }
+                ];
             };
         };
         git = {

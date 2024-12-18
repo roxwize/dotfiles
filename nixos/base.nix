@@ -5,11 +5,7 @@
     ];
 
     nix.settings.experimental-features = ["nix-command" "flakes"];
-
-    nixpkgs = {
-        config.allowUnfree = true;
-        overlays = [ inputs.nur.overlay ];
-    };
+    nixpkgs.config.allowUnfree = true;
 
     networking.networkmanager.enable = true;
 

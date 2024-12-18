@@ -1,11 +1,15 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, inputs, ... }:
 {
     imports = [
         ./packages.nix
     ];
 
     nix.settings.experimental-features = ["nix-command" "flakes"];
-    nixpkgs.config.allowUnfree = true;
+
+    nixpkgs = {
+        config.allowUnfree = true;
+        overlays = [ inputs.nur.overlay ];
+    };
 
     networking.networkmanager.enable = true;
 

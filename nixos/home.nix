@@ -40,6 +40,20 @@
                     "browser.newtabpage.activity-stream.showSponsoredTopSites" = false;
                     "browser.newtabpage.activity-stream.telemetry" = false;
                     "browser.newtabpage.activity-stream.topSitesRows" = 2;
+                    "browser.newtabpage.pinned" = [
+                        {
+                            url = "https://discord.com/app/";
+                            label = "Discord";
+                        }
+                        {
+                            url = "https://pikidiary.lol/";
+                            label = "PikiDiary";
+                        }
+                        {
+                            url = "https://en.wikipedia.org/";
+                            label = "Wikipedia";
+                        }
+                    ];
                     "datareporting.healthreport.uploadEnabled" = false;
                     "font.name.monospace.x-western" = "Fira Code";
                     "layout.css.prefers-color-scheme.content-override" = 0;

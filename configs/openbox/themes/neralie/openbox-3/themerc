@@ -40,11 +40,11 @@ window.inactive.button.pressed.bg: Solid Flat
 window.inactive.button.pressed.bg.color: #d9eafd
 
 # Menus
-menu.separator.color: #f8fafc
+menu.separator.color: #23262a
 
 menu.items.bg: Solid Flat
 menu.items.bg.color: #9aa6b2
-menu.items.text.color: #000000
+menu.items.text.color: #23262a
 
 menu.items.active.bg: Solid Flat
 menu.items.active.bg.color: #bcccdc

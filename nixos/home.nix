@@ -26,7 +26,7 @@
         kitty = {
             enable = true;
             font.name = "Fira Code";
-            theme = "Mayukai";
+            themeFile = "mayukai";
         };
         neovim = {
             enable = true;
@@ -47,10 +47,10 @@
         polybar = {
             enable = true;
             script = "polybar &";
-            settings = 
+            settings =
             let
                 background = "#0000";
-                foreground = "#fff";
+                foreground = "#030910";
                 color0 = "#d9eafd";
                 color1 = "#bcccdc";
                 color2 = "#9aa6b2";
@@ -98,9 +98,10 @@
                     label-active-background = color2;
                     label-active-padding = 1;
                     label-occupied = "%name%";
+                    label-occupied-foreground = "#fff";
                     label-occupied-padding = 1;
                     label-empty = "%name%";
-                    label-empty-foreground = foreground;
+                    label-empty-foreground = "#fff";
                     label-empty-padding = 1;
                     label-urgent = "%name%";
                     label-urgent-background = color0;

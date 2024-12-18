@@ -11,7 +11,7 @@ theoretically:
 ```sh
 git clone https://github.com/roxwize/dotfiles
 cd dotfiles/nixos
-sudo nixos-rebuild switch --flake '.#[hostname]'
+just switch [hostname]
 ```
 
 # usage
@@ -23,7 +23,7 @@ sudo nixos-rebuild switch --flake '.#[hostname]'
 
 **Alt+D** to open the application menu
 
-**Alt+Left arrow** to go to the previous desktop
-**Alt+Right arrow** to go to the next desktop
+**Alt+Left arrow** to go to the previous desktop<br>
+**Alt+Right arrow** to go to the next desktop<br>
 **Alt+[1-4]** to go to a specific desktop
 

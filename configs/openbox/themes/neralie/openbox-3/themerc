@@ -44,7 +44,8 @@ menu.separator.color: #f8fafc
 
 menu.items.bg: Solid Flat
 menu.items.bg.color: #9aa6b2
+menu.items.text.color: #000000
 
 menu.items.active.bg: Solid Flat
 menu.items.active.bg.color: #bcccdc
-menu.items.active.text.color: #f8fafc
+menu.items.active.text.color: #000000

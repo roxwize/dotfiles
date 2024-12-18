@@ -3,6 +3,7 @@
     home = {
         stateVersion = "24.11";
         username = "rae";
+        homeDirectory = "/home/rae";
         sessionVariables = {
             BROWSER = "firefox";
             TERM = "kitty";
@@ -25,7 +26,7 @@
         kitty = {
             enable = true;
             font.name = "Fira Code";
-            theme = "Aquarium Light"; # or Base2Tone Meadow Dark
+            theme = "Mayukai";
         };
         neovim = {
             enable = true;
@@ -60,7 +61,7 @@
                 };
                 "bar/top" = {
                     background = background;
-                    foreground = "#000";
+                    foreground = foreground;
                     width = "100%";
                     height = 32;
                     font-0 = "GohuFont:style=Regular:size=14;3";
@@ -99,6 +100,7 @@
                     label-occupied = "%name%";
                     label-occupied-padding = 1;
                     label-empty = "%name%";
+                    label-empty-foreground = foreground;
                     label-empty-padding = 1;
                     label-urgent = "%name%";
                     label-urgent-background = color0;
@@ -133,7 +135,7 @@
             dock-items = ["firefox.dockitem" "io.elementary.terminal.dockitem" "codium.dockitem" "io.elementary.settings.dockitem"];
         };
         "org/gnome/desktop/background" = {
-            picture-uri = "file://" + builtins.toString /home/rae/.dotfiles/assets/wallpapers/kendal.png;
+            picture-uri = "file://" + builtins.toString /home/rae/.dotfiles/assets/wallpapers/current;
         };
         "org/gnome/desktop/wm/preferences" = {
             button-layout = ":minimize,maximize,close";

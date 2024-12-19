@@ -20,4 +20,6 @@
 [ ] You could try making a GTK4 application that lets you manage/view packages in packages.nix
 [ ] Get Rust to work (rustc + cargo is fine but only rustup provides RLS, but, um,)
  +- [ ] vimPlugins.coc-rls
+ +- [ ] Get rust-analyzer binaries from https://github.com/rust-lang/rust-analyzer
 [ ] See if you can use nixpkgs vscode extensions with codium
+[ ] Get language servers to work with Neovim

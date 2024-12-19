@@ -15,12 +15,17 @@
         maim
         monitor
         xclip
-        yt-dlp
         zellij
+        # internet
+        nicotine-plus
+        vesktop
+        yt-dlp
         # development
         just
         ## language servers
         nil
+        # games
+        prismlauncher
         # text editors
         neovim
         vscodium
@@ -37,6 +42,7 @@
         posy-cursors
         pantheon.elementary-gtk-theme
         # misc
+        gimp
         uxn
     ];
 }

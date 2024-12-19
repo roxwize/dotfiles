@@ -44,9 +44,6 @@
                 };
             };
         };
-        # desktopManager = {
-        #     plasma6.enable = true;
-        # };
 
         # Touchpad support
         libinput.enable = true;
@@ -59,6 +56,8 @@
         };
         # CUPS printing
         printing.enable = true;
+        # Miscellaneous
+        flatpak.enable = true;
     };
 
     fonts = {

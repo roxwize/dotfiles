@@ -4,7 +4,7 @@
         # development
         just
         ## language servers
-        nil
+        nil # Nix
         # games
         prismlauncher
         # graphics

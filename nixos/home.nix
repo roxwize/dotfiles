@@ -9,7 +9,10 @@
             TERM = "kitty";
         };
         file = {
-            ".e16".source = ../configs/e16;
+            ".e16" = {
+                source = ../configs/e16;
+                recursive = true;
+            };
             ".twmrc".source = ../configs/twm;
             ".local/share/themes".source = ../configs/openbox/themes;
         };

@@ -56,7 +56,7 @@
         };
         # CUPS printing
         printing.enable = true;
-        # Miscellaneous
+        # Flatpak
         flatpak.enable = true;
     };
 

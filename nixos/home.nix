@@ -211,6 +211,10 @@
     };
 
     dconf.settings = {
+        "io/elementary/code/settings" = {
+            font = "Fira Code Light 10";
+            use-system-font = false;
+        };
         "net/launchpad/plank/docks/dock1" = {
             dock-items = [
                 "gala-multitaskingview.dockitem"

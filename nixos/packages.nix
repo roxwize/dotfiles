@@ -1,6 +1,25 @@
 { pkgs, ... }:
 {
     environment.systemPackages = with pkgs; [
+        # development
+        just
+        ## language servers
+        nil
+        # games
+        prismlauncher
+        # graphics
+        gimp
+        krita
+        # gtk
+        posy-cursors
+        pantheon.elementary-gtk-theme
+        # internet
+        nicotine-plus
+        vesktop
+        yt-dlp
+        # misc
+        gimp
+        uxn
         # system tools
         bat
         btop
@@ -16,16 +35,6 @@
         monitor
         xclip
         zellij
-        # internet
-        nicotine-plus
-        vesktop
-        yt-dlp
-        # development
-        just
-        ## language servers
-        nil
-        # games
-        prismlauncher
         # text editors
         neovim
         vscodium
@@ -38,11 +47,5 @@
         xdotool
         xorg.xev
         xorg.xwininfo
-        # gtk
-        posy-cursors
-        pantheon.elementary-gtk-theme
-        # misc
-        gimp
-        uxn
     ];
 }

@@ -25,6 +25,7 @@
             enable = true;
             xkb.layout = "us";
             windowManager = {
+                e16.enable = true;
                 openbox.enable = true;
                 twm.enable = true;
             };

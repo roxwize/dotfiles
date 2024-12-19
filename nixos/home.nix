@@ -9,6 +9,7 @@
             TERM = "kitty";
         };
         file = {
+            ".e16".source = ../configs/e16;
             ".twmrc".source = ../configs/twm;
             ".local/share/themes".source = ../configs/openbox/themes;
         };

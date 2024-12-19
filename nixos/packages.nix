@@ -18,7 +18,6 @@
         vesktop
         yt-dlp
         # misc
-        gimp
         uxn
         # system tools
         bat

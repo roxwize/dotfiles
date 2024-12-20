@@ -9,6 +9,7 @@
             luasnip
             nvim-cmp
             nvim-lspconfig
+            rustaceanvim
             vim-just
             vim-sleuth
             vim-wakatime

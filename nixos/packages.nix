@@ -2,7 +2,7 @@
 {
     environment.systemPackages = with pkgs; [
         # development
-        (fenix.default.withComponents [ "cargo" "rustc" ])
+        (fenix.default.withComponents [ "cargo" "rustc" "rust-src" ])
         gtk4
         just
         nodejs_23

@@ -2,9 +2,12 @@
 {
     environment.systemPackages = with pkgs; [
         # development
+        (fenix.default.withComponents [ "cargo" "rustc" ])
         just
+        nodejs_23
         ## language servers
-        nil # Nix
+        nil           # Nix
+        rust-analyzer # Rust
         # games
         prismlauncher
         # graphics

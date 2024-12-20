@@ -7,8 +7,14 @@
             url = "github:nix-community/home-manager/release-24.11";
             inputs.nixpkgs.follows = "nixpkgs";
         };
+        # Nix User Repository
         nur = {
             url = "github:nix-community/NUR";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
+        # Rust toolchains
+        fenix = {
+            url = "github:nix-community/fenix";
             inputs.nixpkgs.follows = "nixpkgs";
         };
     };

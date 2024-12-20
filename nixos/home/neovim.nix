@@ -50,7 +50,7 @@
             -- lspconfig
             local lc = require("lspconfig")
 
-            lc.nix_nil.setup {
+            lc.nil_ls.setup {
                 autostart = true,
                 capabilities = caps,
                 cmd = { "nil" }

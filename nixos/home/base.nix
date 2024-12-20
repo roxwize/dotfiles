@@ -10,19 +10,19 @@
         };
         file = {
             ".e16/backgrounds" = {
-                source = ../assets/wallpapers;
+                source = ../../assets/wallpapers;
                 recursive = true;
             };
             ".e16/themes" = {
-                source = ../assets/e16-themes;
+                source = ../../assets/e16-themes;
                 recursive = true;
             };
-            ".twmrc".source = ../configs/twm;
-            ".local/share/themes".source = ../configs/openbox/themes;
+            ".twmrc".source = ../../configs/twm;
+            ".local/share/themes".source = ../../configs/openbox/themes;
         };
     };
     xdg.configFile = {
-        "openbox".source = ../configs/openbox;
+        "openbox".source = ../../configs/openbox;
     };
 
     programs = {

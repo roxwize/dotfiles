@@ -2,7 +2,7 @@
 {
     imports = [
         ./hardware-configuration.nix
-        ../../base.nix
+        ../base.nix
     ];
 
     boot.loader = {

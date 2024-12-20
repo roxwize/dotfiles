@@ -44,6 +44,7 @@
                 jnoortheen.nix-ide
                 redhat.vscode-xml
                 rust-lang.rust-analyzer
+                skellock.just
                 wakatime.vscode-wakatime
             ];
         };

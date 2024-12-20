@@ -5,6 +5,7 @@
         (fenix.default.withComponents [ "cargo" "rustc" ])
         gtk4
         just
+        meson
         nodejs_23
         vala
         ## language servers

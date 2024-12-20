@@ -3,6 +3,7 @@
     environment.systemPackages = with pkgs; [
         # development
         (fenix.default.withComponents [ "cargo" "rustc" ])
+        gcc
         gtk4
         just
         meson

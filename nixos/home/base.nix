@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
     home = {
         stateVersion = "24.11";
@@ -35,6 +35,17 @@
             enable = true;
             font.name = "Fira Code";
             themeFile = "mayukai";
+        };
+        vscode = {
+            enable = true;
+            package = pkgs.vscodium;
+            extensions = with pkgs.vscode-extensions; [
+                editorconfig.editorconfig
+                jnoortheen.nix-ide
+                redhat.vscode-xml
+                rust-lang.rust-analyzer
+                wakatime.vscode-wakatime
+            ];
         };
     };
 

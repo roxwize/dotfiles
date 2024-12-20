@@ -9,6 +9,7 @@
         nodejs_23
         vala
         ## language servers
+        mesonlsp             # Meson
         nil                  # Nix
         rust-analyzer        # Rust
         vala-language-server # Vala

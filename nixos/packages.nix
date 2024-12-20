@@ -3,11 +3,14 @@
     environment.systemPackages = with pkgs; [
         # development
         (fenix.default.withComponents [ "cargo" "rustc" ])
+        gtk4
         just
         nodejs_23
+        vala
         ## language servers
-        nil           # Nix
-        rust-analyzer # Rust
+        nil                  # Nix
+        rust-analyzer        # Rust
+        vala-language-server # Vala
         # games
         prismlauncher
         # graphics

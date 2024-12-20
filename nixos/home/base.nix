@@ -22,6 +22,10 @@
         };
     };
     xdg.configFile = {
+        "nvim" = {
+            source = ../../configs/neovim;
+            recursive = true;
+        };
         "openbox".source = ../../configs/openbox;
     };
 

@@ -13,7 +13,7 @@
             vim-wakatime
         ];
         extraLuaConfig = ''
-            require("lsp.lua")
+            require("./lsp.lua")
 
             vim.opt.tabstop = 4
             vim.opt.softtabstop = 4

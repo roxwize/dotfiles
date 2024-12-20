@@ -8,6 +8,7 @@
         just
         meson
         nodejs_23
+        pkg-config
         vala
         ## language servers
         mesonlsp             # Meson

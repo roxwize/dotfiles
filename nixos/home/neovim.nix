@@ -18,6 +18,8 @@
             vim.opt.softtabstop = 4
             vim.opt.shiftwidth = 4
             vim.opt.expandtab = true
+            
+            vim.opt.number = true
 
             -- cmp
             local cmp = require("cmp")
@@ -28,8 +30,8 @@
                     end
                 },
                 mapping = {
-                    ['<C-p>'] = cmp.mapping.select_prev_item(),
-                    ['<C-n>'] = cmp.mapping.select_next_item(),
+                    ['<C-up>'] = cmp.mapping.select_prev_item(),
+                    ['<C-down>'] = cmp.mapping.select_next_item(),
                     ['<C-space>'] = cmp.mapping.complete(),
                     ['<C-e>'] = cmp.mapping.close(),
                     ['<tab>'] = cmp.mapping.confirm { select = true }

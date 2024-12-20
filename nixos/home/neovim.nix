@@ -5,6 +5,7 @@
         vimAlias = true;
         plugins = with pkgs.vimPlugins; [
             cmp_luasnip
+            cmp-nvim-lsp
             luasnip
             nvim-cmp
             nvim-lspconfig

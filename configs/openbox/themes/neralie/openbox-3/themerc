@@ -18,7 +18,7 @@ window.active.title.bg: Solid Flat
 window.active.title.bg.color: #bcccdc
 
 window.active.label.bg: Parentrelative
-window.active.label.text.color: #545c63
+window.active.label.text.color: #2c3135
 
 window.active.button.unpressed.bg: Solid Flat
 window.active.button.unpressed.bg.color: #d9eafd
@@ -40,12 +40,12 @@ window.inactive.button.pressed.bg: Solid Flat
 window.inactive.button.pressed.bg.color: #d9eafd
 
 # Menus
-menu.separator.color: #545c63
+menu.separator.color: #2c3135
 
 menu.items.bg: Solid Flat
 menu.items.bg.color: #bcccdc
-menu.items.text.color: #545c63
+menu.items.text.color: #2c3135
 
 menu.items.active.bg: Solid Flat
 menu.items.active.bg.color: #d9eafd
-menu.items.active.text.color: #626a73
+menu.items.active.text.color: #34393f

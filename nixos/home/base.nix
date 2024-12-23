@@ -26,6 +26,12 @@
     };
 
     programs = {
+        fish = {
+            enable = true;
+            shellInit = ''
+                set -g fish_greeting
+            '';
+        };
         git = {
             enable = true;
             userName = "roxwize";

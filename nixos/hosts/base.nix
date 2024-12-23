@@ -48,7 +48,19 @@
         # Touchpad support
         libinput.enable = true;
         # OpenSSH
-        openssh.enable = true;
+        openssh = {
+            enable = true;
+            knownHosts = {
+                "git.sr.ht" = {
+                    hostNames = [ "git.sr.ht" ];
+                    publicKey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMZvRd4EtM7R+IHVMWmDkVU3VLQTSwQDSAvW0t2Tkj60";
+                };
+                "github.com" = {
+                    hostNames = [ "github.com" ];
+                    publicKey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOMqqnkVzrm0SdG6UOoqKLsabgH5C9okWi0dh2l9GKJl";
+                };
+            };
+        };
         # Sound
         pipewire = {
             enable = true;

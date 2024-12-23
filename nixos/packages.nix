@@ -1,5 +1,9 @@
 { pkgs, ... }:
 {
+    # I'm not sure if you actually need stuff like GTK4 to be
+    # in here when it's really only used with nix-shell and the
+    # amount of time it saves during installation is probably
+    # only like a few seconds
     environment.systemPackages = with pkgs; [
         # development
         (fenix.default.withComponents [ "cargo" "rustc" ])

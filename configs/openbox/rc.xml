@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <openbox_config xmlns="http://openbox.org/3.4/rc" xmlns:xi="http://www.w3.org/2001/XInclude">
     <resistance>
-        <strength>20</strength>
-        <screen_edge_strength>40</screen_edge_strength>
+        <strength>40</strength>
+        <screen_edge_strength>80</screen_edge_strength>
     </resistance>
     <theme>
         <name>neralie</name>

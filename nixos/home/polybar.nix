@@ -26,6 +26,7 @@
                 module-margin = 1;
                 offset-y = 14;
                 padding = 2;
+                bottom = true;
             };
 
             "module/cpu" = {
@@ -50,10 +51,10 @@
                 type = "internal/xworkspaces";
                 enable-scroll = false;
                 label-active = "%name%";
-                label-active-background = color2;
+                label-active-background = color1;
                 label-active-padding = 1;
                 label-occupied = "%name%";
-                label-occupied-foreground = "#fff";
+                label-occupied-background = color2;
                 label-occupied-padding = 1;
                 label-empty = "%name%";
                 label-empty-foreground = "#fff";
@@ -78,7 +79,7 @@
                 type = "internal/date";
                 date = "%b %d %y";
                 time = "%I:%M %p";
-                label-background = color0;
+                label-background = color2;
                 label-padding = 2;
                 interval = 5;
             };

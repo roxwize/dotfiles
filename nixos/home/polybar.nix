@@ -21,9 +21,8 @@
                 width = "100%";
                 height = 32;
                 font-0 = "GohuFont:style=Regular:size=14;3";
-                modules-left = "cpu memory";
-                modules-center = "xworkspaces";
-                modules-right = "battery audio date";
+                modules-left = "xworkspaces";
+                modules-right = "cpu memory date";
                 module-margin = 1;
                 offset-y = 14;
                 padding = 2;

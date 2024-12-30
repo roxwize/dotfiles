@@ -19,6 +19,36 @@ nixos-install --flake './nixos#[hostname]'
 
 ## openbox hotkeys
 
+```
+A-d
+    Open application menu
+A-c
+    Open client (window) menu
+
+A-Enter
+    Iconify window
+A-Up
+    Raise window
+A-Down
+    Lower window
+CA-x
+    Close window
+CA-m
+    Maximize window
+
+CA-Enter
+    Open terminal (kitty)
+CAS-r
+    Restart
+
+A-Left
+    Switch to previous workspace
+A-Right
+    Switch to next workspace
+```
+
+or:
+
 **Alt+Left click** and drag over a window to move it<br>
 **Alt+Right click** and drag over a window to resize it<br>
 **Ctrl+Right click** on titlebar to open its window's menu<br>

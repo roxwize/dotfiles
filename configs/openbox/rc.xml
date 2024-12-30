@@ -51,11 +51,35 @@
                 <menu>client-menu</menu>
             </action>
         </keybind>
-        <keybind key="A-Left">
-            <action name="GoToDesktop">
-                <to>previous</to>
+
+        <keybind key="A-Return">
+            <action name="Iconify"/>
+        </keybind>
+        <keybind key="A-Up">
+            <action name="Raise"/>
+        </keybind>
+        <keybind key="A-Down">
+            <action name="Lower"/>
+        </keybind>
+        <keybind key="C-A-x">
+            <action name="Close"/>
+        </keybind>
+        <keybind key="C-A-m">
+            <action name="ToggleMaximize"/>
+        </keybind>
+
+        <keybind key="C-A-Return">
+            <action name="Execute">
+                <command>kitty</command>
             </action>
         </keybind>
+        <keybind key="C-A-S-r">
+            <action name="Execute">
+                <command>shutdown -r now</command>
+                <prompt>Really shutdown the computer?</prompt>
+            </action>
+        </keybind>
+
         <keybind key="A-Right">
             <action name="GoToDesktop">
                 <to>next</to>

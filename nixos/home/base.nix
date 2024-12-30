@@ -44,7 +44,7 @@
         };
         rofi = {
             enable = true;
-            font = "GohuFont 14";
+            font = "Fira Code Light 11";
             terminal = "${pkgs.kitty}/bin/kitty";
         };
         vscode = {

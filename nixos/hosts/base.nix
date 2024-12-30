@@ -74,12 +74,20 @@
 
     fonts = {
         enableDefaultPackages = true;
+        fontconfig = {
+            enable = true;
+            defaultFonts = {
+                monospace = [ "Fira Code Light" ];
+            };
+            subpixel.rgba = "rgb";
+        };
         packages = with pkgs; [
+            fira-code
+            gohufont
             noto-fonts
             noto-fonts-cjk-sans
             noto-fonts-emoji
-            fira-code
-            gohufont
+            twemoji-color-font
         ];
     };
 

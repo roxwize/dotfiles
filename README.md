@@ -1,3 +1,5 @@
+![image](https://github.com/user-attachments/assets/f0f66913-2616-4a3c-ac7f-55db6fc27116)
+
 this is rae's nixOS config meow
 
 - **display manager**: SDDM

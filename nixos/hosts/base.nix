@@ -70,6 +70,8 @@
         flatpak.enable = true;
     };
 
+    xdg.portal.enable = true;
+
     fonts = {
         enableDefaultPackages = true;
         fontconfig = {

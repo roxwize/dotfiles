@@ -22,8 +22,8 @@ nixos-install --flake './nixos#[hostname]'
 **Ctrl+Right click** on a titlebar to open the window's menu<br>
 **Alt+C** over a window to do the same thing
 
-**Middle click** on desktop to open menu
-**Alt+Middle click** over a window to do the same thing
+**Right click** on desktop to open menu
+**Alt+Right click** over a window to do the same thing
 **Alt+D** to open the application launcher
 
 **Alt+Left arrow** to go to the previous desktop<br>

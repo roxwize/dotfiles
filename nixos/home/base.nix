@@ -42,6 +42,11 @@
             font.name = "Fira Code";
             themeFile = "mayukai";
         };
+        rofi = {
+            enable = true;
+            font = "GohuFont 14";
+            terminal = "${pkgs.kitty}/bin/kitty";
+        };
         vscode = {
             enable = true;
             package = pkgs.vscodium;

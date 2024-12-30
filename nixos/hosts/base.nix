@@ -26,12 +26,8 @@
             xkb.layout = "us";
             windowManager = {
                 cwm.enable = true;
-                e16.enable = true;
                 openbox.enable = true;
                 twm.enable = true;
-            };
-            desktopManager = {
-                pantheon.enable = true;
             };
         };
         displayManager = {

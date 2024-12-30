@@ -62,6 +62,7 @@
         xorg.xwininfo
         # misc
         catppuccin-sddm
+        steam-run
         uxn
     ];
 }

@@ -31,8 +31,6 @@
         nicotine-plus
         vesktop
         yt-dlp
-        # misc
-        uxn
         # system tools
         alsa-utils
         bat
@@ -62,5 +60,8 @@
         xdotool
         xorg.xev
         xorg.xwininfo
+        # misc
+        catppuccin-sddm
+        uxn
     ];
 }

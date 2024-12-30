@@ -42,6 +42,7 @@
                         Session = "none+openbox";
                     };
                 };
+                theme = "catppuccin-mocha";
             };
         };
 

@@ -34,6 +34,7 @@
         # misc
         uxn
         # system tools
+        alsa-utils
         bat
         btop
         dconf-editor

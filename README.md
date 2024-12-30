@@ -10,9 +10,9 @@ theoretically:
 
 ```sh
 nix-shell -p git just
-git clone https://github.com/roxwize/dotfiles
-cd dotfiles/nixos
-just switch [hostname]
+git clone https://git.sr.ht/~roxwize/.dotfiles
+cd .dotfiles/
+nixos-install --flake './nixos#[hostname]'
 ```
 
 # usage
@@ -22,7 +22,9 @@ just switch [hostname]
 **Ctrl+Right click** on a titlebar to open the window's menu<br>
 **Alt+C** over a window to do the same thing
 
-**Alt+D** to open the application menu
+**Middle click** on desktop to open menu
+**Alt+Middle click** over a window to do the same thing
+**Alt+D** to open the application launcher
 
 **Alt+Left arrow** to go to the previous desktop<br>
 **Alt+Right arrow** to go to the next desktop<br>

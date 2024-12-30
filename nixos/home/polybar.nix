@@ -65,6 +65,8 @@
             };
             "module/audio" = {
                 type = "internal/alsa";
+                master-soundcard = "hw:0";
+                master-mixer = "Master";
                 format-volume = "<label-volume>";
                 format-muted = "<label-muted>";
                 label-volume = "SND: %percentage%%";

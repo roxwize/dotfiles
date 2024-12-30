@@ -95,6 +95,11 @@
             <mousebind button="A-Right" action="Drag">
                 <action name="Resize"/>
             </mousebind>
+            <mousebind button="A-Middle" action="Click">
+                <action name="ShowMenu">
+                    <menu>root</menu>
+                </action>
+            </mousebind>
         </context>
 
         <context name="Titlebar">
@@ -157,7 +162,7 @@
         </context>
 
         <context name="Root">
-            <mousebind button="Right" action="Click">
+            <mousebind button="Middle" action="Click">
                 <action name="ShowMenu">
                     <menu>root</menu>
                 </action>

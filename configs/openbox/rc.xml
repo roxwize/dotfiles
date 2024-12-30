@@ -29,7 +29,7 @@
         </font>
     </theme>
     <desktops>
-        <number>4</number>
+        <number>8</number>
         <firstdesk>1</firstdesk>
         <popupTime>0</popupTime>
         <names>
@@ -37,6 +37,10 @@
             <name>2</name>
             <name>3</name>
             <name>4</name>
+            <name>5</name>
+            <name>6</name>
+            <name>7</name>
+            <name>8</name>
         </names>
     </desktops>
     <keyboard>

@@ -69,8 +69,8 @@
                 master-mixer = "Master";
                 format-volume = "<label-volume>";
                 format-muted = "<label-muted>";
-                label-volume = "SND: %percentage%%";
-                label-muted = "SND: 0%";
+                label-volume = "VOL: %percentage%%";
+                label-muted = "VOL: 0%";
                 label-volume-background = color0;
                 label-volume-padding = 2;
                 label-muted-background = color0;

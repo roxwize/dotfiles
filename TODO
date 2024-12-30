@@ -26,3 +26,4 @@
 [ ] Get language servers to work with Neovim
 [ ] Theme your SDDM (you should make one yourself ;w;;;)
 [ ] Maybe convert some of your configuration files and themes into derivations
+[ ] Add polybar root filesystem usage module??

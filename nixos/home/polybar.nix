@@ -65,10 +65,15 @@
             };
             "module/audio" = {
                 type = "internal/alsa";
-                format-volume = "SND: <label-volume>";
-                label-volume = "%percentage%%";
-                label-muted = "0%";
-                label-background = color0;
+                format-volume = "<label-volume>";
+                format-muted = "<label-muted>";
+                label-volume = "SND: %percentage%%";
+                label-muted = "SND: 0%";
+                label-volume-background = color0;
+                label-volume-padding = 2;
+                label-muted-background = color0;
+                label-muted-padding = 2;
+                click-right = "pavucontrol";
             };
             "module/battery" = {
                 type = "internal/battery";

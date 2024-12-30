@@ -77,6 +77,7 @@
         fontconfig = {
             enable = true;
             defaultFonts = {
+                emoji = [ "Twitter Color Emoji" "Noto Color Emoji" ];
                 monospace = [ "Fira Code Light" ];
             };
             subpixel.rgba = "rgb";

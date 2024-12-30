@@ -39,6 +39,8 @@ Window actions
         Raise
     A-Down
         Lower
+    A-[hjkl]
+        Move
     CA-x
         Close
     CA-f
@@ -51,6 +53,8 @@ Workspace management
         Switch to previous workspace
     A-Right
         Switch to next workspace
+    A-[1234]
+        Switch to specific workspace
 
 Miscellaneous
     CA-Return

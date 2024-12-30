@@ -46,6 +46,16 @@
                 <command>rofi -show combi -modes combi -combi-modes "window,drun,run"</command>
             </action>
         </keybind>
+        <keybind key="A-question">
+            <action name="Execute">
+                <command>rofi -show run -modes run</command>
+            </action>
+        </keybind>
+        <keybind key="A-period">
+            <action name="Execute">
+                <command>rofi -show ssh -modes ssh</command>
+            </action>
+        </keybind>
         <keybind key="A-c">
             <action name="ShowMenu">
                 <menu>client-menu</menu>
@@ -64,8 +74,37 @@
         <keybind key="C-A-x">
             <action name="Close"/>
         </keybind>
+        <keybind key="C-A-f">
+            <action name="ToggleFullscreen"/>
+        </keybind>
         <keybind key="C-A-m">
             <action name="ToggleMaximize"/>
+        </keybind>
+
+
+        <keybind key="A-h">
+            <action name="MoveRelative">
+                <x>-5</x>
+                <y>0</y>
+            </action>
+        </keybind>
+        <keybind key="A-j">
+            <action name="MoveRelative">
+                <x>0</x>
+                <y>5</y>
+            </action>
+        </keybind>
+        <keybind key="A-k">
+            <action name="MoveRelative">
+                <x>0</x>
+                <y>-5</y>
+            </action>
+        </keybind>
+        <keybind key="A-l">
+            <action name="MoveRelative">
+                <x>5</x>
+                <y>0</y>
+            </action>
         </keybind>
 
         <keybind key="C-A-Return">

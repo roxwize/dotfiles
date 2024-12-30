@@ -46,6 +46,7 @@
         kitty
         maim
         monitor
+        pavucontrol
         xclip
         zellij
         # text editors

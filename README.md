@@ -19,8 +19,15 @@ nixos-install --flake './nixos#[hostname]'
 
 ## openbox hotkeys
 
-**Ctrl+Right click** on a titlebar to open the window's menu<br>
-**Alt+C** over a window to do the same thing
+**Alt+Left click** and drag over a window to move it<br>
+**Alt+Right click** and drag over a window to resize it<br>
+**Ctrl+Right click** on titlebar to open its window's menu<br>
+**Alt+C** over a window to do the same thing<br>
+
+**Double click titlebar** to maximize its window completely<br>
+**Left click maximize button** to maximize completely<br>
+**Middle click maximize button** to maximize vertically<br>
+**Right click maximize button** to maximize horizontally
 
 **Right click** on desktop to open menu<br>
 **Alt+Right click** over a window to do the same thing<br>

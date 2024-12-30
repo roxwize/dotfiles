@@ -37,7 +37,7 @@
         rofi = {
             enable = true;
             font = "Fira Code Light 11";
-            terminal = "${pkgs.kitty}/bin/kitty";
+            terminal = "kitty";
         };
         vscode = {
             enable = true;
@@ -51,6 +51,10 @@
                 wakatime.vscode-wakatime
             ];
         };
+    };
+
+    services = {
+        mpris-proxy.enable = true;
     };
 
     gtk = {

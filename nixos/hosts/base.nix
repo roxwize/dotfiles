@@ -20,7 +20,7 @@
     };
 
     services = {
-        # X11
+        # Xorg
         xserver = {
             enable = true;
             xkb.layout = "us";
@@ -45,7 +45,6 @@
 
         # Touchpad support
         libinput.enable = true;
-        # OpenSSH
         openssh = {
             enable = true;
             knownHosts = {
@@ -66,8 +65,16 @@
         };
         # CUPS printing
         printing.enable = true;
-        # Flatpak
         flatpak.enable = true;
+        blueman.enable = true;
+    };
+
+    hardware = {
+        bluetooth = {
+            enable = true;
+            powerOnBoot = true;
+        };
+        pulseaudio.enable = true;
     };
 
     xdg.portal = {

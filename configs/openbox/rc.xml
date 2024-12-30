@@ -119,6 +119,11 @@
             </action>
         </keybind>
 
+        <keybind key="A-Left">
+            <action name="GoToDesktop">
+                <to>previous</to>
+            </action>
+        </keybind>
         <keybind key="A-Right">
             <action name="GoToDesktop">
                 <to>next</to>

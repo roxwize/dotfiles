@@ -1,7 +1,7 @@
-[ ] Get PulseAudio sound controls on polybar to work
+[x] Get PulseAudio sound controls on polybar to work
 [x] Add desktop switching to windows (context menu?)
-[ ] Decide on an icon theme (flat-remix-icon-theme or pantheon.elementary-icon-theme?)
-[ ] Use XDG???
+[x] Decide on an icon theme (flat-remix-icon-theme or pantheon.elementary-icon-theme?)
+[x] Use XDG???
 [x] Add Mousepad (xfce) maybe
 [ ] Make setting your wallpaper like. Global across everything because you
  |  do it with hsetroot on Openbox startup but not anywhere else (minus
@@ -22,8 +22,9 @@
  +- [ ] vimPlugins.coc-rls
  +- [x] Get rust-analyzer binaries from https://github.com/rust-lang/rust-analyzer
  +- [ ] rust-analyzer doesn't fucking work (and you should probably use mkShell for this)
-[ ] See if you can use nixpkgs vscode extensions with codium
+[x] See if you can use nixpkgs vscode extensions with codium
 [ ] Get language servers to work with Neovim
 [ ] Theme your SDDM (you should make one yourself ;w;;;)
 [ ] Maybe convert some of your configuration files and themes into derivations
 [ ] Add polybar root filesystem usage module??
+[ ] Test out bluetooth (https://nixos.wiki/wiki/Bluetooth)

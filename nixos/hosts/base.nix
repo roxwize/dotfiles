@@ -45,6 +45,21 @@
 
         # Touchpad support
         libinput.enable = true;
+        # Sound
+        pipewire = {
+            enable = true;
+            alsa.enable = true;
+            pulse.enable = true;
+        };
+        # TODO
+        mpd = {
+            enable = true;
+        };
+        # CUPS printing
+        printing.enable = true;
+        # misc
+        flatpak.enable = true;
+        blueman.enable = true;
         openssh = {
             enable = true;
             knownHosts = {
@@ -58,16 +73,6 @@
                 };
             };
         };
-        # Sound
-        pipewire = {
-            enable = true;
-            alsa.enable = true;
-            pulse.enable = true;
-        };
-        # CUPS printing
-        printing.enable = true;
-        flatpak.enable = true;
-        blueman.enable = true;
     };
 
     hardware = {

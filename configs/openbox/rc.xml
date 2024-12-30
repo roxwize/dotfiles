@@ -46,7 +46,7 @@
                 <command>rofi -show combi -modes combi -combi-modes "window,drun,run"</command>
             </action>
         </keybind>
-        <keybind key="A-question">
+        <keybind key="A-S-question">
             <action name="Execute">
                 <command>rofi -show run -modes run</command>
             </action>

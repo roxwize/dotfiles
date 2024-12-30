@@ -28,3 +28,4 @@
 [ ] Maybe convert some of your configuration files and themes into derivations
 [ ] Add polybar root filesystem usage module??
 [ ] Test out bluetooth (https://nixos.wiki/wiki/Bluetooth)
+[ ] Get a music player + get MPD to work (+last.fm with mpdscribble)

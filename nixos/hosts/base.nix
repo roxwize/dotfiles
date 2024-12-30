@@ -61,6 +61,7 @@
         # Sound
         pipewire = {
             enable = true;
+            alsa.enable = true;
             pulse.enable = true;
         };
         # CUPS printing
@@ -74,7 +75,6 @@
             enable = true;
             powerOnBoot = true;
         };
-        pulseaudio.enable = true;
     };
 
     xdg.portal = {

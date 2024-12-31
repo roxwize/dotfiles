@@ -20,13 +20,15 @@
                 foreground = foreground;
                 width = "100%";
                 height = 32;
-                font-0 = "GohuFont:style=Regular:pixelsize=11;3";
+                font-0 = "GohuFont:style=Regular:size=11:antialias=false;3";
                 modules-left = "xworkspaces audio";
                 modules-right = "cpu memory date";
                 module-margin = 1;
                 offset-y = 14;
                 padding = 2;
                 bottom = true;
+                dpi-x = 96;
+                dpi-y = 96;
             };
 
             "module/cpu" = {

@@ -7,5 +7,6 @@
         ./firefox.nix
         ./neovim.nix
         ./polybar.nix
+        ./yambar.nix
     ];
 }

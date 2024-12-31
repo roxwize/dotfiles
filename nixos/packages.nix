@@ -62,6 +62,7 @@
         xdotool
         xorg.xev
         xorg.xwininfo
+        yambar
         # misc
         catppuccin-sddm
         steam-run

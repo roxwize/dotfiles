@@ -24,4 +24,4 @@ push:
 
 # run `switch` on default host
 sd:
-    @just switch qemu
+    @just switch ioides

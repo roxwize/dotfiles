@@ -15,7 +15,7 @@
         grub = {
             enable = true;
             efiSupport = true;
-            devices = [ "/dev/sdb" ];
+            devices = [ "nodev" ];
         };
     };
 

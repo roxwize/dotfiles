@@ -12,6 +12,7 @@
 
                 left = [
                     {
+                        # TODO: mpd <https://www.mankier.com/5/yambar-modules-mpd>
                         label = {
                             content.string.text = "god's in his heaven | all's right with the world";
                         };

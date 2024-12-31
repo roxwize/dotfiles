@@ -27,7 +27,10 @@
 
     networking.hostName = "ioides";
 
-    services.xserver.videoDrivers = [ "nvidia" ];
+    services = {
+        mpd.musicDirectory = "/mnt/world/music";
+        xserver.videoDrivers = [ "nvidia" ];
+    };
     hardware.nvidia = {
         modesetting.enable = true;
         powerManagement = {

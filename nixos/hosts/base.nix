@@ -57,9 +57,19 @@
             alsa.enable = true;
             pulse.enable = true;
         };
-        # TODO
+        # Music directory is host-dependent
+        #? Using ALSA when we're using pipewire??? <https://nixos.wiki/wiki/MPD#PipeWire>
         mpd = {
             enable = true;
+            extraConfig = ''
+                audio_output {
+                    type "alsa"
+                    name "alsa"
+                    mixer_type "hardware"
+                    mixer_device "default"
+                    mixer_control "PCM"
+                }
+            '';
         };
         # CUPS printing
         printing.enable = true;

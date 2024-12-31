@@ -28,17 +28,25 @@
     networking.hostName = "ioides";
 
     services = {
-        xserver.videoDrivers = [ "nvidia" ];
+        xserver.videoDrivers = [ "nvidia" "modesetting" "fbdev" ];
     };
-    hardware.nvidia = {
-        modesetting.enable = true;
-        powerManagement = {
-            enable = false;
-            finegrained = false;
+    hardware = {
+        nvidia = {
+            modesetting.enable = true;
+            powerManagement = {
+                enable = false;
+                finegrained = false;
+            };
+            open = false;
+            nvidiaSettings = true;
+            package = config.boot.kernelPackages.nvidiaPackages.stable;
         };
-        open = false;
-        nvidiaSettings = true;
-        package = config.boot.kernelPackages.nvidiaPackages.stable;
+        opengl = {
+            enable = true;
+            extraPackages = with pkgs; [
+                intel-media-sdk
+            ];
+        };
     };
     fonts.fontconfig.subpixel.rgba = "rgb";
 

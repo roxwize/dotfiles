@@ -46,6 +46,7 @@
         maim
         monitor
         pavucontrol
+        scrot
         xclip
         zellij
         # text editors

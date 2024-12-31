@@ -37,6 +37,7 @@
         btop
         dconf-editor
         ffmpeg
+        flameshot
         git
         gparted
         home-manager

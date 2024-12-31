@@ -12,7 +12,7 @@
             enable = true;
             efiSupport = true;
             efiInstallAsRemovable = true;
-            device = "/dev/disk/by-uuid/58D1-BC3F";
+            device = "/dev/sdb";
         };
     };
 

@@ -31,6 +31,7 @@
         nvidiaSettings = true;
         package = config.boot.kernelPackages.nvidiaPackages.stable;
     };
+    fonts.fontconfig.subpixel.rgba = "rgb";
 
     time.timeZone = "America/New_York";
     i18n.defaultLocale = "en_US.UTF-8";

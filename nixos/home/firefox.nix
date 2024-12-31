@@ -70,6 +70,14 @@
                         }];
                         icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
                     };
+                    "Manpages" = {
+                        urls = [{
+                            template = "https://www.mankier.com/";
+                            params = [
+                                { name = "q"; value = "{searchTerms}"; }
+                            ];
+                        }];
+                    };
 
                     "Bing".metaData.hidden = true;
                     "Google".metaData.hidden = true;

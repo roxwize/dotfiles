@@ -57,6 +57,8 @@ Workspace management
         Switch to specific workspace
 
 Miscellaneous
+    A-F12
+        Take screenshot
     CA-Return
         Open terminal (kitty)
     CAS-r

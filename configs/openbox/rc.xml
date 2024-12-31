@@ -9,23 +9,23 @@
         <titleLayout>LIMC</titleLayout>
         <font place="ActiveWindow">
             <name>GohuFont</name>
-            <size>14</size>
+            <size>11</size>
         </font>
         <font place="InactiveWindow">
             <name>GohuFont</name>
-            <size>14</size>
+            <size>11</size>
         </font>
         <font place="MenuHeader">
             <name>GohuFont</name>
-            <size>14</size>
+            <size>11</size>
         </font>
         <font place="MenuItem">
             <name>GohuFont</name>
-            <size>14</size>
+            <size>11</size>
         </font>
         <font place="OnScreenDisplay">
             <name>GohuFont</name>
-            <size>14</size>
+            <size>11</size>
         </font>
     </theme>
     <desktops>
@@ -107,6 +107,11 @@
             </action>
         </keybind>
 
+        <keybind key="A-F12">
+            <action name="Execute">
+                <command>flameshot gui</command>
+            </action>
+        </keybind>
         <keybind key="C-A-Return">
             <action name="Execute">
                 <command>kitty</command>

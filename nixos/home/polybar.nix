@@ -20,7 +20,7 @@
                 foreground = foreground;
                 width = "100%";
                 height = 32;
-                font-0 = "GohuFont:style=Regular:size=14;3";
+                font-0 = "GohuFont:style=Regular:pixelsize=11;3";
                 modules-left = "xworkspaces audio";
                 modules-right = "cpu memory date";
                 module-margin = 1;
@@ -65,7 +65,7 @@
             };
             "module/audio" = {
                 type = "internal/alsa";
-                master-soundcard = "hw:0";
+                master-soundcard = "hw:1";
                 master-mixer = "Master";
                 format-volume = "<label-volume>";
                 format-muted = "<label-muted>";

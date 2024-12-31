@@ -61,13 +61,11 @@
         #? Using ALSA when we're using pipewire??? <https://nixos.wiki/wiki/MPD#PipeWire>
         mpd = {
             enable = true;
+            #? user = "rae";
             extraConfig = ''
                 audio_output {
-                    type "alsa"
-                    name "alsa"
-                    mixer_type "hardware"
-                    mixer_device "default"
-                    mixer_control "PCM"
+                    type "pipewire"
+                    name "main"
                 }
             '';
         };
@@ -105,6 +103,10 @@
             script = ''
                 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
             '';
+        };
+        # https://github.com/NixOS/nixpkgs/issues/102547#issuecomment-1016671189
+        mpd.environment = {
+            XDG_RUNTIME_DIR = "/run/user/1000";
         };
     };
 

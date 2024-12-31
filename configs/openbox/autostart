@@ -1,3 +1,4 @@
 hsetroot -cover ~/.dotfiles/assets/wallpapers/current
 xcompmgr &
+sleep 5
 yambar &

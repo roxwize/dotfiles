@@ -65,6 +65,7 @@
         yambar
         # misc
         catppuccin-sddm
+        mpc
         steam-run
         uxn
     ];

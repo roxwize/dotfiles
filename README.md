@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/f0f66913-2616-4a3c-ac7f-55db6fc27116)
+![image](https://github.com/user-attachments/assets/2ab0e4f6-6a94-437b-9598-4396500d1f5b)
 
 this is rae's nixOS config meow
 
@@ -17,7 +17,11 @@ cd .dotfiles/
 nixos-install --flake './nixos#[hostname]'
 ```
 
+from my experience the process is more involved, but it ultimately boils down to those three commands above (the first command is only for bootstrapping). youll need to make a configuration for your host which involves creating default configurations with `nixos-generate-config`, copying it to your host's folder in `nixos/hosts/[host]/`, editing it, and then adding it to `flake.nix`. after that you should clone the repo inside of `/home/rae/` on your filesystem
+
 # usage
+
+the system should boot into openbox and from there you'll have your statusbar and a lot of keybinds to learn x3
 
 ## openbox hotkeys
 
@@ -85,3 +89,8 @@ or:
 **Alt+Right arrow** to go to the next desktop<br>
 **Alt+[1-4]** to go to a specific desktop
 
+# (history)
+
+here is the very first finalized version of this config that was originally tested on a qemu vm. it took 14 hours to set up. after running it on the machine itself and switching over to the configuration in its entirety i realized that it was complete and utter HORSESHIT. making things look nice again took another like four hours.
+
+![image](https://github.com/user-attachments/assets/f0f66913-2616-4a3c-ac7f-55db6fc27116)

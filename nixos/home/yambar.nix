@@ -21,6 +21,12 @@
 
                 right = [
                     {
+                        battery = {
+                            name = "BAT0";
+                            content.map.conditions."state != unknown".string.text = "bat {capacity}% |";
+                        };
+                    }
+                    {
                         pipewire = {
                             content.map.conditions."type == sink".string = {
                                 text = "vol {linear_volume}% |";

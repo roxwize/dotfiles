@@ -32,3 +32,5 @@
 [x] Give yambar a try ;w;
 [ ] Dig polybar's grave (you're not using it anymore so why keep it around?)
 [ ] Get a pager/systray <https://wiki.gentoo.org/wiki/Openbox/Guide#Pagers_and_systrays>
+[ ] Fix yambar being offset on your screen for some reason (might have to file an issue on its repo)
+[ ] Host-dependent home configurations (e.g. don't assume MPD music is in `/mnt/world/music` for every machine)

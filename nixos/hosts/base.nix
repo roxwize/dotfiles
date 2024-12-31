@@ -57,18 +57,6 @@
             alsa.enable = true;
             pulse.enable = true;
         };
-        # Music directory is host-dependent
-        #? Using ALSA when we're using pipewire??? <https://nixos.wiki/wiki/MPD#PipeWire>
-        mpd = {
-            enable = true;
-            #? user = "rae";
-            extraConfig = ''
-                audio_output {
-                    type "pipewire"
-                    name "main"
-                }
-            '';
-        };
         # CUPS printing
         printing.enable = true;
         # misc
@@ -104,10 +92,11 @@
                 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
             '';
         };
+        #?rm
         # https://github.com/NixOS/nixpkgs/issues/102547#issuecomment-1016671189
-        mpd.environment = {
-            XDG_RUNTIME_DIR = "/run/user/1000";
-        };
+        # mpd.environment = {
+        #     XDG_RUNTIME_DIR = "/run/user/1000";
+        # };
     };
 
     xdg.portal = {

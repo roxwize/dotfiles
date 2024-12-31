@@ -28,7 +28,6 @@
     networking.hostName = "ioides";
 
     services = {
-        mpd.musicDirectory = "/mnt/world/music";
         xserver.videoDrivers = [ "nvidia" ];
     };
     hardware.nvidia = {

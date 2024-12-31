@@ -63,6 +63,16 @@
                 };
             };
         };
+        mpd = {
+            enable = true;
+            musicDirectory = "/mnt/world/music";
+            extraConfig = ''
+                audio_output {
+                    type "pipewire"
+                    name "main"
+                }
+            '';
+        };
         mpris-proxy.enable = true;
     };
 

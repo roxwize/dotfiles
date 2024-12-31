@@ -21,6 +21,15 @@
 
     outputs = { self, nixpkgs, home-manager, ... }@inputs: {
         nixosConfigurations = {
+            ioides = nixpkgs.lib.nixosSystem {
+                system = "x86_64-linux";
+                specialArgs = { inherit inputs; };
+                modules = [
+                    ./hosts/ioides/configuration.nix
+                    (import ./overlays)
+                ];
+            };
+
             qemu = nixpkgs.lib.nixosSystem {
                 system = "x86_64-linux";
                 specialArgs = { inherit inputs; };

@@ -34,3 +34,4 @@
 [ ] Get a pager/systray <https://wiki.gentoo.org/wiki/Openbox/Guide#Pagers_and_systrays>
 [ ] Fix yambar being offset on your screen for some reason (might have to file an issue on its repo)
 [ ] Host-dependent home configurations (e.g. don't assume MPD music is in `/mnt/world/music` for every machine)
+ +- [ ] Maybe symlink your music to a music folder in your home directory or something (i.e. `~/Music -> /mnt/world/music` or perhaps a subdirectory of that?)

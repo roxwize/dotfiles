@@ -7,7 +7,7 @@
         ];
 
     boot.loader = {
-        efi.canTouchEfiVariables = true;
+        efi.canTouchEfiVariables = false;
         grub = {
             enable = true;
             efiSupport = true;

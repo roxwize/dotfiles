@@ -1,3 +1,3 @@
 hsetroot -cover ~/.dotfiles/assets/wallpapers/current
 xcompmgr &
-polybar top 2>/tmp/polybar-log.txt &
+yambar &

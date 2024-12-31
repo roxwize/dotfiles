@@ -31,3 +31,4 @@
 [ ] Get a music player + get MPD to work (+last.fm with mpdscribble)
 [x] Give yambar a try ;w;
 [ ] Dig polybar's grave (you're not using it anymore so why keep it around?)
+[ ] Get a pager/systray <https://wiki.gentoo.org/wiki/Openbox/Guide#Pagers_and_systrays>

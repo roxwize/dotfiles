@@ -22,6 +22,7 @@
  +- [ ] vimPlugins.coc-rls
  +- [x] Get rust-analyzer binaries from https://github.com/rust-lang/rust-analyzer
  +- [ ] rust-analyzer doesn't fucking work (and you should probably use mkShell for this)
+ +- [ ] All of a sudden Nix won't let you run rustc or cargo due to some dynamically linked executable bullshit
 [x] See if you can use nixpkgs vscode extensions with codium
 [ ] Get language servers to work with Neovim
 [ ] Theme your SDDM (you should make one yourself ;w;;;)
@@ -33,6 +34,7 @@
 [ ] Dig polybar's grave (you're not using it anymore so why keep it around?)
 [ ] Get a pager/systray <https://wiki.gentoo.org/wiki/Openbox/Guide#Pagers_and_systrays>
 [ ] Fix yambar being offset on your screen for some reason (might have to file an issue on its repo)
+[ ] Get MPC to work with yambar (having to use playerctl mpris bridge shit at the moment which doesn't work very well x_x)
 [ ] Host-dependent home configurations (e.g. don't assume MPD music is in `/mnt/world/music` for every machine)
  +- [ ] Maybe symlink your music to a music folder in your home directory or something (i.e. `~/Music -> /mnt/world/music` or perhaps a subdirectory of that?)
 [ ] rmpc isnt working WAAAAAAAAAAAAAAAAAAAAAAAAAaa ive been working on this for a month i just wanna be done so i can lie down and cuddle girls and be happy forever................

@@ -15,6 +15,7 @@
     };
     xdg.configFile = {
         "openbox".source = ../../configs/openbox;
+        "rmpc".source = ../../configs/rmpc;
     };
 
     programs = {

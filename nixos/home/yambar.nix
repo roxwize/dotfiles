@@ -47,7 +47,7 @@
                     {
                         pipewire = {
                             content.map.conditions."type == sink".string = {
-                                text = "vol {linear_volume}% |";
+                                text = "vol {cubic_volume}% |";
                                 on-click = {
                                     left = "pavucontrol";
                                     wheel-up = "amixer sset Master 1%+";

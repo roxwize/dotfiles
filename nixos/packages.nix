@@ -56,7 +56,7 @@
         # music
         mpc
         playerctl
-        rmpc
+        unstable.rmpc
         # X11
         hsetroot
         nitrogen
@@ -69,6 +69,7 @@
         yambar
         # misc
         catppuccin-sddm
+        nmap
         steam-run
         uxn
     ];

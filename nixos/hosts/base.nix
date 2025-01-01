@@ -1,11 +1,22 @@
-{ pkgs, ... }:
+{ pkgs, nixpkgs-unstable, ... }:
 {
     imports = [
         ../packages.nix
     ];
 
     nix.settings.experimental-features = ["nix-command" "flakes"];
-    nixpkgs.config.allowUnfree = true;
+    nixpkgs = {
+        config.allowUnfree = true;
+        overlays = [
+            inputs.nur.overlays.default
+            inputs.fenix.overlays.default
+            (final: prev: {
+                unstable = import nixpkgs-unstable {
+                    system = prev.system;
+                };
+            })
+        ];
+    };
 
     networking.networkmanager.enable = true;
 

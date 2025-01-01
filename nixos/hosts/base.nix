@@ -1,4 +1,4 @@
-{ pkgs, nixpkgs-unstable, ... }:
+{ pkgs, inputs, ... }:
 {
     imports = [
         ../packages.nix
@@ -11,7 +11,7 @@
             inputs.nur.overlays.default
             inputs.fenix.overlays.default
             (final: prev: {
-                unstable = import nixpkgs-unstable {
+                unstable = import inputs.nixpkgs-unstable {
                     system = prev.system;
                 };
             })

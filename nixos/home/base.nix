@@ -1,6 +1,6 @@
 { pkgs, inputs, ... }:
 {
-    nixpkgs.overlays = import ../overlays.nix;
+    nixpkgs.overlays = import ../overlays.nix inputs;
 
     home = {
         stateVersion = "24.11";

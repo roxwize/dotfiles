@@ -7,7 +7,7 @@
     nix.settings.experimental-features = ["nix-command" "flakes"];
     nixpkgs = {
         config.allowUnfree = true;
-        overlays = import ../overlays.nix;
+        overlays = import ../overlays.nix inputs;
     };
 
     networking.networkmanager.enable = true;

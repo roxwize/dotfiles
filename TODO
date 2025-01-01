@@ -35,3 +35,4 @@
 [ ] Fix yambar being offset on your screen for some reason (might have to file an issue on its repo)
 [ ] Host-dependent home configurations (e.g. don't assume MPD music is in `/mnt/world/music` for every machine)
  +- [ ] Maybe symlink your music to a music folder in your home directory or something (i.e. `~/Music -> /mnt/world/music` or perhaps a subdirectory of that?)
+[ ] rmpc isnt working WAAAAAAAAAAAAAAAAAAAAAAAAAaa ive been working on this for a month i just wanna be done so i can lie down and cuddle girls and be happy forever................

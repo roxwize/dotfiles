@@ -1,5 +1,7 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 {
+    nixpkgs.overlays = import ../overlays.nix;
+
     home = {
         stateVersion = "24.11";
         username = "rae";

@@ -73,10 +73,11 @@
                 }
             '';
         };
-        #! doesn't seem to do anything ;w;;;;;
         mpdris2 = {
             enable = true;
             mpd.musicDirectory = "/mnt/world/music";
+            multimediaKeys = true;
+            notifications = true;
         };
         mpris-proxy.enable = true;
     };

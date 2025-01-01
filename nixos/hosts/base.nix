@@ -57,6 +57,7 @@
             alsa.enable = true;
             pulse.enable = true;
         };
+        mpd.enable = true; # Configured with home-manager
         # CUPS printing
         printing.enable = true;
         # misc

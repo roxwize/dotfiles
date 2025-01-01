@@ -55,6 +55,7 @@
         vscodium
         # music
         mpc
+        playerctl
         rmpc
         # X11
         hsetroot

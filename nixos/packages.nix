@@ -53,6 +53,9 @@
         # text editors
         neovim
         vscodium
+        # music
+        mpc
+        rmpc
         # X11
         hsetroot
         nitrogen
@@ -65,7 +68,6 @@
         yambar
         # misc
         catppuccin-sddm
-        mpc
         steam-run
         uxn
     ];

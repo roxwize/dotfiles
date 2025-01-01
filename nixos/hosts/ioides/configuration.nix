@@ -31,6 +31,12 @@
         xserver.videoDrivers = [ "nvidia" "modesetting" "fbdev" ];
     };
     hardware = {
+        graphics = {
+            enable = true;
+            extraPackages = with pkgs; [
+                intel-media-sdk
+            ];
+        };
         nvidia = {
             modesetting.enable = true;
             powerManagement = {
@@ -40,12 +46,6 @@
             open = false;
             nvidiaSettings = true;
             package = config.boot.kernelPackages.nvidiaPackages.stable;
-        };
-        opengl = {
-            enable = true;
-            extraPackages = with pkgs; [
-                intel-media-sdk
-            ];
         };
     };
     fonts.fontconfig.subpixel.rgba = "rgb";

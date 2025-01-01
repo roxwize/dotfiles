@@ -1,4 +1,4 @@
-{ ... }: {
+{ pkgs, ... }: {
     programs.yambar = {
         enable = true;
         settings = {
@@ -12,13 +12,12 @@
 
                 left = [
                     {
-                        # TODO: mpd <https://www.mankier.com/5/yambar-modules-mpd>
+                        # https://codeberg.org/dnkl/yambar/issues/53#issuecomment-264088
                         label = {
                             content.string.text = "god's in his heaven | all's right with the world";
                         };
                     }
                 ];
-
                 right = [
                     {
                         battery = {

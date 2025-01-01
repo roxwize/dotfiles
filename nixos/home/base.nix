@@ -71,6 +71,7 @@
                     type "pipewire"
                     name "main"
                 }
+                log_file "/tmp/mpd.log"
             '';
         };
         mpdris2 = {

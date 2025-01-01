@@ -13,8 +13,27 @@
                 left = [
                     {
                         # https://codeberg.org/dnkl/yambar/issues/53#issuecomment-264088
-                        label = {
-                            content.string.text = "god's in his heaven | all's right with the world";
+                        script = {
+                            #? or /run/current-system/sw/bin/playerctl
+                            path = "${pkgs.playerctl}/bin/playerctl";
+                            args = [
+                                "--follow"
+                                "metadata"
+                                "--format"
+                                ''
+                                    status|string|{{status}}
+                                    artist|string|{{artist}}
+                                    title|string|{{title}}
+                                ''
+                            ];
+                            content.map.conditions = {
+                                "status == Playing" = {
+                                    string.text = "{artist} - {title}";
+                                };
+                                "status != Playing" = {
+                                    string.text = "god's in his heaven | all's right with the world";
+                                };
+                            };
                         };
                     }
                 ];

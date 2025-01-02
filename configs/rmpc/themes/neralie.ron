@@ -21,7 +21,7 @@
     current_item_style: (fg: "black", bg: "blue", modifiers: "Bold"),
     borders_style: (fg: "blue"),
     highlight_border_style: (fg: "blue"),
-    symbols: (song: " ", dir: ":", marker: ">", ellipsis: "..."),
+    symbols: (song: " ", dir: "-", marker: ">", ellipsis: "..."),
     progress_bar: (
         symbols: ["█", "▌", " "],
         track_style: (fg: "#1e2030"),

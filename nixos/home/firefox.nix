@@ -1,6 +1,27 @@
 { pkgs, ... }: {
     programs.firefox = {
         enable = true;
+        policies = {
+            DisableTelemetry = true;
+            DisableFirefoxStudies = true;
+            EnableTrackingProtection = {
+                Value = true;
+                Locked = true;
+                Cryptomining = true;
+                Fingerprinting = true;
+            };
+            DisablePocket = true;
+            ExtensionUpdate = false;
+            FirefoxHome = {
+                SponsoredTopSites = false;
+                Highlights = false;
+                Pocket = false;
+                SponsoredPocket = false;
+            };
+            FirefoxSuggest = {
+                SponsoredSuggestions = false;
+            };
+        };
         profiles.default = {
             isDefault = true;
             extensions = with pkgs.nur.repos.rycee.firefox-addons; [
@@ -12,6 +33,7 @@
                 violentmonkey
             ];
             settings = {
+                "browser.aboutConfig.showWarning" = false;
                 "browser.newtabpage.activity-stream.default.sites" = "https://en.wikipedia.org/";
                 "browser.newtabpage.activity-stream.discoverystream.enabled" = false;
                 "browser.newtabpage.activity-stream.feeds.telemetry" = false;
@@ -55,6 +77,10 @@
                 {
                     name = "NixOS wiki";
                     url = "https://nixos.wiki/";
+                }
+                {
+                    name = "Nix functions";
+                    url = "https://teu5us.github.io/nix-lib.html";
                 }
             ];
             search = {

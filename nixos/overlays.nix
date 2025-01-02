@@ -1,8 +1,8 @@
-inputs: [
-    inputs.nur.overlays.default
-    inputs.fenix.overlays.default
+{ nur, fenix, nixpkgs-unstable, ... }: [
+    nur.overlays.default
+    fenix.overlays.default
     (final: prev: {
-        unstable = import inputs.nixpkgs-unstable {
+        unstable = import nixpkgs-unstable {
             system = prev.system;
         };
     })

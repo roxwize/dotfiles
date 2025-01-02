@@ -27,6 +27,7 @@
             extensions = with pkgs.nur.repos.rycee.firefox-addons; [
                 canvasblocker
                 catppuccin-gh-file-explorer
+                indie-wiki-buddy
                 privacy-badger
                 stylus
                 ublock-origin

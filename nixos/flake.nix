@@ -21,23 +21,22 @@
     };
 
     outputs = { self, nixpkgs, home-manager, ... }@inputs: {
-        nixosConfigurations = {
-            ioides = nixpkgs.lib.nixosSystem {
-                system = "x86_64-linux";
-                specialArgs = { inherit inputs; };
-                modules = [
-                    ./hosts/ioides/configuration.nix
-                ];
-            };
-
-            qemu = nixpkgs.lib.nixosSystem {
-                system = "x86_64-linux";
-                specialArgs = { inherit inputs; };
-                modules = [
-                    ./hosts/qemu/configuration.nix
-                ];
-            };
-        };
+        nixosConfigurations =
+            let
+                system = hostname: {
+                    name = hostname;
+                    value = nixpkgs.lib.nixosSystem {
+                        system = "x86_64-linux";
+                        specialArgs = { inherit inputs; };
+                        modules = [
+                            ./hosts/${hostname}/configuration.nix
+                        ];
+                    };
+                };
+            in builtins.listToAttrs [
+                (system "ioides")
+                (system "qemu")
+            ];
 
         homeConfigurations.rae = home-manager.lib.homeManagerConfiguration {
             pkgs = nixpkgs.legacyPackages.x86_64-linux;

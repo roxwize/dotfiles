@@ -64,24 +64,34 @@
             };
             bookmarks = [
                 {
-                    name = "NixOS search";
-                    url = "https://search.nixos.org/packages";
+                    name = "Nix sites";
+                    toolbar = true;
+                    bookmarks = [
+                        {
+                            name = "NixOS search";
+                            url = "https://search.nixos.org/packages";
+                        }
+                        {
+                            name = "Home Manager search";
+                            url = "https://home-manager-options.extranix.com/";
+                        }
+                        {
+                            name = "NUR search";
+                            url = "https://nur.nix-community.org/";
+                        }
+                        {
+                            name = "NixOS wiki";
+                            url = "https://nixos.wiki/";
+                        }
+                        {
+                            name = "Nix functions";
+                            url = "https://teu5us.github.io/nix-lib.html";
+                        }
+                    ];
                 }
                 {
-                    name = "Home Manager search";
-                    url = "https://home-manager-options.extranix.com/";
-                }
-                {
-                    name = "NUR search";
-                    url = "https://nur.nix-community.org/";
-                }
-                {
-                    name = "NixOS wiki";
-                    url = "https://nixos.wiki/";
-                }
-                {
-                    name = "Nix functions";
-                    url = "https://teu5us.github.io/nix-lib.html";
+                    name = "Pinky & Pepper Forever";
+                    url = "https://www.silversprocket.net/2020/05/02/pinky-and-pepper-forever-by-eddy-atoms-part-1-of-2/";
                 }
             ];
             search = {
@@ -96,6 +106,15 @@
                             ];
                         }];
                         icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
+                    };
+                    "Home Manager options" = {
+                        urls = [{
+                            template = "https://home-manager-options.extranix.com/";
+                            params = [
+                                { name = "release"; value = "release-24.11"; }
+                                { name = "query"; value = "{searchTerms}"; }
+                            ];
+                        }];
                     };
                     "Manpages" = {
                         urls = [{

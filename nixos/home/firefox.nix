@@ -64,40 +64,33 @@
             };
             bookmarks = [
                 {
-                    name = "bar";
-                    toolbar = true;
+                    name = "Nix sites";
                     bookmarks = [
                         {
-                            name = "Nix sites";
-                            toolbar = true;
-                            bookmarks = [
-                                {
-                                    name = "NixOS search";
-                                    url = "https://search.nixos.org/packages";
-                                }
-                                {
-                                    name = "Home Manager search";
-                                    url = "https://home-manager-options.extranix.com/";
-                                }
-                                {
-                                    name = "NUR search";
-                                    url = "https://nur.nix-community.org/";
-                                }
-                                {
-                                    name = "NixOS wiki";
-                                    url = "https://nixos.wiki/";
-                                }
-                                {
-                                    name = "Nix functions";
-                                    url = "https://teu5us.github.io/nix-lib.html";
-                                }
-                            ];
+                            name = "NixOS search";
+                            url = "https://search.nixos.org/packages";
                         }
                         {
-                            name = "Pinky & Pepper Forever";
-                            url = "https://www.silversprocket.net/2020/05/02/pinky-and-pepper-forever-by-eddy-atoms-part-1-of-2/";
+                            name = "Home Manager search";
+                            url = "https://home-manager-options.extranix.com/";
+                        }
+                        {
+                            name = "NUR search";
+                            url = "https://nur.nix-community.org/";
+                        }
+                        {
+                            name = "NixOS wiki";
+                            url = "https://nixos.wiki/";
+                        }
+                        {
+                            name = "Nix functions";
+                            url = "https://teu5us.github.io/nix-lib.html";
                         }
                     ];
+                }
+                {
+                    name = "Pinky & Pepper Forever";
+                    url = "https://www.silversprocket.net/2020/05/02/pinky-and-pepper-forever-by-eddy-atoms-part-1-of-2/";
                 }
             ];
             search = {

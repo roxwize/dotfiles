@@ -64,6 +64,16 @@
             };
             bookmarks = [
                 {
+                    name = "Toolbar";
+                    toolbar = true;
+                    bookmarks = [
+                        {
+                            name = "Pinky & Pepper Forever";
+                            url = "https://www.silversprocket.net/2020/05/02/pinky-and-pepper-forever-by-eddy-atoms-part-1-of-2/";
+                        }
+                    ];
+                }
+                {
                     name = "Nix sites";
                     bookmarks = [
                         {
@@ -87,10 +97,6 @@
                             url = "https://teu5us.github.io/nix-lib.html";
                         }
                     ];
-                }
-                {
-                    name = "Pinky & Pepper Forever";
-                    url = "https://www.silversprocket.net/2020/05/02/pinky-and-pepper-forever-by-eddy-atoms-part-1-of-2/";
                 }
             ];
             search = {

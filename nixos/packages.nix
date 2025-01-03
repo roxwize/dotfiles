@@ -53,10 +53,12 @@
         # text editors
         neovim
         vscodium
-        # music
+        # audio
+        audacity
         mpc
         playerctl
         unstable.rmpc
+        sunvox
         # X11
         hsetroot
         nitrogen

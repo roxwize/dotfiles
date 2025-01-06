@@ -28,7 +28,7 @@
     networking.hostName = "ioides";
 
     services = {
-        xserver.videoDrivers = [ "nvidia" "modesetting" "fbdev" ];
+        xserver.videoDrivers = [ "nvidia" ];
     };
     hardware = {
         graphics = {

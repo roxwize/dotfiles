@@ -30,7 +30,7 @@
     </theme>
     <desktops>
         <!-- just use 4 until the need for more arises -->
-        <number>4</number>
+        <number>6</number>
         <firstdesk>1</firstdesk>
         <popupTime>0</popupTime>
         <names>
@@ -38,6 +38,8 @@
             <name>2</name>
             <name>3</name>
             <name>4</name>
+            <name>5</name>
+            <name>6</name>
         </names>
     </desktops>
     <keyboard>

@@ -22,6 +22,7 @@
         rust-analyzer        # Rust
         vala-language-server # Vala
         # games
+        unstable.luanti                                          # An open source voxel game engine (formerly Minetest)
         prismlauncher                                            # Free, open source launcher for Minecraft
         steam-run                                                # Run commands in the same FHS environment that is used for Steam
         uxn                                                      # Assembler and emulator for the Uxn stack machine

@@ -8,11 +8,14 @@
         # development
         (fenix.default.withComponents [ "cargo" "rustc" ])
         gcc
+        git
+        godot_4
         gtk4
         just
         meson
         nodejs_23
         pkg-config
+        pnpm
         vala
         ## language servers
         mesonlsp             # Meson
@@ -21,9 +24,14 @@
         vala-language-server # Vala
         # games
         prismlauncher
+        steam-run
+        uxn
         # graphics
+        flameshot
         gimp
+        imagemagick
         krita
+        maim
         # gtk
         posy-cursors
         pantheon.elementary-gtk-theme
@@ -32,30 +40,26 @@
         vesktop
         yt-dlp
         # system tools
-        alsa-utils
         bat
         btop
         dconf-editor
         ffmpeg
-        flameshot
-        git
         gparted
         home-manager
         hyfetch
-        imagemagick
         kitty
-        maim
         monitor
-        pavucontrol
-        scrot
+        wine
         xclip
         zellij
         # text editors
         neovim
         vscodium
         # audio
+        alsa-utils
         audacity
         mpc
+        pavucontrol
         playerctl
         unstable.rmpc
         sunvox
@@ -72,7 +76,5 @@
         # misc
         catppuccin-sddm
         nmap
-        steam-run
-        uxn
     ];
 }

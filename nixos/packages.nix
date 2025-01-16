@@ -22,6 +22,7 @@
         rust-analyzer        # Rust
         vala-language-server # Vala
         # games
+        alvr                                                     # Stream VR games from your PC to your headset via Wi-Fi
         unstable.luanti                                          # An open source voxel game engine (formerly Minetest)
         prismlauncher                                            # Free, open source launcher for Minecraft
         steam-run                                                # Run commands in the same FHS environment that is used for Steam
@@ -44,11 +45,13 @@
         btop                                                     # Monitor of resources
         dconf-editor                                             # GSettings editor for GNOME
         ffmpeg                                                   # Complete, cross-platform solution to record, convert and stream audio and video
+        kdePackages.filelight                                    # Quickly visualize your disk space usage
         gparted                                                  # Graphical disk partitioning tool
         home-manager                                             # Nix-based user environment configurator
         hyfetch                                                  # neofetch with pride flags <3
         kitty                                                    # Modern, hackable, featureful, OpenGL based terminal emulator
         monitor                                                  # Manage processes and monitor system resources
+        unzip                                                    # Extraction utility for archives compressed in .zip format
         wine                                                     # Open Source implementation of the Windows API on top of X, OpenGL, and Unix
         xclip                                                    # Tool to access the X clipboard from a console application
         zellij                                                   # Terminal workspace with batteries included

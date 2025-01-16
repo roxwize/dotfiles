@@ -52,6 +52,7 @@
         kitty                                                    # Modern, hackable, featureful, OpenGL based terminal emulator
         monitor                                                  # Manage processes and monitor system resources
         unzip                                                    # Extraction utility for archives compressed in .zip format
+        usbutils                                                 # Tools for working with USB devices, such as lsusb
         wine                                                     # Open Source implementation of the Windows API on top of X, OpenGL, and Unix
         xclip                                                    # Tool to access the X clipboard from a console application
         zellij                                                   # Terminal workspace with batteries included

@@ -37,4 +37,5 @@
 [ ] Get MPC to work with yambar (having to use playerctl mpris bridge shit at the moment which doesn't work very well x_x)
 [ ] Host-dependent home configurations (e.g. don't assume MPD music is in `/mnt/world/music` for every machine)
  +- [ ] Maybe symlink your music to a music folder in your home directory or something (i.e. `~/Music -> /mnt/world/music` or perhaps a subdirectory of that?)
-[ ] rmpc isnt working WAAAAAAAAAAAAAAAAAAAAAAAAAaa ive been working on this for a month i just wanna be done so i can lie down and cuddle girls and be happy forever................
+[x] rmpc isnt working WAAAAAAAAAAAAAAAAAAAAAAAAAaa ive been working on this for a month i just wanna be done so i can lie down and cuddle girls and be happy forever................
+[ ] alvr doesnt work :(

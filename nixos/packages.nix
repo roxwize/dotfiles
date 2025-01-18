@@ -6,6 +6,7 @@
     # only like a few seconds
     environment.systemPackages = with pkgs; [
         # development
+        cc65                                                     # C compiler for processors of 6502 family
         (fenix.default.withComponents [ "cargo" "rustc" ])
         gcc                                                      # GNU Compiler Collection, version 13.3.0 (wrapper script)
         git                                                      # Distributed version control system
@@ -27,6 +28,8 @@
         prismlauncher                                            # Free, open source launcher for Minecraft
         steam-run                                                # Run commands in the same FHS environment that is used for Steam
         uxn                                                      # Assembler and emulator for the Uxn stack machine
+        x16                                                      # Official emulator of CommanderX16 8-bit computer
+        x16-rom                                                  # ROM file for CommanderX16 8-bit computer
         # graphics
         flameshot                                                # Powerful yet simple to use screenshot software
         gimp                                                     # GNU Image Manipulation Program
@@ -41,9 +44,11 @@
         vesktop                                                  # Alternate client for Discord with Vencord built-in
         yt-dlp                                                   # Command-line tool to download videos from YouTube.com and other sites (youtube-dl fork)
         # system tools
+        android-tools                                            # Android SDK platform tools
         bat                                                      # Cat(1) clone with syntax highlighting and Git integration
         btop                                                     # Monitor of resources
         dconf-editor                                             # GSettings editor for GNOME
+        kdePackages.dolphin                                      # File manager by KDE
         ffmpeg                                                   # Complete, cross-platform solution to record, convert and stream audio and video
         kdePackages.filelight                                    # Quickly visualize your disk space usage
         gparted                                                  # Graphical disk partitioning tool

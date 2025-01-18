@@ -39,3 +39,4 @@
  +- [ ] Maybe symlink your music to a music folder in your home directory or something (i.e. `~/Music -> /mnt/world/music` or perhaps a subdirectory of that?)
 [x] rmpc isnt working WAAAAAAAAAAAAAAAAAAAAAAAAAaa ive been working on this for a month i just wanna be done so i can lie down and cuddle girls and be happy forever................
 [ ] alvr doesnt work :(
+[ ] Manage flatpaks declaratively (https://github.com/gmodena/nix-flatpak)

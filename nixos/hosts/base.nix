@@ -64,7 +64,13 @@
         # CUPS printing
         printing.enable = true;
         # misc
-        flatpak.enable = true;
+        flatpak = {
+            enable = true;
+            packages = [
+                "com.github.tchx84.Flatseal"
+                { flatpakref = "https://sober.vinegarhq.org/sober.flatpakref"; sha256 = "1pj8y1xhiwgbnhrr3yr3ybpfis9slrl73i0b1lc9q89vhip6ym2l"; }
+            ];
+        };
         blueman.enable = true;
         openssh = {
             enable = true;
@@ -86,21 +92,6 @@
             enable = true;
             powerOnBoot = true;
         };
-    };
-
-    systemd.services = {
-        flatpak-repo = {
-            wantedBy = [ "multi-user.target" ];
-            path = [ pkgs.flatpak ];
-            script = ''
-                flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-            '';
-        };
-        #?rm
-        # https://github.com/NixOS/nixpkgs/issues/102547#issuecomment-1016671189
-        # mpd.environment = {
-        #     XDG_RUNTIME_DIR = "/run/user/1000";
-        # };
     };
 
     xdg.portal = {

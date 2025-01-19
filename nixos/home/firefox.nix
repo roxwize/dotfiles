@@ -30,7 +30,9 @@
                 indie-wiki-buddy
                 privacy-badger
                 stylus
+                tabliss
                 ublock-origin
+                user-agent-string-switcher
                 violentmonkey
             ];
             settings = {
@@ -48,10 +50,6 @@
                     {
                         url = "https://discord.com/app/";
                         label = "Discord";
-                    }
-                    {
-                        url = "https://pikidiary.lol/";
-                        label = "PikiDiary";
                     }
                     {
                         url = "https://en.wikipedia.org/";

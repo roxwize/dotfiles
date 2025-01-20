@@ -4,13 +4,20 @@
         ../packages.nix
     ];
 
-    nix.settings.experimental-features = ["nix-command" "flakes"];
+    nix.settings.experimental-features = [ "nix-command" "flakes" ];
     nixpkgs = {
         config.allowUnfree = true;
         overlays = import ../overlays.nix inputs;
     };
 
     networking.networkmanager.enable = true;
+
+    users.users.rae = {
+        isNormalUser = true;
+        extraGroups = [ "wheel" "docker" ];
+        hashedPassword = "$y$j9T$YPq.Kl8rss1JmJ5Vg6cHE/$2kdfzCkkhaO.I4u714EQnS/ZFert5byisiRVxtC.9G2";
+        shell = pkgs.fish;
+    };
 
     programs = {
         dconf.enable = true;
@@ -87,18 +94,16 @@
         };
     };
 
-    hardware = {
-        bluetooth = {
-            enable = true;
-            powerOnBoot = true;
-        };
+    hardware.bluetooth = {
+        enable = true;
+        powerOnBoot = true;
     };
 
     xdg.portal = {
         enable = true;
         config = {
             common = {
-                default = [ "gtk "];
+                default = [ "gtk" ];
             };
         };
         extraPortals = with pkgs; [ xdg-desktop-portal-gtk ];
@@ -130,11 +135,4 @@
     };
 
     virtualisation.docker.enable = true;
-
-    users.users.rae = {
-        isNormalUser = true;
-        extraGroups = [ "wheel" "docker" ];
-        hashedPassword = "$y$j9T$YPq.Kl8rss1JmJ5Vg6cHE/$2kdfzCkkhaO.I4u714EQnS/ZFert5byisiRVxtC.9G2";
-        shell = pkgs.fish;
-    };
 }

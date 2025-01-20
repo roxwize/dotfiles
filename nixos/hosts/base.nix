@@ -123,6 +123,12 @@
         ];
     };
 
+    i18n.defaultLocale = "en_US.UTF-8";
+    console = {
+        font = "gr928-8x16-thin";
+        keyMap = "us";
+    };
+
     virtualisation.docker.enable = true;
 
     users.users.rae = {

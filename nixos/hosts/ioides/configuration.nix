@@ -51,12 +51,7 @@
     fonts.fontconfig.subpixel.rgba = "rgb";
 
     time.timeZone = "America/New_York";
-    i18n.defaultLocale = "en_US.UTF-8";
-    console = {
-        font = "gr928-8x16-thin";
-        keyMap = "us";
-    };
-
+    
     system.stateVersion = "24.11";
 }
 

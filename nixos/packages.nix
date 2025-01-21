@@ -7,7 +7,7 @@
     environment.systemPackages = with pkgs; [
         # development
         cc65                                                     # C compiler for processors of 6502 family
-        chibicc-uxn
+        chibicc-uxn                                              # A small C compiler... for uxn
         (fenix.default.withComponents [ "cargo" "rustc" ])
         gcc                                                      # GNU Compiler Collection, version 13.3.0 (wrapper script)
         git                                                      # Distributed version control system

@@ -69,7 +69,15 @@
             pulse.enable = true;
         };
         # CUPS printing
+        #     Can be configured at http://127.0.0.1:631/
+        #     Local printers are host-specific (see `hardware.printers`)
+        #     Avahi enables IPP Everywhere
         printing.enable = true;
+        avahi = {
+            enable = true;
+            nssmdns4 = true;
+            openFirewall = true;
+        };
         # misc
         flatpak = {
             enable = true;

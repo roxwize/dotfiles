@@ -48,6 +48,7 @@
             extensions = with pkgs.vscode-extensions; [
                 editorconfig.editorconfig
                 jnoortheen.nix-ide
+                llvm-vs-code-extensions.vscode-clangd
                 mesonbuild.mesonbuild
                 rust-lang.rust-analyzer
                 skellock.just

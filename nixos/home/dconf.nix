@@ -1,5 +1,4 @@
-{ ... }:
-{
+{ ... }: {
     dconf.settings = {
         "io/elementary/code/settings" = {
             font = "Fira Code Light 10";

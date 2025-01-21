@@ -27,6 +27,7 @@
  +- [ ] Maybe symlink your music to a music folder in your home directory or something (i.e. `~/Music -> /mnt/world/music` or perhaps a subdirectory of that?)
 [ ] alvr doesnt work :(
 [ ] Using clangd and gcc ??? Also clang-tools is atrociously big
+[ ] Try getting `ultram4rine.vscode-choosealicense` (either locally via overlays and `buildVscodeMarketplaceExtension` or via <https://github.com/nix-community/nix-vscode-extensions>)
 
 [x] Get PulseAudio sound controls on polybar to work
 [x] Add desktop switching to windows (context menu?)

@@ -1,5 +1,4 @@
-{ pkgs, inputs, ... }:
-{
+{ pkgs, inputs, ... }: {
     nixpkgs.overlays = import ../overlays.nix inputs;
 
     home = {
@@ -41,19 +40,6 @@
             enable = true;
             font = "Fira Code Light 11";
             terminal = "kitty";
-        };
-        vscode = {
-            enable = true;
-            package = pkgs.vscodium;
-            extensions = with pkgs.vscode-extensions; [
-                editorconfig.editorconfig
-                jnoortheen.nix-ide
-                llvm-vs-code-extensions.vscode-clangd
-                mesonbuild.mesonbuild
-                rust-lang.rust-analyzer
-                skellock.just
-                wakatime.vscode-wakatime
-            ];
         };
     };
 

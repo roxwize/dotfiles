@@ -11,13 +11,14 @@
         (fenix.default.withComponents [ "cargo" "rustc" ])
         gcc                                                      # GNU Compiler Collection, version 13.3.0 (wrapper script)
         git                                                      # Distributed version control system
+        gnumake                                                  # Tool to control the generation of non-source files from sources
         godot_4                                                  # Free and Open Source 2D and 3D game engine
         gtk4                                                     # Multi-platform toolkit for creating graphical user interfaces
         just                                                     # Handy way to save and run project-specific commands
-        gnumake                                                  # Tool to control the generation of non-source files from sources
         meson                                                    # Open source, fast and friendly build system made in Python
         nodejs_23                                                # Event-driven I/O framework for the V8 JavaScript engine
         pnpm                                                     # Fast, disk space efficient package manager for JavaScript
+        python314                                                # High-level dynamically-typed programming language
         vala                                                     # Compiler for GObject type system
         ## language servers
         mesonlsp             # Meson
@@ -89,5 +90,6 @@
         catppuccin-sddm                                          # Soothing pastel theme for SDDM
         kdePackages.kdenlive                                     # Free and open source video editor, based on MLT Framework and KDE Frameworks
         nmap                                                     # Free and open source utility for network discovery and security auditing
+        qemu_kvm                                                 # Generic and open source machine emulator and virtualizer
     ];
 }

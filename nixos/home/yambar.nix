@@ -27,8 +27,11 @@
                                 ''
                             ];
                             content.map.conditions = {
-                                "status == Playing" = {
+                                "status == Playing && artist != \"\"" = {
                                     string.text = "{artist} - {title}";
+                                };
+                                "status == Playing && artist == \"\"" = {
+                                    string.text = "{title}";
                                 };
                                 "status != Playing" = {
                                     string.text = "god's in his heaven | all's right with the world";

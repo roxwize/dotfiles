@@ -28,8 +28,9 @@
 [ ] alvr doesnt work :(
 [ ] Using clangd and gcc ??? Also clang-tools is atrociously big
 [ ] Try getting `ultram4rine.vscode-choosealicense` (either locally via overlays and `buildVscodeMarketplaceExtension` or via <https://github.com/nix-community/nix-vscode-extensions>)
-[ ] Add openbox keybinds for defocusing/focusing + cycling windows and maybe swapping workspaces
+[x] Add openbox keybinds for defocusing/focusing + cycling windows and maybe swapping workspaces
  +- [ ] Click to focus doesnt work unless its on the titlebar for some reason
+ +- [ ] Using shift instead of ctrl seems inconsistent but it appears that other applications use ctrl+alt+arrowkeys for their own purposes which IDK if i want to overwrite
 [ ] Download Slack !!NOW WWWW!!!!FUCKKKK
 
 [x] Get PulseAudio sound controls on polybar to work

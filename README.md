@@ -51,13 +51,19 @@ Window actions
         Fullscreen
     CA-m
         Maximize
+    SA-Left
+        Switch focus to previous window
+    SA-Right
+        Switch focus to previous window
+    A-Tab
+        Cycle focus to windows in all workspaces
 
 Workspace management
     A-Left
         Switch to previous workspace
     A-Right
         Switch to next workspace
-    A-[1234]
+    A-[123456]
         Switch to specific workspace
 
 Miscellaneous
@@ -87,7 +93,10 @@ or:
 
 **Alt+Left arrow** to go to the previous desktop<br>
 **Alt+Right arrow** to go to the next desktop<br>
-**Alt+[1-4]** to go to a specific desktop
+**Alt+[1-6]** to go to a specific desktop<br>
+**Alt+Shift+Left arrow** to go to the previous desktop window<br>
+**Alt+Shift+Right arrow** to go to the next desktop window<br>
+**Alt+Tab** to cycle windows in all desktops
 
 # (history)
 

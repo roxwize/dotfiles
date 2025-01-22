@@ -131,9 +131,32 @@
                 <to>previous</to>
             </action>
         </keybind>
+        <keybind key="A-S-Left">
+            <action name="PreviousWindow">
+                <dialog>none</dialog>
+                <linear>yes</linear>
+                <interactive>no</interactive>
+            </action>
+        </keybind>
         <keybind key="A-Right">
             <action name="GoToDesktop">
                 <to>next</to>
+            </action>
+        </keybind>
+        <keybind key="A-S-Right">
+            <action name="NextWindow">
+                <dialog>none</dialog>
+                <linear>yes</linear>
+                <interactive>no</interactive>
+            </action>
+        </keybind>
+        <keybind key="A-Tab">
+            <action name="NextWindow">
+                <dialog>list</dialog>
+                <raise>yes</raise>
+                <allDesktops>yes</allDesktops>
+                <linear>no</linear>
+                <interactive>yes</interactive>
             </action>
         </keybind>
         <keybind key="A-1">
@@ -154,6 +177,16 @@
         <keybind key="A-4">
             <action name="GoToDesktop">
                 <to>4</to>
+            </action>
+        </keybind>
+        <keybind key="A-5">
+            <action name="GoToDesktop">
+                <to>5</to>
+            </action>
+        </keybind>
+        <keybind key="A-6">
+            <action name="GoToDesktop">
+                <to>6</to>
             </action>
         </keybind>
     </keyboard>

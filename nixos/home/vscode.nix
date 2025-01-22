@@ -14,6 +14,7 @@
             mesonbuild.mesonbuild
             rust-lang.rust-analyzer
             skellock.just
+            vadimcn.vscode-lldb
             wakatime.vscode-wakatime
         ];
         userSettings = {
@@ -30,6 +31,8 @@
             "prettier.singleAttributePerLine" = false;
             "prettier.useEditorConfig" = true;
             "telemetry.telemetryLevel" = "off";
+            "workbench.activityBar.iconClickBehavior" = "toggle";
+            "workbench.activityBar.location" = "bottom";
             "workbench.colorTheme" = "Catppuccin Frappé";
             "workbench.iconTheme" = "catppuccin-frappe";
         };

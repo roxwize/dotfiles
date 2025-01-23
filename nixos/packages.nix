@@ -45,6 +45,7 @@
         pantheon.elementary-gtk-theme                            # GTK theme designed to be smooth, attractive, fast, and usable
         # internet
         nicotine-plus                                            # Graphical client for the SoulSeek peer-to-peer system
+        slack                                                    # Desktop client for Slack
         vesktop                                                  # Alternate client for Discord with Vencord built-in
         yt-dlp                                                   # Command-line tool to download videos from YouTube.com and other sites (youtube-dl fork)
         # system tools

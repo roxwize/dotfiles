@@ -32,6 +32,7 @@
  +- [ ] Click to focus doesnt work unless its on the titlebar for some reason
  +- [ ] Using shift instead of ctrl seems inconsistent but it appears that other applications use ctrl+alt+arrowkeys for their own purposes which IDK if i want to overwrite
 [ ] Download Slack !!NOW WWWW!!!!FUCKKKK
+[ ] Fix alt+tab switcher fonts and colors being fucked up
 
 [x] Get PulseAudio sound controls on polybar to work
 [x] Add desktop switching to windows (context menu?)

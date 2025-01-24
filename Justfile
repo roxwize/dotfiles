@@ -2,10 +2,10 @@ default:
     @just --list
 
 rebuild host operation:
-    sudo nixos-rebuild {{operation}} --flake ./nix#{{host}}
+    sudo nixos-rebuild {{operation}} --flake ./nixos#{{host}}
 
 home-rebuild operation:
-    home-manager {{operation}} --flake ./nix
+    home-manager {{operation}} --flake ./nixos
 
 switch host:
     just rebuild {{host}} switch

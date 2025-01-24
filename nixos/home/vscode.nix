@@ -46,6 +46,7 @@
                 "workbench.colorTheme" = "Catppuccin Frappé";
                 "workbench.iconTheme" = "catppuccin-frappe";
             } // builtins.listToAttrs [
+                (df "css"        "esbenp.prettier-vscode")
                 (df "html"       "esbenp.prettier-vscode")
                 (df "typescript" "esbenp.prettier-vscode")
                 (df "javascript" "esbenp.prettier-vscode")

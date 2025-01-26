@@ -14,10 +14,10 @@
         cp chibicc $out/bin
     '';
 
-    meta = {
+    meta = with lib; {
         description = "A small C compiler... for uxn";
         homepage = "https://github.com/lynn/chibicc";
-        license = lib.licenses.mit;
-        platforms = lib.platforms.unix;
+        license = licenses.mit;
+        platforms = platforms.unix;
     };
 }

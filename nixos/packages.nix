@@ -34,6 +34,7 @@
         uxn                                                      # Assembler and emulator for the Uxn stack machine
         x16                                                      # Official emulator of CommanderX16 8-bit computer
         x16-rom                                                  # ROM file for CommanderX16 8-bit computer
+        ynodesktop                                               # A desktop client for Yume Nikki Online with Discord Rich Presence
         # graphics
         flameshot                                                # Powerful yet simple to use screenshot software
         gimp                                                     # GNU Image Manipulation Program

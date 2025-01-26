@@ -9,6 +9,7 @@
     imagemagick,
     makeWrapper,
     nodejs,
+    copyDesktopItems,
     electron,
     makeDesktopItem
 }: stdenv.mkDerivation rec {
@@ -36,6 +37,7 @@
         imagemagick
         makeWrapper
         nodejs
+        copyDesktopItems
     ];
 
     yarnBuildScript = "electron-builder";
@@ -63,15 +65,17 @@
         runHook postInstall
     '';
 
-    desktopItems = [(
-        makeDesktopItem {
+    desktopItems = [
+        (makeDesktopItem {
             name = pname;
             desktopName = "YNOdesktop";
+            genericName = "Desktop client for Yume Nikki Online";
+            comment = "Play Yume Nikki Online";
             exec = "ynodesktop";
             icon = "ynodesktop";
             categories = [ "Game" ];
-        }
-    )];
+        })
+    ];
 
     meta = with lib; {
         description = "A desktop client for Yume Nikki Online with Discord Rich Presence";

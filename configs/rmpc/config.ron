@@ -40,12 +40,12 @@
             "?": ShowCurrentSongInfo,
             "O": ShowOutputs,
             "P": ShowDecoders,
-            "1": SwitchToTab("Queue"),
-            "2": SwitchToTab("Directories"),
-            "3": SwitchToTab("Album Artists"),
-            "4": SwitchToTab("Albums"),
-            "5": SwitchToTab("Playlists"),
-            "6": SwitchToTab("Search"),
+            "1": SwitchToTab("main"),
+            "2": SwitchToTab("directories"),
+            "3": SwitchToTab("artists"),
+            "4": SwitchToTab("albums"),
+            "5": SwitchToTab("playlists"),
+            "6": SwitchToTab("search"),
         },
         navigation: {
             "k":         Up,
@@ -64,12 +64,12 @@
             "<C-d>":     DownHalf,
             "N":         PreviousResult,
             "n":         NextResult,
-            "<CR>":         Add,
+            "<CR>":      Add,
             "A":         AddAll,
-            "<Del>":         Delete,
+            "<Del>":     Delete,
             "r":         Rename,
-            "<Home>":         Top,
-            "<End>":         Bottom,
+            "<Home>":    Top,
+            "<End>":     Bottom,
             "<Space>":   Select,
             "<C-Space>": InvertSelection,
             "<CR>":      Confirm,
@@ -109,35 +109,44 @@
     ),
     tabs: [
         (
-            name: "Queue",
+            name: "main",
             border_type: None,
             pane: Split(
                 direction: Horizontal,
-                panes: [(size: "40%", pane: Pane(AlbumArt)), (size: "60%", pane: Pane(Queue))],
+                panes: [
+                    (size: "20%", pane: Split(
+                        direction: Vertical,
+                        panes: [
+                            (size: "40%", pane: Pane(AlbumArt)),    
+                            (size: "60%", pane: Pane(AlbumArtists))
+                        ]
+                    )),
+                    (size: "80%", pane: Pane(Queue))
+                ],
             ),
         ),
         (
-            name: "Directories",
+            name: "directories",
             border_type: None,
             pane: Pane(Directories),
         ),
         (
-            name: "Artists",
+            name: "artists",
             border_type: None,
             pane: Pane(AlbumArtists),
         ),
         (
-            name: "Albums",
+            name: "albums",
             border_type: None,
             pane: Pane(Albums),
         ),
         (
-            name: "Playlists",
+            name: "playlists",
             border_type: None,
             pane: Pane(Playlists),
         ),
         (
-            name: "Search",
+            name: "search",
             border_type: None,
             pane: Pane(Search),
         ),

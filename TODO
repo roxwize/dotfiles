@@ -22,7 +22,6 @@
  +- [ ] +last.fm with mpdscribble
 [ ] Dig polybar's grave (you're not using it anymore so why keep it around?)
 [ ] Get a pager/systray <https://wiki.gentoo.org/wiki/Openbox/Guide#Pagers_and_systrays>
-[ ] Get MPC to work with yambar (having to use playerctl mpris bridge shit at the moment which doesn't work very well x_x)
 [ ] Host-dependent home configurations (e.g. don't assume MPD music is in `/mnt/world/music` for every machine)
  +- [ ] Maybe symlink your music to a music folder in your home directory or something (i.e. `~/Music -> /mnt/world/music` or perhaps a subdirectory of that?)
 [ ] alvr doesnt work :(
@@ -31,8 +30,8 @@
 [x] Add openbox keybinds for defocusing/focusing + cycling windows and maybe swapping workspaces
  +- [ ] Click to focus doesnt work unless its on the titlebar for some reason
  +- [ ] Using shift instead of ctrl seems inconsistent but it appears that other applications use ctrl+alt+arrowkeys for their own purposes which IDK if i want to overwrite
-[ ] Download Slack !!NOW WWWW!!!!FUCKKKK
 [ ] Fix alt+tab switcher fonts and colors being fucked up
+[ ] Get fishline
 
 [x] Get PulseAudio sound controls on polybar to work
 [x] Add desktop switching to windows (context menu?)
@@ -49,3 +48,5 @@
 [x] Fix yambar being offset on your screen for some reason (might have to file an issue on its repo)
 [x] rmpc isnt working WAAAAAAAAAAAAAAAAAAAAAAAAAaa ive been working on this for a month i just wanna be done so i can lie down and cuddle girls and be happy forever................
 [x] Manage flatpaks declaratively (https://github.com/gmodena/nix-flatpak)
+[x] Download Slack !!NOW WWWW!!!!FUCKKKK
+[x] Get MPC to work with yambar (having to use playerctl mpris bridge shit at the moment which doesn't work very well x_x)

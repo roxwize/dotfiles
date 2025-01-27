@@ -9,6 +9,7 @@
         cc65                                                     # C compiler for processors of 6502 family
         chibicc-uxn                                              # A small C compiler... for uxn
         llvmPackages_19.clang-tools                              # Standalone command line tools for C++ development
+        fasm                                                     # x86(-64) macro assembler to binary, MZ, PE, COFF, and ELF
         (fenix.default.withComponents [ "cargo" "rustc" ])
         gcc                                                      # GNU Compiler Collection, version 13.3.0 (wrapper script)
         git                                                      # Distributed version control system

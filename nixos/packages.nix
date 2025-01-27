@@ -16,6 +16,7 @@
         gnumake                                                  # Tool to control the generation of non-source files from sources
         godot_4                                                  # Free and Open Source 2D and 3D game engine
         gtk4                                                     # Multi-platform toolkit for creating graphical user interfaces
+        jdk23                                                    # Open-source Java Development Kit
         just                                                     # Handy way to save and run project-specific commands
         meson                                                    # Open source, fast and friendly build system made in Python
         nodejs_23                                                # Event-driven I/O framework for the V8 JavaScript engine
@@ -97,5 +98,7 @@
         nmap                                                     # Free and open source utility for network discovery and security auditing
         obs-studio                                               # Free and open source software for video recording and live streaming
         qemu_kvm                                                 # Generic and open source machine emulator and virtualizer
+        temurin-jre-bin-23                                       # Eclipse Temurin, prebuilt OpenJDK binary
+        temurin-jre-bin-8                                        # Eclipse Temurin, prebuilt OpenJDK binary
     ];
 }

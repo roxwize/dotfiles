@@ -32,6 +32,7 @@
  +- [ ] Using shift instead of ctrl seems inconsistent but it appears that other applications use ctrl+alt+arrowkeys for their own purposes which IDK if i want to overwrite
 [ ] Fix alt+tab switcher fonts and colors being fucked up
 [ ] Get fishline
+[ ] Get minecraft assets to work PLEAAASEEEEE
 
 [x] Get PulseAudio sound controls on polybar to work
 [x] Add desktop switching to windows (context menu?)

@@ -1,4 +1,3 @@
-# TODO Um this is a rust package
 { rustPlatform, fetchFromGitHub, lib }: rustPlatform.buildRustPackage rec {
     pname = "playit-agent";
     version = "0.15.26";

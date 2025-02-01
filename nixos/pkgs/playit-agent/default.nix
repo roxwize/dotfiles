@@ -11,6 +11,7 @@
     };
 
     cargoHash = "sha256-JRsmZ5D/awsIjExGTDkzYkun6oeIpL1FkZJKzZf/XF0=";
+    doCheck = false; # uses network tests and it also takes SO FUCKING LONG oh my god
 
     meta = with lib; {
         description = "The playit program";

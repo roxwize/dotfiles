@@ -66,7 +66,7 @@
         hyfetch                                                  # neofetch with pride flags <3
         kitty                                                    # Modern, hackable, featureful, OpenGL based terminal emulator
         monitor                                                  # Manage processes and monitor system resources
-        timemachine                                              # System restore tool for Linux
+        timeshift                                                # System restore tool for Linux
         unzip                                                    # Extraction utility for archives compressed in .zip format
         usbutils                                                 # Tools for working with USB devices, such as lsusb
         wineWowPackages.stable                                   # Open Source implementation of the Windows API on top of X, OpenGL, and Unix

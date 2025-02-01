@@ -29,8 +29,7 @@
         </item>
         <item label="Backup Manager">
             <action name="Execute">
-                <!--! i think needing sudo for this will 100% fuck things up but ill fix it later -->
-                <command>sudo timeshift-gtk</command>
+                <command>pkexec timeshift-gtk</command>
             </action>
         </item>
         <separator/>

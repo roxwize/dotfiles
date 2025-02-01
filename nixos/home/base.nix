@@ -30,6 +30,11 @@
             enable = true;
             userName = "roxwize";
             userEmail = "rae@roxwize.xyz";
+            extraConfig = {
+                core = {
+                    editor = "nvim";
+                };
+            };
         };
         kitty = {
             enable = true;

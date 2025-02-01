@@ -11,14 +11,15 @@
                 <command>kitty</command>
             </action>
         </item>
-        <item label="File Browser">
-            <action name="Execute">
-                <command>io.elementary.files</command>
-            </action>
-        </item>
         <item label="VSCodium">
             <action name="Execute">
                 <command>codium</command>
+            </action>
+        </item>
+        <separator/>
+        <item label="File Browser">
+            <action name="Execute">
+                <command>dolphin</command>
             </action>
         </item>
         <item label="Task Manager">
@@ -26,10 +27,10 @@
                 <command>com.github.stsdc.monitor</command>
             </action>
         </item>
-        <separator/>
-        <item label="Set Wallpaper">
+        <item label="Backup Manager">
             <action name="Execute">
-                <command>nitrogen ~/.dotfiles/assets/wallpapers</command>
+                <!--! i think needing sudo for this will 100% fuck things up but ill fix it later -->
+                <command>sudo timeshift-gtk</command>
             </action>
         </item>
         <separator/>

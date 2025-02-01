@@ -101,6 +101,7 @@
         nmap                                                     # Free and open source utility for network discovery and security auditing
         obs-studio                                               # Free and open source software for video recording and live streaming
         qemu_kvm                                                 # Generic and open source machine emulator and virtualizer
+        soteria                                                  # Polkit authentication agent written in GTK designed to be used with any desktop environment
         temurin-jre-bin-23                                       # Eclipse Temurin, prebuilt OpenJDK binary
         temurin-jre-bin-8                                        # Eclipse Temurin, prebuilt OpenJDK binary
     ];

@@ -12,6 +12,11 @@
         file = {
             ".twmrc".source = ../../configs/twm;
             ".local/share/themes".source = ../../configs/openbox/themes;
+            #! dumb (see todo)
+            ".local/share/PrismLauncher" = {
+                source = ../../assets/minecraft;
+                recursive = true;
+            };
         };
     };
     xdg.configFile = {

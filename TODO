@@ -34,6 +34,10 @@
 [ ] Get fishline
 [ ] Get minecraft assets to work PLEAAASEEEEE
 [ ] Make cavestory multiplayer into a nix derivation (its a zip file, see https://discourse.nixos.org/t/what-is-your-approach-to-packaging-wine-applications-with-nix-derivations/12799)
+[ ] MEGA TODO: get timeshift.json to work (its in /etc/timeshift/timeshift.json so i think itll need its own derivation)
+[ ] soteria doesnt fucking work
+[ ] make https://github.com/addy-dclxvi/openbox-theme-collections.git into a derivation????
+ +- [ ] numix-clone + vermello
 
 [x] Get PulseAudio sound controls on polybar to work
 [x] Add desktop switching to windows (context menu?)

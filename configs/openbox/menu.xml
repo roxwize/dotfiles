@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openbox_menu xmlns="http://openbox.org/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://openbox.org/ file:///usr/share/openbox/menu.xsd">
     <menu id="root" label="Menu">
-        <item label="Firefox">
-            <action name="Execute">
-                <command>firefox</command>
-            </action>
-        </item>
-        <item label="kitty">
+        <item label="Terminal emulator">
             <action name="Execute">
                 <command>kitty</command>
+            </action>
+        </item>
+        <item label="Web browser">
+            <action name="Execute">
+                <command>firefox</command>
             </action>
         </item>
         <item label="VSCodium">
@@ -17,17 +17,17 @@
             </action>
         </item>
         <separator/>
-        <item label="File Browser">
+        <item label="File browser">
             <action name="Execute">
                 <command>dolphin</command>
             </action>
         </item>
-        <item label="Task Manager">
+        <item label="Task manager">
             <action name="Execute">
                 <command>com.github.stsdc.monitor</command>
             </action>
         </item>
-        <item label="Backup Manager">
+        <item label="Backup manager">
             <action name="Execute">
                 <command>pkexec timeshift-gtk</command>
             </action>

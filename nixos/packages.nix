@@ -46,10 +46,11 @@
         # gtk
         posy-cursors                                             # Posy's Improved Cursors for Linux
         pantheon.elementary-gtk-theme                            # GTK theme designed to be smooth, attractive, fast, and usable
-        # internet
+        # network
         ngrok                                                    # Allows you to expose a web server running on your local machine to the internet
         nicotine-plus                                            # Graphical client for the SoulSeek peer-to-peer system
         playit-agent                                             # The playit program
+        qbittorrent                                              # Featureful free software BitTorrent client
         slack                                                    # Desktop client for Slack
         vesktop                                                  # Alternate client for Discord with Vencord built-in
         yt-dlp                                                   # Command-line tool to download videos from YouTube.com and other sites (youtube-dl fork)
@@ -98,6 +99,7 @@
         # misc
         catppuccin-sddm                                          # Soothing pastel theme for SDDM
         kdePackages.kdenlive                                     # Free and open source video editor, based on MLT Framework and KDE Frameworks
+        mlt                                                      #! Open source multimedia framework, designed for television broadcasting (This is fucking stupid)
         nmap                                                     # Free and open source utility for network discovery and security auditing
         obs-studio                                               # Free and open source software for video recording and live streaming
         qemu_kvm                                                 # Generic and open source machine emulator and virtualizer

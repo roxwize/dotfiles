@@ -106,5 +106,6 @@
         soteria                                                  # Polkit authentication agent written in GTK designed to be used with any desktop environment
         temurin-jre-bin-23                                       # Eclipse Temurin, prebuilt OpenJDK binary
         temurin-jre-bin-8                                        # Eclipse Temurin, prebuilt OpenJDK binary
+        vlc                                                      # Cross-platform media player and streaming server
     ];
 }

@@ -24,6 +24,12 @@
         fsType = "ext4";
         neededForBoot = false;
     };
+    # Big fucking thing
+    fileSystems."/mnt/rae2" = {
+        device = "/dev/disk/by-uuid/fbbcc72f-34af-425c-9151-ef8919a6ae07";
+        fsType = "ext4";
+        neededForBoot = false;
+    };
 
     networking.hostName = "ioides";
 

@@ -3,7 +3,7 @@
         ./base.nix
 
         ./dconf.nix
-        ./firefox.nix
+        ./mozilla.nix
         ./neovim.nix
         ./polybar.nix
         ./vscode.nix

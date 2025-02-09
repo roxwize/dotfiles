@@ -44,6 +44,10 @@
             dedicatedServer.openFirewall = true;
             localNetworkGameTransfers.openFirewall = true;
         };
+        thunderbird = {
+            enable = true;
+            policies.DisableTelemetry = true;
+        };
     };
 
     services = {

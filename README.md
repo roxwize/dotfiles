@@ -29,9 +29,11 @@ the system should boot into openbox and from there you'll have your statusbar an
 Menus
     A-d
         Main menu
-    A-question
+    A-/
+        Passwords
+    A-? (SA-/)
         Application menu
-    A-period
+    A-.
         ssh menu
     A-c
         Client (window) menu

@@ -27,13 +27,21 @@
     accounts.email = {
         maildirBasePath = "mail";
         accounts.rae = rec {
+            primary = true;
             address = "rae@roxwize.xyz";
             realName = "Rae 5e";
             userName = address;
+            passwordCommand = "pass show mail/rae";
+            signature = {
+                showSignature = "append";
+                text = "rae <roxwize.xyz>";
+                delimiter = "~~~~";
+            };
             gpg = {
                 key = "6F92AED338D339DE14E7491C5B1A0FAB9BAB81EE";
                 signByDefault = true;
             };
+
             imap = {
                 host = "mail.privateemail.com";
                 port = 993;
@@ -42,6 +50,7 @@
                 host = imap.host;
                 port = 465;
             };
+
             thunderbird.enable = true;
         };
     };
@@ -79,6 +88,10 @@
             enable = true;
             font = "Fira Code Light 11";
             terminal = "kitty";
+            pass = {
+                enable = true;
+                stores = [ "/home/rae/.dotfiles/secrets" ];
+            };
         };
     };
 

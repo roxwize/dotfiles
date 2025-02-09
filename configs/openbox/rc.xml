@@ -55,7 +55,7 @@
         </keybind>
         <keybind key="A-question">
             <action name="Execute">
-                <command>rofi -show pass -modes pass</command>
+                <command>rofi-pass</command>
             </action>
         </keybind>
         <keybind key="A-period">

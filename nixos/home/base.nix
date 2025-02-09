@@ -24,6 +24,28 @@
         "rmpc".source = ../../configs/rmpc;
     };
 
+    accounts.email = {
+        maildirBasePath = "mail";
+        accounts.rae = rec {
+            address = "rae@roxwize.xyz";
+            realName = "Rae 5e";
+            userName = address;
+            gpg = {
+                key = "6F92AED338D339DE14E7491C5B1A0FAB9BAB81EE";
+                signByDefault = true;
+            };
+            imap = {
+                host = "mail.privateemail.com";
+                port = 993;
+            };
+            smtp = {
+                host = imap.host;
+                port = 465;
+            };
+            thunderbird.enable = true;
+        };
+    };
+
     programs = {
         fish = {
             enable = true;
@@ -45,6 +67,13 @@
             enable = true;
             font.name = "Fira Code";
             themeFile = "mayukai";
+        };
+        password-store = {
+            enable = true;
+            settings = {
+                PASSWORD_STORE_DIR = "/home/rae/.dotfiles/secrets";
+                PASSWORD_STORE_KEY = "6F92AED338D339DE14E7491C5B1A0FAB9BAB81EE";
+            };
         };
         rofi = {
             enable = true;

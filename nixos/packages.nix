@@ -99,7 +99,6 @@
         # misc
         catppuccin-sddm                                          # Soothing pastel theme for SDDM
         kdePackages.kdenlive                                     # Free and open source video editor, based on MLT Framework and KDE Frameworks
-        kdePackages.kservice                                     # KService allows to query information about installed applications and their associated file types.
         mlt                                                      #! Open source multimedia framework, designed for television broadcasting (This is fucking stupid)
         nmap                                                     # Free and open source utility for network discovery and security auditing
         obs-studio                                               # Free and open source software for video recording and live streaming

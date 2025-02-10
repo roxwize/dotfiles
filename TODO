@@ -32,12 +32,15 @@
  +- [ ] Using shift instead of ctrl seems inconsistent but it appears that other applications use ctrl+alt+arrowkeys for their own purposes which IDK if i want to overwrite
 [ ] Fix alt+tab switcher fonts and colors being fucked up
 [ ] Get fishline
+ +- [ ] i dont think fish.plugins works for this
 [ ] Get minecraft assets to work PLEAAASEEEEE
 [ ] Make cavestory multiplayer into a nix derivation (its a zip file, see https://discourse.nixos.org/t/what-is-your-approach-to-packaging-wine-applications-with-nix-derivations/12799)
 [ ] MEGA TODO: get timeshift.json to work (its in /etc/timeshift/timeshift.json so i think itll need its own derivation)
 [ ] soteria doesnt fucking work
 [ ] make https://github.com/addy-dclxvi/openbox-theme-collections.git into a derivation????
  +- [ ] numix-clone + vermello
+[ ] YNFG derivations
+[ ] Switch over to using tabs for indents
 
 [x] Get PulseAudio sound controls on polybar to work
 [x] Add desktop switching to windows (context menu?)

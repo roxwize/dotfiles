@@ -30,6 +30,7 @@
         vala-language-server # Vala
         # games
         alvr                                                     # Stream VR games from your PC to your headset via Wi-Fi
+        easyrpg-player                                           # RPG Maker 2000/2003 and EasyRPG games interpreter
         unstable.luanti                                          # An open source voxel game engine (formerly Minetest)
         prismlauncher                                            # Free, open source launcher for Minecraft
         steam-run                                                # Run commands in the same FHS environment that is used for Steam

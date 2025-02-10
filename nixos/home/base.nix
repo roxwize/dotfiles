@@ -61,6 +61,17 @@
             shellInit = ''
                 set -g fish_greeting
             '';
+            plugins = [
+                {
+                    name = "fishline";
+                    src = pkgs.fetchFromGitHub {
+                        owner = "0rax";
+                        repo = "fishline";
+                        rev = "v3.3.0";
+                        sha256 = "0j14nvhbz80pfkyzmwmj8x5b4pbngg9z4w04c6qrx3fip8fv70im";
+                    };
+                }
+            ];
         };
         git = {
             enable = true;

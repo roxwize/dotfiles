@@ -8,13 +8,7 @@
  +- [x] Just put it in your base.nix config and see if it comes across to home
  |      manager or if you have to import it into both
  +- [ ] https://github.com/notusknot/dotfiles-nix/blob/a034dcb6daff31ce50cdbc74a5972b1ef56ef3d7/overlays/apple-color-emoji.nix
-[ ] Use pass <https://www.passwordstore.org/>? (See also https://elvishjerricco.github.io/2018/06/24/secure-declarative-key-management.html)
 [ ] You could try making a GTK4 application that lets you manage/view packages in packages.nix
-[x] Get Rust to work (rustc + cargo is fine but only rustup provides RLS, but, um,)
- +- [ ] vimPlugins.coc-rls
- +- [x] Get rust-analyzer binaries from https://github.com/rust-lang/rust-analyzer
- +- [x] rust-analyzer doesn't fucking work (and you should probably use mkShell for this)
- +- [x] All of a sudden Nix won't let you run rustc or cargo due to some dynamically linked executable bullshit
 [ ] Theme your SDDM (you should make one yourself ;w;;;)
 [ ] Maybe convert some of your configuration files and themes into derivations
 [ ] Test out bluetooth (https://nixos.wiki/wiki/Bluetooth)
@@ -41,6 +35,7 @@
  +- [ ] numix-clone + vermello
 [ ] YNFG derivations
 [ ] Switch over to using tabs for indents
+[ ] music tagging - ex falso or kid3???
 
 [x] Get PulseAudio sound controls on polybar to work
 [x] Add desktop switching to windows (context menu?)
@@ -59,3 +54,9 @@
 [x] Manage flatpaks declaratively (https://github.com/gmodena/nix-flatpak)
 [x] Download Slack !!NOW WWWW!!!!FUCKKKK
 [x] Get MPC to work with yambar (having to use playerctl mpris bridge shit at the moment which doesn't work very well x_x)
+[x] Get Rust to work (rustc + cargo is fine but only rustup provides RLS, but, um,)
+ +- [x] vimPlugins.coc-rls
+ +- [x] Get rust-analyzer binaries from https://github.com/rust-lang/rust-analyzer
+ +- [x] rust-analyzer doesn't fucking work (and you should probably use mkShell for this)
+ +- [x] All of a sudden Nix won't let you run rustc or cargo due to some dynamically linked executable bullshit
+[x] Use pass <https://www.passwordstore.org/>? (See also https://elvishjerricco.github.io/2018/06/24/secure-declarative-key-management.html)

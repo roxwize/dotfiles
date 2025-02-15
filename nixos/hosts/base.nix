@@ -153,6 +153,7 @@
         packages = with pkgs; [
             fira-code
             gohufont
+            nasin-nanpa
             noto-fonts
             noto-fonts-cjk-sans
             noto-fonts-emoji

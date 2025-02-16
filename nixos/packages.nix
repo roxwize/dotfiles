@@ -79,7 +79,7 @@
 		# audio
 		alsa-utils                                               # ALSA, the Advanced Linux Sound Architecture utils
 		audacity                                                 # Sound editor with graphical UI
-		cardinal                                                 # Plugin wrapper around VCV Rack
+		vcv-rack                                                 # Open-source virtual modular synthesizer
 		# fooyin                                                 # Customisable music player
 		mpc                                                      # Minimalist command line interface to MPD
 		pavucontrol                                              # PulseAudio Volume Control

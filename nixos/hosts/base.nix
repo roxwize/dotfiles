@@ -77,10 +77,6 @@
         # Touchpad support
         libinput.enable = true;
         # Sound
-        jack = {
-            jackd.enable = true;
-            loopback.enable = true;
-        };
         pipewire = {
             enable = true;
             alsa.enable = true;

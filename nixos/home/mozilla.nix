@@ -93,7 +93,7 @@
                             }
                             {
                                 name = "NixOS wiki";
-                                url = "https://nixos.wiki/";
+                                url = "https://wiki.nixos.org/";
                             }
                             {
                                 name = "Nix functions";

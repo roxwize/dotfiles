@@ -77,11 +77,15 @@
         # Touchpad support
         libinput.enable = true;
         # Sound
-        jack.jackd.enable = true;
+        jack = {
+            jackd.enable = true;
+            loopback.enable = true;
+        };
         pipewire = {
             enable = true;
             alsa.enable = true;
             pulse.enable = true;
+            jack.enable = true;
         };
         # CUPS printing
         #     Can be configured at http://127.0.0.1:631/

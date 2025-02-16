@@ -79,7 +79,8 @@
 		# audio
 		alsa-utils                                               # ALSA, the Advanced Linux Sound Architecture utils
 		audacity                                                 # Sound editor with graphical UI
-		# fooyin                                                   # Customisable music player
+		cardinal                                                 # Plugin wrapper around VCV Rack
+		# fooyin                                                 # Customisable music player
 		mpc                                                      # Minimalist command line interface to MPD
 		pavucontrol                                              # PulseAudio Volume Control
 		playerctl                                                # Command-line utility and library for controlling media players that implement MPRIS
@@ -108,5 +109,14 @@
 		temurin-jre-bin-23                                       # Eclipse Temurin, prebuilt OpenJDK binary
 		temurin-jre-bin-8                                        # Eclipse Temurin, prebuilt OpenJDK binary
 		vlc                                                      # Cross-platform media player and streaming server
+	];
+
+	services.flatpak.packages = [
+		"com.github._0negal.Viper"                               # Launcher and updater for the Titanfall|2 mod Northstar
+		"com.github.tchx84.Flatseal"                             # Manage Flatpak permissions
+		"net.davidotek.pupgui2"                                  # Install Wine- and Proton-based compatibility tools
+
+		# Glorified roblox android wrapper ;w;
+		{ flatpakref = "https://sober.vinegarhq.org/sober.flatpakref"; sha256 = "1pj8y1xhiwgbnhrr3yr3ybpfis9slrl73i0b1lc9q89vhip6ym2l"; }
 	];
 }

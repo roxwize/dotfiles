@@ -2,9 +2,9 @@
 
 this is rae's nixOS config meow
 
-- **display manager**: SDDM
+- **display manager**: SDDM (BUT YUO NEVER SEE IT BLEHHHH)
 - **window manager**: openbox
-- **status bar**: polybar
+- **status bar**: yambar
 
 # installation
 

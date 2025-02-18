@@ -91,7 +91,6 @@
 		# X11
 		hsetroot                                                 # Allows you to compose wallpapers ('root pixmaps') for X
 		nitrogen                                                 # Wallpaper browser and setter for X11
-		unstable.pantheon.elementary-dock                        # Elegant, simple, clean dock
 		polybarFull                                              # Fast and easy-to-use tool for creating status bars
 		rofi                                                     # Window switcher, run dialog and dmenu replacement
 		xcompmgr                                                 #

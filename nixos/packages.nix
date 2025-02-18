@@ -5,6 +5,7 @@
 	# only like a few seconds
 	environment.systemPackages = with pkgs; [
 		# development
+		bun                                                      # Incredibly fast JavaScript runtime, bundler, transpiler and package manager – all in one
 		cc65                                                     # C compiler for processors of 6502 family
 		chibicc-uxn                                              # A small C compiler... for uxn
 		llvmPackages_19.clang-tools                              # Standalone command line tools for C++ development
@@ -32,6 +33,7 @@
 		easyrpg-player                                           # RPG Maker 2000/2003 and EasyRPG games interpreter
 		unstable.luanti                                          # An open source voxel game engine (formerly Minetest)
 		prismlauncher                                            # Free, open source launcher for Minecraft
+		slade                                                    # Doom editor
 		steam-run                                                # Run commands in the same FHS environment that is used for Steam
 		uxn                                                      # Assembler and emulator for the Uxn stack machine
 		x16                                                      # Official emulator of CommanderX16 8-bit computer
@@ -80,7 +82,7 @@
 		alsa-utils                                               # ALSA, the Advanced Linux Sound Architecture utils
 		audacity                                                 # Sound editor with graphical UI
 		vcv-rack                                                 # Open-source virtual modular synthesizer
-		# fooyin                                                 # Customisable music player
+	  # fooyin                                                   # Customisable music player
 		mpc                                                      # Minimalist command line interface to MPD
 		pavucontrol                                              # PulseAudio Volume Control
 		playerctl                                                # Command-line utility and library for controlling media players that implement MPRIS
@@ -90,6 +92,7 @@
 		# X11
 		hsetroot                                                 # Allows you to compose wallpapers ('root pixmaps') for X
 		nitrogen                                                 # Wallpaper browser and setter for X11
+		pantheon.elementary-dock                                 # Elegant, simple, clean dock
 		polybarFull                                              # Fast and easy-to-use tool for creating status bars
 		rofi                                                     # Window switcher, run dialog and dmenu replacement
 		xcompmgr                                                 #
@@ -101,6 +104,7 @@
 		anki                                                     # Spaced repetition flashcard program
 		catppuccin-sddm                                          # Soothing pastel theme for SDDM
 		kdePackages.kdenlive                                     # Free and open source video editor, based on MLT Framework and KDE Frameworks
+		kicad-small                                              # Open Source Electronics Design Automation suite, without 3D models
 		mlt                                                      #! Open source multimedia framework, designed for television broadcasting (This is fucking stupid)
 		nmap                                                     # Free and open source utility for network discovery and security auditing
 		obs-studio                                               # Free and open source software for video recording and live streaming

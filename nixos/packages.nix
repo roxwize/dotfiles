@@ -33,7 +33,6 @@
 		easyrpg-player                                           # RPG Maker 2000/2003 and EasyRPG games interpreter
 		unstable.luanti                                          # An open source voxel game engine (formerly Minetest)
 		prismlauncher                                            # Free, open source launcher for Minecraft
-		slade                                                    # Doom editor
 		steam-run                                                # Run commands in the same FHS environment that is used for Steam
 		uxn                                                      # Assembler and emulator for the Uxn stack machine
 		x16                                                      # Official emulator of CommanderX16 8-bit computer
@@ -92,7 +91,7 @@
 		# X11
 		hsetroot                                                 # Allows you to compose wallpapers ('root pixmaps') for X
 		nitrogen                                                 # Wallpaper browser and setter for X11
-		pantheon.elementary-dock                                 # Elegant, simple, clean dock
+		unstable.pantheon.elementary-dock                        # Elegant, simple, clean dock
 		polybarFull                                              # Fast and easy-to-use tool for creating status bars
 		rofi                                                     # Window switcher, run dialog and dmenu replacement
 		xcompmgr                                                 #
@@ -119,6 +118,7 @@
 		"com.github._0negal.Viper"                               # Launcher and updater for the Titanfall|2 mod Northstar
 		"com.github.tchx84.Flatseal"                             # Manage Flatpak permissions
 		"net.davidotek.pupgui2"                                  # Install Wine- and Proton-based compatibility tools
+		"net.mancubus.SLADE"                                     # It's a DOOM editor
 
 		# Glorified roblox android wrapper ;w;
 		{ flatpakref = "https://sober.vinegarhq.org/sober.flatpakref"; sha256 = "1pj8y1xhiwgbnhrr3yr3ybpfis9slrl73i0b1lc9q89vhip6ym2l"; }

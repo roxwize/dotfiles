@@ -33,6 +33,13 @@
 		easyrpg-player                                           # RPG Maker 2000/2003 and EasyRPG games interpreter
 		unstable.luanti                                          # An open source voxel game engine (formerly Minetest)
 		prismlauncher                                            # Free, open source launcher for Minecraft
+		(retroarch.override {                                    # Multi-platform emulator frontend for libretro cores
+			cores = with libretro; [
+				easyrpg                                          	# RPG Maker 2000/2003 and EasyRPG games interpreter
+				ppsspp                                              # HLE Playstation Portable emulator, written in C++ (SDL + headless)
+				yabause                                          	# Open-source Sega Saturn emulator
+			];
+		})
 		steam-run                                                # Run commands in the same FHS environment that is used for Steam
 		uxn                                                      # Assembler and emulator for the Uxn stack machine
 		x16                                                      # Official emulator of CommanderX16 8-bit computer
@@ -101,7 +108,7 @@
 		# misc
 		anki                                                     # Spaced repetition flashcard program
 		catppuccin-sddm                                          # Soothing pastel theme for SDDM
-		kdePackages.kdenlive                                     # Free and open source video editor, based on MLT Framework and KDE Frameworks
+		unstable.kdePackages.kdenlive                            # Free and open source video editor, based on MLT Framework and KDE Frameworks
 		kicad-small                                              # Open Source Electronics Design Automation suite, without 3D models
 		mlt                                                      #! Open source multimedia framework, designed for television broadcasting (This is fucking stupid)
 		nmap                                                     # Free and open source utility for network discovery and security auditing

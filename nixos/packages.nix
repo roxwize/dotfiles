@@ -35,12 +35,14 @@
 		prismlauncher                                            # Free, open source launcher for Minecraft
 		(retroarch.override {                                    # Multi-platform emulator frontend for libretro cores
 			cores = with libretro; [
-				dosbox                                           	# DOS
+				dosbox                                           	# MS-DOS
 				easyrpg                                          	# RPG Maker 2000/2003
 				mame                                                # Arcade
 				melonds                                          	# Nintendo DS
+				mgba                                                # Game Boy Advance
 				pcsx2                                               # PlayStation 2
 				ppsspp                                           	# PlayStation Portable
+				snes9x                                              # Super Nintendo Entertainment System
 				yabause                                          	# Sega Saturn
 			];
 		})

@@ -35,9 +35,13 @@
 		prismlauncher                                            # Free, open source launcher for Minecraft
 		(retroarch.override {                                    # Multi-platform emulator frontend for libretro cores
 			cores = with libretro; [
-				easyrpg                                          	# RPG Maker 2000/2003 and EasyRPG games interpreter
-				ppsspp                                              # HLE Playstation Portable emulator, written in C++ (SDL + headless)
-				yabause                                          	# Open-source Sega Saturn emulator
+				dosbox                                           	# DOS
+				easyrpg                                          	# RPG Maker 2000/2003
+				mame                                                # Arcade
+				melonds                                          	# Nintendo DS
+				pcsx2                                               # PlayStation 2
+				ppsspp                                           	# PlayStation Portable
+				yabause                                          	# Sega Saturn
 			];
 		})
 		steam-run                                                # Run commands in the same FHS environment that is used for Steam

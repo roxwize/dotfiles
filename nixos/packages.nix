@@ -21,7 +21,7 @@
 		meson                                                    # Open source, fast and friendly build system made in Python
 		nodejs_23                                                # Event-driven I/O framework for the V8 JavaScript engine
 		pnpm                                                     # Fast, disk space efficient package manager for JavaScript
-		python314                                                # High-level dynamically-typed programming language
+		python313                                                # High-level dynamically-typed programming language
 		vala                                                     # Compiler for GObject type system
 		## language servers
 		mesonlsp             # Meson
@@ -35,16 +35,17 @@
 		prismlauncher                                            # Free, open source launcher for Minecraft
 		(retroarch.override {                                    # Multi-platform emulator frontend for libretro cores
 			cores = with libretro; [
-				blastem                                           # Sega Genesis
-				dosbox                                           	# MS-DOS
-				easyrpg                                          	# RPG Maker 2000/2003
-				mame                                            	# Arcade
-				melonds                                          	# Nintendo DS
-				mesen
-				pcsx2                                           	# PlayStation 2
-				ppsspp                                           	# PlayStation Portable
-				snes9x                                            # Super Nintendo Entertainment System
-				yabause                                          	# Sega Saturn
+				blastem                                            	# Sega Genesis
+				dosbox                                            	# MS-DOS
+				easyrpg                                           	# RPG Maker 2000/2003
+				mame                                              	# Arcade
+				melonds                                           	# Nintendo DS
+				mesen                                             	# Nintendo Entertainment System
+				mgba                                              	# Game Boy Advance
+				pcsx2                                             	# PlayStation 2
+				ppsspp                                            	# PlayStation Portable
+				snes9x                                            	# Super Nintendo Entertainment System
+				yabause                                           	# Sega Saturn
 			];
 		})
 		steam-run                                                # Run commands in the same FHS environment that is used for Steam
@@ -115,6 +116,7 @@
 		# misc
 		anki                                                     # Spaced repetition flashcard program
 		catppuccin-sddm                                          # Soothing pastel theme for SDDM
+		flips                                                    # Patcher for IPS and BPS files
 		unstable.kdePackages.kdenlive                            # Free and open source video editor, based on MLT Framework and KDE Frameworks
 		kicad-small                                              # Open Source Electronics Design Automation suite, without 3D models
 		mlt                                                      #! Open source multimedia framework, designed for television broadcasting (This is fucking stupid)

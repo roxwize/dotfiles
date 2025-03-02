@@ -95,14 +95,14 @@
 		# audio
 		alsa-utils                                               # ALSA, the Advanced Linux Sound Architecture utils
 		audacity                                                 # Sound editor with graphical UI
-		vcv-rack                                                 # Open-source virtual modular synthesizer
-	  # fooyin                                                   # Customisable music player
+	  fooyin                                                   # Customisable music player
 		mpc                                                      # Minimalist command line interface to MPD
 		pavucontrol                                              # PulseAudio Volume Control
 		playerctl                                                # Command-line utility and library for controlling media players that implement MPRIS
 		reaper                                                   # Digital audio workstation
 		unstable.rmpc                                            # TUI music player client for MPD with album art support via kitty image protocol
 		sunvox                                                   # Small, fast and powerful modular synthesizer with pattern-based sequencer
+#   vcv-rack                                                 # Open-source virtual modular synthesizer
 		# X11
 		hsetroot                                                 # Allows you to compose wallpapers ('root pixmaps') for X
 		nitrogen                                                 # Wallpaper browser and setter for X11

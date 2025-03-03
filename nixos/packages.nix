@@ -95,7 +95,8 @@
 		# audio
 		alsa-utils                                               # ALSA, the Advanced Linux Sound Architecture utils
 		audacity                                                 # Sound editor with graphical UI
-	  fooyin                                                   # Customisable music player
+		# TODO: consider getting rid of this (no mpd support makes me sad......)
+    fooyin                                                   # Customisable music player
 		mpc                                                      # Minimalist command line interface to MPD
 		pavucontrol                                              # PulseAudio Volume Control
 		playerctl                                                # Command-line utility and library for controlling media players that implement MPRIS

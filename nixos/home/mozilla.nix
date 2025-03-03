@@ -146,6 +146,10 @@
             profiles.default = {
                 isDefault = true;
                 search = firefox.profiles.default.search;
+                settings = {
+                    "mail.show_headers" = 2;
+                    "mail.spellcheck.inline" = false;
+                };
             };
         };
     };

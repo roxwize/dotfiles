@@ -1,0 +1,137 @@
+{
+    "Name": "techcat8",
+    "Theme": "AAAAAQAAAAAAAAAA/////wAAAAAOAAAABQAAAAAB//9+foSEo6MAAAAAAAUAAAABAf//CQkRESkpAAAAAAAFAAAAAgH//5iYnp6+vgAAAAAABQAAAAQB//8AAAgIIyMAAAAAAAUAAAAGAf//ZWVra4iIAAAAAAAFAAAABwH//5iYnp6+vgAAAAAABQAAAAgB//9+foSEo6MAAAAAAAUAAAAJAf//CQkRESkpAAAAAAAFAAAACgH//wAACAgjIwAAAAAABQAAAAwB//9PT0hIcnIAAAAAAAUAAAANAf//7u7o6NXVAAAAAAAFAAAADgH//4yMnZ3h4QAAAAAABQAAABAB//8UFBwcNDQAAAAAAAUAAAAUAYCAZWVra4iIAAAAAAAB/////wAAAB4ARwBvAGgAdQBGAG8AbgB0ACAAWwBHAG8AaAB1AF0AAAAOAFIAZQBnAHUAbABhAHJAIAAAAAAAAP////8FAAEBkBAAAAEAAAAAAAAAAAAAAAAAAQAAAB4ARwBvAGgAdQBGAG8AbgB0ACAAWwBHAG8AaAB1AF0=",
+    "Version": 1,
+    "Widgets": [
+        {
+            "SplitterVertical": {
+                "State": "AAAA/wAAAAEAAAACAAACkQAAABYA/////wEAAAACAA==",
+                "Widgets": [
+                    {
+                        "SplitterVertical": {
+                            "State": "AAAA/wAAAAEAAAACAAAAFwAAApAA/////wEAAAACAA==",
+                            "Widgets": [
+                                {
+                                    "SplitterHorizontal": {
+                                        "State": "AAAA/wAAAAEAAAACAAAAYAAABIoA/////wEAAAABAA==",
+                                        "Widgets": [
+                                            {
+                                                "PlayerControls": {
+                                                }
+                                            },
+                                            {
+                                                "SplitterHorizontal": {
+                                                    "State": "AAAA/wAAAAEAAAACAAAAMAAABFYA/////wEAAAABAA==",
+                                                    "Widgets": [
+                                                        {
+                                                            "PlaylistControls": {
+                                                            }
+                                                        },
+                                                        {
+                                                            "SplitterHorizontal": {
+                                                                "State": "AAAA/wAAAAEAAAACAAAAGAAABDoA/////wEAAAABAA==",
+                                                                "Widgets": [
+                                                                    {
+                                                                        "ScrobbleToggle": {
+                                                                        }
+                                                                    },
+                                                                    {
+                                                                        "SplitterHorizontal": {
+                                                                            "State": "AAAA/wAAAAEAAAACAAADcQAAAMUA/////wEAAAABAA==",
+                                                                            "Widgets": [
+                                                                                {
+                                                                                    "WaveBar": {
+                                                                                        "ElapsedTotal": false,
+                                                                                        "ShowLabels": false
+                                                                                    }
+                                                                                },
+                                                                                {
+                                                                                    "VolumeControls": {
+                                                                                        "Mode": 3
+                                                                                    }
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    }
+                                                                ]
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "SplitterHorizontal": {
+                                        "State": "AAAA/wAAAAEAAAACAAAAdwAAAHcA/////wEAAAABAA==",
+                                        "Widgets": [
+                                            {
+                                                "SplitterVertical": {
+                                                    "State": "AAAA/wAAAAEAAAACAAABzgAAANkA/////wEAAAACAA==",
+                                                    "Widgets": [
+                                                        {
+                                                            "LibraryTree": {
+                                                                "Grouping": 0,
+                                                                "ID": "e08879b321a8498cbadd465bf62f9c6f",
+                                                                "State": "AAAAQHjaY2BgEPi7rmOhvt91wasG3JELHk43Y2BgYAJigZudBe5LOmervS3i/X1i+cH3ILHoeZFnjU7PPG60YWXD7dz57QAB+Bql"
+                                                            }
+                                                        },
+                                                        {
+                                                            "SplitterHorizontal": {
+                                                                "State": "AAAA/wAAAAEAAAACAAAA3AAAAZUA/////wEAAAABAA==",
+                                                                "Widgets": [
+                                                                    {
+                                                                        "ArtworkPanel": {
+                                                                            "CoverAlignment": 132,
+                                                                            "CoverType": 0,
+                                                                            "KeepAspectRatio": true
+                                                                        }
+                                                                    },
+                                                                    {
+                                                                        "SelectionInfo": {
+                                                                            "Options": 23,
+                                                                            "State": "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYUAAAACAAAAAQAAAAAAAAAAAAAAAGT/////AAAAhAAAAAAAAAACAAAAZAAAAAEAAAAAAAABIQAAAAEAAAAAAAAD6AAAAABkAAAAAA=="
+                                                                        }
+                                                                    }
+                                                                ]
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "SplitterVertical": {
+                                                    "State": "AAAA/wAAAAEAAAACAAACPQAAAGoA/////wEAAAACAA==",
+                                                    "Widgets": [
+                                                        {
+                                                            "Playlist": {
+                                                                "Columns": "8:132|3|0:2|1|7:2",
+                                                                "HeaderState": "AAAAZXjaY2BgYGVgYFAF4ndAbASl7Rgg4iDACMRMQMwMxCwgcft1OwJft8rtsL8BpoLst1Q9dF8nUg3n75wJArNAGhn+AwEAPekbJQ==",
+                                                                "ID": "c2178bed5edc4b38b7f5b9e12ad3714a",
+                                                                "Preset": 0,
+                                                                "SingleMode": false
+                                                            }
+                                                        },
+                                                        {
+                                                            "PlaylistOrganiser": {
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "StatusBar": {
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}

@@ -13,11 +13,6 @@
     enable_mouse: true,
     status_update_interval_ms: 1000,
     select_current_song_on_change: false,
-    album_art: (
-        method: Auto,
-        max_size_px: (width: 600, height: 600),
-        disabled_protocols: ["http://", "https://"],
-    ),
     keybinds: (
         global: {
             ":": CommandMode,
@@ -89,6 +84,12 @@
             "i":       ShowInfo,
             "C":       JumpToCurrent,
         },
+    ),
+
+    album_art: (
+        method: Auto,
+        max_size_px: (width: 600, height: 600),
+        disabled_protocols: ["http://", "https://"],
     ),
     search: (
         case_sensitive: false,

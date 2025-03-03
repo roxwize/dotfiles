@@ -85,7 +85,10 @@
         };
         kitty = {
             enable = true;
-            font.name = "Fira Code";
+            font = {
+                name = "GohuFont";
+                size = 10.5;
+            };
             themeFile = "mayukai";
         };
         password-store = {

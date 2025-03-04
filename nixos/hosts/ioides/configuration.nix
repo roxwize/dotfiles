@@ -34,7 +34,12 @@
 		neededForBoot = false;
 	};
 
-	networking.hostName = "ioides";
+	networking = {
+		hostName = "ioides";
+		hosts = {
+			"10.0.0.39" = [ "near" "near.local" ];
+		};
+	};
 
 	services = {
 		xserver.videoDrivers = [ "nvidia" ];

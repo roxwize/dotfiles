@@ -19,25 +19,25 @@
             url = "github:nix-community/fenix";
             inputs.nixpkgs.follows = "nixpkgs";
         };
+        # Raspberry Pi support
+        raspberry-pi-nix.url = "github:nix-community/raspberry-pi-nix";
     };
 
     outputs = { self, nixpkgs, home-manager, nix-flatpak, ... }@inputs: {
         nixosConfigurations =
             let
-                system = hostname: {
+                mkSystem = hostname: arch: with nixpkgs; {
                     name = hostname;
-                    value = nixpkgs.lib.nixosSystem {
-                        system = "x86_64-linux";
+                    value = lib.nixosSystem {
+                        system = "${arch}-linux";
                         specialArgs = { inherit inputs; };
-                        modules = [
-                            nix-flatpak.nixosModules.nix-flatpak
-                            ./hosts/${hostname}/configuration.nix
-                        ];
+                        modules = [ ./hosts/${hostname}/configuration.nix ];
                     };
                 };
             in builtins.listToAttrs [
-                (system "ioides")
-                (system "qemu")
+                (mkSystem "ioides" "x86_64")    # main pc
+                (mkSystem "qemu"   "x86_64")    # emulatr...........
+                (mkSystem "near"   "aarch_64")  # raspberry pi 5 home server
             ];
 
         homeConfigurations.rae = home-manager.lib.homeManagerConfiguration {

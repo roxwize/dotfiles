@@ -40,6 +40,7 @@
 [ ] Personally i think your desktop fucking sucks and you should just switch to kde plasma
  +- [ ] Just see if you can write a yambar plugin that gives you a taskbar...........
 [ ] Should you be using both libretro easyrpg and standalone easyrpg at the same time like you are now ????????
+[ ] FUN IDEA::: Do you see ? https://github.com/nix-community/raspberry-pi-nix/blob/master/rpi/default.nix ??? see if it might be worth trying to make an options set across your config for very non granular at a glance configurations ... (see also https://github.com/nanzhong/env/blob/master/machines/devpi/configuration.nix)
 
 [x] Get PulseAudio sound controls on polybar to work
 [x] Add desktop switching to windows (context menu?)

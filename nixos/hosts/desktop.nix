@@ -1,6 +1,7 @@
 { config, pkgs, inputs, ... }:
 {
     imports = [
+        inputs.nix-flatpak.nixosModules.nix-flatpak
         ../packages.nix
     ];
 
@@ -14,7 +15,10 @@
 
     security.polkit.enable = true;
 
-    nix.settings.experimental-features = [ "nix-command" "flakes" ];
+    nix.settings = {
+        experimental-features = [ "nix-command" "flakes" ];
+        trusted-users = [ "root" "rae" ];
+    };
     nixpkgs = {
         config.allowUnfree = true;
         overlays = import ../overlays.nix inputs;

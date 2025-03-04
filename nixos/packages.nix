@@ -63,6 +63,7 @@
 		posy-cursors                                             # Posy's Improved Cursors for Linux
 		pantheon.elementary-gtk-theme                            # GTK theme designed to be smooth, attractive, fast, and usable
 		# network
+		cachix                                                   # Command-line client for Nix binary cache hosting
 		ngrok                                                    # Allows you to expose a web server running on your local machine to the internet
 		nicotine-plus                                            # Graphical client for the SoulSeek peer-to-peer system
 		playit-agent                                             # The playit program

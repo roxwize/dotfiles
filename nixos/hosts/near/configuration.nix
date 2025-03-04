@@ -3,6 +3,7 @@
 		inputs.raspberry-pi-nix.nixosModules.raspberry-pi
 		inputs.raspberry-pi-nix.nixosModules.sd-image
 		./hardware-configuration.nix
+		../base.nix
 	];
 
     networking.hostName = "near";

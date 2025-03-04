@@ -1,20 +1,12 @@
-{ ... }: {
+{ lib, ... }: {
 	raspberry-pi-nix.board = "bcm2712"; # RPI5 64bit
-	hardware.raspberry-pi.config.all = let 
-		o = k: v: {
-			name = k;
-			value = {
-				enable = true;
-				value = v;
-			};
+	hardware.raspberry-pi.config.all = {
+		base-dt-params = {
+			BOOT_UART = { enable = true; value = 1; };
+			uart_2ndstage = { enable = true; value = 1; };
 		};
-	in {
-		base-dt-params = builtins.listToAttrs [
-			(o "BOOT_UART" 1)
-			(o "uart_2ndstage" 1)
-		];
-		dt-overlays = builtins.listToAttrs [
-			(o "disable-bt" {})
-		];
+		dt-overlays = {
+			disable-bt = { enable = true; params = {}; };
+		};
 	};
 }

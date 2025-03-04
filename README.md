@@ -19,6 +19,16 @@ nixos-install --flake './nixos#[hostname]'
 
 from my experience the process is more involved, but it ultimately boils down to those three commands above (the first command is only for bootstrapping). youll need to make a configuration for your host which involves creating default configurations with `nixos-generate-config`, copying it to your host's folder in `nixos/hosts/[host]/`, editing it, and then adding it to `flake.nix`. after that you should clone the repo inside of `/home/rae/` on your filesystem
 
+## raspberry PI devices
+
+have yur lil sd card on hand (paw) and run in the root of the repository:
+
+```sh
+nix build './nixos#nixosConfigurations.[hostname].config.system.build.sdImage'
+```
+
+and then Wait...................
+
 # usage
 
 the system should boot into openbox and from there you'll have your statusbar and a lot of keybinds to learn x3

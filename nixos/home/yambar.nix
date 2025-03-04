@@ -72,7 +72,7 @@
 					}
 					{
 						clock = {
-							date-format = "%b %d %y";
+							date-format = "%d %b %y";
 							time-format = "%I:%M %p";
 							content.string.text = "{date} {time}";
 						};

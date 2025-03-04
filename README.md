@@ -21,13 +21,13 @@ from my experience the process is more involved, but it ultimately boils down to
 
 ## raspberry PI devices
 
-have yur lil sd card on hand (paw) and run in the root of the repository:
+[raspberry-pi-nix](https://github.com/nix-community/raspberry-pi-nix) is used to build PI sd card images. have yur lil sd card on hand (paw) and run in the root of the repository:
 
 ```sh
 nix build './nixos#nixosConfigurations.[hostname].config.system.build.sdImage'
 ```
 
-and then Wait...................
+and then Wait................... output will be in `result/` NYA!!
 
 # usage
 

@@ -84,26 +84,6 @@
 		# misc
 		blueman.enable = true;
 		flatpak.enable = true;
-		openssh = {
-			enable = true;
-			knownHosts =
-			let
-				host = name: key: {
-					name = name;
-					value = {
-						hostNames = [ name ];
-						publicKey = key;
-					};
-				};
-			in {
-				
-			} // builtins.listToAttrs [
-				(host "git.sr.ht" "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMZvRd4EtM7R+IHVMWmDkVU3VLQTSwQDSAvW0t2Tkj60")
-				(host "github.com" "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOMqqnkVzrm0SdG6UOoqKLsabgH5C9okWi0dh2l9GKJl")
-				(host "hackclub.app" "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJ3pezDUZG+4bPRZg2znAuuMp42AL+rc1HGUltnNf8cA")
-				(host "verygay.world" "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICMql669TiEneexyQsUWfCo9ouEJwk3f21d9chpBqFge")
-			];
-		};
 	};
 
 	hardware = {

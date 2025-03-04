@@ -75,6 +75,7 @@
 		android-tools                                            # Android SDK platform tools
 		bat                                                      # Cat(1) clone with syntax highlighting and Git integration
 		btop                                                     # Monitor of resources
+		compose2nix                                              # Generate a NixOS config from a Docker Compose project
 		dconf-editor                                             # GSettings editor for GNOME
 		kdePackages.dolphin                                      # File manager by KDE
 		ffmpeg                                                   # Complete, cross-platform solution to record, convert and stream audio and video

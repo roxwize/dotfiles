@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ inputs, pkgs, ... }: {
     nix.settings = {
         experimental-features = [ "nix-command" "flakes" ];
         trusted-users = [ "root" "rae" ];
@@ -12,7 +12,6 @@
 		isNormalUser = true;
 		extraGroups = [ "wheel" "docker" "jackaudio" ];
 		hashedPassword = "$y$j9T$YPq.Kl8rss1JmJ5Vg6cHE/$2kdfzCkkhaO.I4u714EQnS/ZFert5byisiRVxtC.9G2";
-		shell = pkgs.fish;
 	};
 
 	i18n.defaultLocale = "en_US.UTF-8";

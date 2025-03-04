@@ -1,7 +1,7 @@
 { config, pkgs, inputs, ... }: {
 	imports = [
 		inputs.nix-flatpak.nixosModules.nix-flatpak
-		../base.nix
+		./base.nix
 		../packages.nix
 	];
 
@@ -143,6 +143,8 @@
 			twemoji-color-font
 		];
 	};
+
+	users.users.rae.shell = pkgs.fish;
 
 	virtualisation.docker.enable = true;
 }

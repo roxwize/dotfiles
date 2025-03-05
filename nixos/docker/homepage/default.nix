@@ -1,5 +1,5 @@
 { pkgs, lib, ... }: let
-	cfg = options.containers.homepage;
+	cfg = config.containers.homepage;
 	settingsFormat = pkgs.formats.yaml;
 in {
 	options.containers.homepage = {

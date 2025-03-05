@@ -11,7 +11,7 @@ this is rae's nixOS config meow
 theoretically:
 
 ```sh
-nix-shell -p git just
+nix-shell -p git
 git clone https://git.sr.ht/~roxwize/.dotfiles
 cd .dotfiles/
 nixos-install --flake './nixos#[hostname]'

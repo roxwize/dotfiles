@@ -14,7 +14,42 @@
 	programs.git.enable = true;
 	virtualisation.docker.enable = true;
 	containers = {
-		homepage.enable = true;
+		homepage = {
+			enable = true;
+			openFirewall = true;
+			settings = {
+				title = "near";
+				background = "/images/2kki_rainy_apartments.png";
+				theme = "dark";
+				color = "violet";
+				headerStyle = "clean";
+				target = "_self";
+				quickLaunch.provider = "duckduckgo";
+			};
+			widgets = [
+				{
+					search.provider = "duckduckgo";
+				}
+				{
+					resources = {
+						cpu = true;
+						memory = true;
+						disk = "/";
+						uptime = true;
+						network = true;
+					};
+				}
+				{
+					openmeteo = {
+						label = "Jacksonville";
+						latitude = 30.3321838;
+						longitude = -81.655651;
+						timezone = "America/New_York";
+						units = "imperial";
+					};
+				}
+			];
+		};
 	};
 
 	services = {
@@ -22,14 +57,17 @@
 			ports = [ 22 ];
 			banner = "I won't hold it against you";
 			settings = {
-				PasswordAuthentication = true;
+				PasswordAuthentication = false;
 			};
 		};
 	};
 
 	networking = {
 		hostName = "near";
-		firewall.allowedTCPPorts = [ 22 8082 ];
+		firewall.allowedTCPPorts = [ 22 ];
+		networkmanager = {
+			enable = true;
+		};
 	};
 
 	time.timeZone = "America/New_York";

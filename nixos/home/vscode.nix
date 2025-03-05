@@ -27,6 +27,7 @@
                     };
                 };
             in {
+                "editor.detectIndentation" = false;
                 "editor.fontFamily" = "'Fira Code Light', monospace";
               # "editor.fontLigatures" = true;
                 "editor.formatOnSave" = false;
@@ -39,6 +40,7 @@
                 "prettier.trailingComma" = "none";
                 "prettier.singleAttributePerLine" = false;
                 "prettier.useEditorConfig" = true;
+                "prettier.useTabs" = true;
                 "svelte.enable-ts-plugin" = true;
                 "telemetry.telemetryLevel" = "off";
                 "workbench.activityBar.iconClickBehavior" = "toggle";

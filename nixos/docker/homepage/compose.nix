@@ -1,5 +1,7 @@
 # Auto-generated using compose2nix v0.3.1.
-{ pkgs, lib, ... }: {
+{ pkgs, lib, ... }:
+
+{
 	# Runtime
 	virtualisation.docker = {
 		enable = true;
@@ -11,6 +13,7 @@
 	virtualisation.oci-containers.containers."homepage" = {
 		image = "ghcr.io/gethomepage/homepage:latest";
 		volumes = [
+			"/home/rae/.dotfiles/assets/wallpapers:/app/public/images:rw"
 			"/home/rae/.dotfiles/configs/homepage:/app/config:rw"
 			"/var/run/docker.sock:/var/run/docker.sock:rw"
 		];

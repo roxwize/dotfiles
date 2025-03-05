@@ -1,4 +1,4 @@
-{ inputs, ... }: {
+{ inputs, pkgs, ... }: {
 	imports = [
 		inputs.raspberry-pi-nix.nixosModules.raspberry-pi
 		inputs.raspberry-pi-nix.nixosModules.sd-image
@@ -69,6 +69,8 @@
 			enable = true;
 		};
 	};
+
+	environment.systemPackages = with pkgs; [ git ];
 
 	time.timeZone = "America/New_York";
 

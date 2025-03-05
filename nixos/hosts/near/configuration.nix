@@ -13,7 +13,7 @@
 
 	programs.git.enable = true;
 	virtualisation.docker.enable = true;
-	containers = {
+	r5e.containers = {
 		homepage = {
 			enable = true;
 			openFirewall = true;

@@ -1,8 +1,8 @@
 { pkgs, lib, config, ... }: let
-	cfg = config.containers.homepage;
+	cfg = config.r5e.containers.homepage;
 	settingsFormat = pkgs.formats.yaml;
 in {
-	options.containers.homepage = {
+	options.r5e.containers.homepage = {
 		enable = lib.mkEnableOption "homepage";
 		openFirewall = lib.mkOption {
 			type = lib.types.bool;

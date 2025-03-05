@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }: let
+{ pkgs, lib, config, ... }: let
 	cfg = config.containers.homepage;
 	settingsFormat = pkgs.formats.yaml;
 in {

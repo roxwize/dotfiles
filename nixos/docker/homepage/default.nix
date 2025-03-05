@@ -1,6 +1,6 @@
 { pkgs, lib, config, ... }: let
 	cfg = config.r5e.containers.homepage;
-	settingsFormat = pkgs.formats.yaml;
+	settingsFormat = pkgs.formats.yaml {};
 in {
 	options.r5e.containers.homepage = {
 		enable = lib.mkEnableOption "homepage";

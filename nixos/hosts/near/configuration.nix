@@ -65,9 +65,10 @@
 	networking = {
 		hostName = "near";
 		firewall.allowedTCPPorts = [ 22 ];
-		networkmanager = {
-			enable = true;
-		};
+		#! TODO: webkitgtk seems to be a cache miss (alongside SDL and openal) which makes this take FOREVER to build
+		# networkmanager = {
+		# 	enable = true;
+		# };
 	};
 
 	environment.systemPackages = with pkgs; [ git ];

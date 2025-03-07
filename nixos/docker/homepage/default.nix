@@ -1,48 +1,48 @@
 { pkgs, lib, config, ... }: let
 	cfg = config.r5e.containers.homepage;
 	settingsFormat = pkgs.formats.yaml {};
-in {
+in with lib; {
 	options.r5e.containers.homepage = {
-		enable = lib.mkEnableOption "homepage";
-		listenPort = {
-			type = lib.types.int;
+		enable = mkEnableOption "homepage";
+		listenPort = mkOption {
+			type = types.int;
 			default = 3000;
 		};
-		openFirewall = lib.mkOption {
-			type = lib.types.bool;
+		openFirewall = mkOption {
+			type = types.bool;
 			default = false;
 		};
-		settings = lib.mkOption {
+		settings = mkOption {
 			inherit (settingsFormat) type;
 			description = "See https://gethomepage.dev/configs/settings/";
 			default = {};
 		};
-		widgets = lib.mkOption {
+		widgets = mkOption {
 			inherit (settingsFormat) type;
 			description = "See https://gethomepage.dev/widgets/";
 			default = [];
 		};
-		imagesDir = lib.mkOption {
-			type = lib.types.path;
+		imagesDir = mkOption {
+			type = types.path;
 			default = "";
-		}
+		};
 	};
 
-	config = lib.mkMerge [
+	config = mkMerge [
 		(import ./compose.nix { inherit pkgs lib; })
 		{
-			environment.etc = lib.mkIf cfg.enable {
+			environment.etc = mkIf cfg.enable {
 				"homepage-dashboard/settings.yaml".source = settingsFormat.generate "settings.yaml" cfg.settings;
 				"homepage-dashboard/widgets.yaml".source = settingsFormat.generate "widgets.yaml" cfg.widgets;
 			};
 
-			networking.firewall = lib.mkIf cfg.openFirewall {
+			networking.firewall = mkIf cfg.openFirewall {
 				allowedTCPPorts = [ builtins.toString cfg.listenPort ];
 			};
 			
 			virtualisation.oci-containers.containers.homepage = {
-				ports = [ builtins.toString cfg.listenPort + ":3000/tcp" ];
-				volumes = lib.mkIf cfg.imagesDir [ builtins.toString cfg.imagesDir + ":/app/public/images:rw" ];
+				ports = [ (builtins.toString cfg.listenPort + ":3000/tcp") ];
+				volumes = mkIf cfg.imagesDir [ (builtins.toString cfg.imagesDir + ":/app/public/images:rw") ];
 			};
 		}
 	];

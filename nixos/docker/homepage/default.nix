@@ -42,7 +42,7 @@ in {
 			
 			virtualisation.oci-containers.containers.homepage = {
 				ports = [ builtins.toString cfg.listenPort + ":3000/tcp" ];
-				volumes = lib.mkIf cfg.imagesDir [ builtins.toString cfg.imagesDir + "/app/public/images:rw" ];
+				volumes = lib.mkIf cfg.imagesDir [ builtins.toString cfg.imagesDir + ":/app/public/images:rw" ];
 			};
 		}
 	];

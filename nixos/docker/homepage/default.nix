@@ -37,12 +37,12 @@ in with lib; {
 			};
 
 			networking.firewall = mkIf cfg.openFirewall {
-				allowedTCPPorts = [ builtins.toString cfg.listenPort ];
+				allowedTCPPorts = [ cfg.listenPort ];
 			};
 			
 			virtualisation.oci-containers.containers.homepage = {
 				ports = [ (builtins.toString cfg.listenPort + ":3000/tcp") ];
-				volumes = mkIf cfg.imagesDir [ (builtins.toString cfg.imagesDir + ":/app/public/images:rw") ];
+				volumes = mkIf (cfg.imagesDir != null) [ (builtins.toString cfg.imagesDir + ":/app/public/images:rw") ];
 			};
 		}
 	];

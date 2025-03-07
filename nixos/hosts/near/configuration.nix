@@ -14,8 +14,10 @@
 	programs.git.enable = true;
 	virtualisation.docker.enable = true;
 	r5e.containers = {
+		# TODO: this doesnt work (some random ENOENT shit) and it seems slightly overkill
+		# maybe make your own dashboard page yourself or something
 		homepage = {
-			enable = true;
+			enable = false;
 			openFirewall = true;
 			settings = {
 				title = "near";

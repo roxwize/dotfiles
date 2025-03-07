@@ -18,6 +18,7 @@
 		# maybe make your own dashboard page yourself or something
 		homepage = {
 			enable = false;
+			listenPort = 80;
 			openFirewall = true;
 			settings = {
 				title = "near";
@@ -51,6 +52,7 @@
 					};
 				}
 			];
+			imagesDir = /home/rae/.dotfiles/assets/wallpapers;
 		};
 	};
 

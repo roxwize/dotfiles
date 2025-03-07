@@ -4,6 +4,10 @@
 in {
 	options.r5e.containers.homepage = {
 		enable = lib.mkEnableOption "homepage";
+		listenPort = {
+			type = lib.types.int;
+			default = 3000;
+		};
 		openFirewall = lib.mkOption {
 			type = lib.types.bool;
 			default = false;
@@ -18,6 +22,10 @@ in {
 			description = "See https://gethomepage.dev/widgets/";
 			default = [];
 		};
+		imagesDir = lib.mkOption {
+			type = lib.types.path;
+			default = "";
+		}
 	};
 
 	config = lib.mkMerge [
@@ -29,7 +37,12 @@ in {
 			};
 
 			networking.firewall = lib.mkIf cfg.openFirewall {
-				allowedTCPPorts = [ 3000 ];
+				allowedTCPPorts = [ builtins.toString cfg.listenPort ];
+			};
+			
+			virtualisation.oci-containers.containers.homepage = {
+				ports = [ builtins.toString cfg.listenPort + ":3000/tcp" ];
+				volumes = lib.mkIf cfg.imagesDir [ builtins.toString cfg.imagesDir + "/app/public/images:rw" ];
 			};
 		}
 	];

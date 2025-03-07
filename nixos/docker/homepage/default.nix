@@ -20,16 +20,17 @@ in {
 		};
 	};
 
-	config = {
-		inherit (./compose.nix);
-		
-		environment.etc = lib.mkIf cfg.enable {
-			"homepage-dashboard/settings.yaml".source = settingsFormat.generate "settings.yaml" cfg.settings;
-			"homepage-dashboard/widgets.yaml".source = settingsFormat.generate "widgets.yaml" cfg.widgets;
-		};
+	config = lib.mkMerge [
+		(import ./compose.nix { inherit pkgs lib; })
+		{
+			environment.etc = lib.mkIf cfg.enable {
+				"homepage-dashboard/settings.yaml".source = settingsFormat.generate "settings.yaml" cfg.settings;
+				"homepage-dashboard/widgets.yaml".source = settingsFormat.generate "widgets.yaml" cfg.widgets;
+			};
 
-		networking.firewall = lib.mkIf cfg.openFirewall {
-			allowedTCPPorts = [ 3000 ];
-		};
-	};
+			networking.firewall = lib.mkIf cfg.openFirewall {
+				allowedTCPPorts = [ 3000 ];
+			};
+		}
+	];
 }

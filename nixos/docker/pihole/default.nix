@@ -37,6 +37,7 @@ in with lib; {
 
 			networking.firewall = mkIf cfg.openFirewall {
 				allowedTCPPorts = [ 53 cfg.listenPortHTTP cfg.listenPortHTTPS ];
+				allowedUDPPorts = [ 53 67 ];
 			};
 		}
 	]);

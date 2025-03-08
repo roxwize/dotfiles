@@ -7,6 +7,8 @@
 		../../docker
 	];
 
+	hardware.enableRedistributableFirmware = true;
+
 	users.users.root.openssh.authorizedKeys.keys = [
 		"ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPyZFWvrboUTM/dKzz5kQHEKjNqI410VJUGiVckhjOve rae@ioides"
 	];
@@ -22,12 +24,37 @@
 		};
 	};
 
-	networking = {
-		hostName = "near";
-		firewall.allowedTCPPorts = [ 22 ];
+	services = {
+		# dnsmasq = {
+		# 	enable = true;
+		# 	extraConfig = ''
+		# 		interface=wlan0
+		# 		bind-interfaces
+		# 	'';
+		# };
+		hostapd = {
+			enable = true;
+			interface = "wlan0";
+			hwMode = "g";
+			ssid = "near";
+			wpaPassphrase = "RjkVTYUZE08HN"; #! world readable
+		};
 	};
 
-	environment.systemPackages = with pkgs; [ git ];
+	networking = {
+		bridges.br0.interfaces = [ "end0" "wlan0" ];
+		firewall.allowedTCPPorts = [ 22 ];
+		hostName = "near";
+		networkmanager.unmanaged = [ "interface-name:wlan0" ];
+		wireless.enable = true;
+	};
+
+	environment.systemPackages = with pkgs; [
+		bridge-utils
+		# dnsmasq
+		git
+		hostapd
+	];
 
 	time.timeZone = "America/New_York";
 

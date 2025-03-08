@@ -1,7 +1,7 @@
 { pkgs, lib, config, ... }: let
 	cfg = config.r5e.containers.raspap;
 in with lib; {
-	options.r5e.containers.pihole = {
+	options.r5e.containers.raspap = {
 		enable = mkEnableOption "raspap";
 		ssid = mkOption {
 			type = types.str;

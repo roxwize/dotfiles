@@ -38,14 +38,14 @@ in with lib; {
 	config = mkIf cfg.enable (mkMerge [
 		(import ./docker-compose.nix { inherit pkgs lib; })
 		{
-			virtualisation.oci-containers.containers.pihole = {
+			virtualisation.oci-containers.containers.raspap = {
 				environment = {
 					RASPAP_SSID = cfg.ssid;
 					RASPAP_SSID_PASS = cfg.password;
 					RASPAP_COUNTRY = cfg.country;
 					RASPAP_WEBGUI_USER = cfg.webgui.username;
 					RASPAP_WEBGUI_PASS = cfg.webgui.password;
-					RASPAP_WEBGUI_PORT = cfg.webgui.listenPort;
+					RASPAP_WEBGUI_PORT = builtins.toString cfg.webgui.listenPort;
 				};
 			};
 

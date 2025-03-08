@@ -20,20 +20,6 @@
 			listenPortHTTP = 8081;
 			listenPortHTTPS = 8443;
 		};
-		raspap = {
-			enable = true;
-			ssid = "near";
-			password = "RjkVTYUZE08HN"; #! world readable
-			country = "US";
-
-			listenPort = 8082;
-			openFirewall = true;
-			webgui = {
-				username = "rae";
-				password = "EBjrJutn06C"; #! world readable
-				listenPort = 8080;
-			};
-		};
 	};
 
 	networking = {

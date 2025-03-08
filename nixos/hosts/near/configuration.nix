@@ -16,6 +16,20 @@
 	r5e.containers = {
 		pihole = {
 			enable = true;
+			openFirewall = true;
+			listenPortHTTP = 8081;
+			listenPortHTTPS = 8443;
+		};
+		raspap = {
+			enable = true;
+			ssid = "near";
+			password = "RjkVTYUZE08HN"; #! world readable
+			webgui = {
+				username = "rae";
+				password = "EBjrJutn06C"; #! world readable
+				listenPort = 8080;
+				openFirewall = true;
+			};
 		};
 	};
 
@@ -24,7 +38,7 @@
 		firewall.allowedTCPPorts = [ 22 ];
 	};
 
-	environment.systemPackages = with pkgs; [ git linux-wifi-hotspot ];
+	environment.systemPackages = with pkgs; [ git ];
 
 	time.timeZone = "America/New_York";
 

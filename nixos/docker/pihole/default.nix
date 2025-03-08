@@ -7,6 +7,14 @@ in with lib; {
 			type = types.bool;
 			default = false;
 		};
+		listenPortHTTP = mkOption {
+			type = types.int;
+			default = 80;
+		};
+		listenPortHTTPS = mkOption {
+			type = types.int;
+			default = 443;
+		};
 		api-password = mkOption {
 			type = types.str;
 			default = "";
@@ -21,10 +29,14 @@ in with lib; {
 					TZ = config.time.timeZone;
 					FTLCONF_webserver_api_password = mkIf (cfg.api-password != "") cfg.api-password;
 				};
+				ports = [
+					(builtins.toString cfg.listenPortHTTP + ":80")
+					(builtins.toString cfg.listenPortHTTPS + ":443")
+				];
 			};
 
 			networking.firewall = mkIf cfg.openFirewall {
-				allowedTCPPorts = [ 53 80 443 ];
+				allowedTCPPorts = [ 53 cfg.listenPortHTTP cfg.listenPortHTTPS ];
 			};
 		}
 	]);

@@ -30,8 +30,8 @@ in with lib; {
 					FTLCONF_webserver_api_password = mkIf (cfg.api-password != "") cfg.api-password;
 				};
 				ports = [
-					(builtins.toString cfg.listenPortHTTP + ":80")
-					(builtins.toString cfg.listenPortHTTPS + ":443")
+					(builtins.toString cfg.listenPortHTTP + ":80/tcp")
+					(builtins.toString cfg.listenPortHTTPS + ":443/tcp")
 				];
 			};
 

@@ -1,5 +1,0 @@
-{ lib, config, ... }: {
-	imports = [
-		./homepage
-	];
-}

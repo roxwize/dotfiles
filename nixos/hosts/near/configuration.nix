@@ -4,7 +4,6 @@
 		inputs.raspberry-pi-nix.nixosModules.sd-image
 		./hardware-configuration.nix
 		../base.nix
-		../../docker
 	];
 
 	users.users.root.openssh.authorizedKeys.keys = [
@@ -13,16 +12,14 @@
 
 	programs.git.enable = true;
 	virtualisation.docker.enable = true;
-	r5e.containers = {
-		# TODO: this doesnt work (some random ENOENT shit) and it seems slightly overkill
-		# maybe make your own dashboard page yourself or something
-		homepage = {
-			enable = false;
+
+	services = {
+		homepage-dashboard = {
+			enable = true;
 			listenPort = 80;
 			openFirewall = true;
 			settings = {
 				title = "near";
-				background = "/images/2kki_rainy_apartments.png";
 				theme = "dark";
 				color = "violet";
 				headerStyle = "clean";
@@ -52,11 +49,7 @@
 					};
 				}
 			];
-			imagesDir = /home/rae/.dotfiles/assets/wallpapers;
 		};
-	};
-
-	services = {
 		openssh = {
 			ports = [ 22 ];
 			banner = "I won't hold it against you";

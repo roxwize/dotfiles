@@ -19,11 +19,6 @@ nixos-install --flake './nixos#[hostname]'
 
 from my experience the process is more involved, but it ultimately boils down to those three commands above (the first command is only for bootstrapping). youll need to make a configuration for your host which involves creating default configurations with `nixos-generate-config`, copying it to your host's folder in `nixos/hosts/[host]/`, editing it, and then adding it to `flake.nix`. after that you should clone the repo inside of `/home/rae/` on your filesystem
 
-FOOTNOTE: the `r5e` option set is importantm,, for Difnerent thigs,. Its individual segments can be found in:
-
-- `docker/default.nix` - this file imports other files which use the r5e set to provide options for configuring predefined docker containers without needing to write yucky yaml, that dumbfuck piece of shit I HATE that STUPID Yaml (see the subdirectories' default.nix files for configuration options)
-- i lied HAHA, that is all the set is used for, ill probably make it more all-encompassing when the need for such a thing actually arises ...
-
 ## raspberry PI devices
 
 [raspberry-pi-nix](https://github.com/nix-community/raspberry-pi-nix) is used to build PI sd card images. have yur lil sd card on hand (paw) and run in the root of the repository:

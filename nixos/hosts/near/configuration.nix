@@ -7,6 +7,10 @@
 		../../docker
 	];
 
+	boot.kernel.sysctl = {
+		"net.ipv4.ip_forward" = true;
+	};
+
 	users.users.root.openssh.authorizedKeys.keys = [
 		"ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPyZFWvrboUTM/dKzz5kQHEKjNqI410VJUGiVckhjOve rae@ioides"
 	];
@@ -15,48 +19,58 @@
 	virtualisation.docker.enable = true;
 	r5e.containers = {
 		pihole = {
-			enable = false;
-			openFirewall = true;
+			enable = true;
+			dhcp.enable = false;
 			listenPortHTTP = 8080;
 			listenPortHTTPS = 8443;
+			openFirewall = true;
 		};
 	};
 
 	services = {
-		dnsmasq = {
+		create_ap = {
 			enable = true;
 			settings = {
-				dhcp-range = [ "192.168.14.10,192.168.14.254,24h" ];
-				interface = "wlan0";
+				COUNTRY = "US";
+				GATEWAY = "10.0.0.1";
+				INTERNET_IFACE = "end0";
+				NO_DNS = 1;
+				PASSPHRASE = "techcat8";
+				SSID = "near";
+				WIFI_IFACE = "wlan0";
 			};
 		};
-		hostapd = {
-			enable = true;
-			radios.wlan0 = {
-				band = "2g";
-				channel = 7;
-				countryCode = "US";
-				networks.wlan0 = {
-					ssid = "near [2.4ghz]";
-					authentication = {
-						mode = "wpa2-sha256";
-						wpaPassword = "techcat8";
-					};
-				};
-				settings = {
-					ht_capab = lib.mkForce "[HT40][SHORT-GI-20]";
-				};
-			};
-		};
+		# hostapd = {
+		# 	enable = true;
+		# 	radios.wlan0 = {
+		# 		band = "2g";
+		# 		channel = 7;
+		# 		countryCode = "US";
+		# 		networks.wlan0 = {
+		# 			authentication = {
+		# 				mode = "wpa2-sha256";
+		# 				wpaPassword = "techcat8";
+		# 			};
+		# 			logLevel = 1;
+		# 			ssid = "near";
+		# 		};
+		# 		settings = {
+		# 			ht_capab = lib.mkForce "[HT40][SHORT-GI-20]";
+		# 		};
+		# 	};
+		# };
 	};
 
 	networking = {
 		# bridges.br0 = {
 		# 	interfaces = [ "end0" "wlan0" ];
 		# };
-		defaultGateway.address = "10.0.0.1";
-		firewall.allowedTCPPorts = [ 53 22 ];
-		firewall.allowedUDPPorts = [ 53 67 68 ];
+		firewall = {
+			allowedTCPPorts = [ 22 ];
+			extraCommands = ''
+				iptables -t nat -A POSTROUTING -o end0 -j MASQUERADE
+			'';
+		};
 		hostName = "near";
 		interfaces = {
 			# br0 = {

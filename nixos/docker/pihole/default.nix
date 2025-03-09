@@ -2,7 +2,7 @@
 	cfg = config.r5e.containers.pihole;
 in with lib; {
 	options.r5e.containers.pihole = {
-		enable = mkEnableOption "pihole";
+		enable = mkEnableOption "Pi-hole";
 		openFirewall = mkOption {
 			type = types.bool;
 			default = false;
@@ -19,6 +19,10 @@ in with lib; {
 			type = types.str;
 			default = "";
 		};
+
+		dhcp = {
+			enable = mkEnableOption "the Pi-hole DHCP server";
+		};
 	};
 
 	config = mkIf cfg.enable (mkMerge [
@@ -32,12 +36,12 @@ in with lib; {
 				ports = [
 					(builtins.toString cfg.listenPortHTTP + ":80/tcp")
 					(builtins.toString cfg.listenPortHTTPS + ":443/tcp")
-				];
+				] ++ (optional cfg.dhcp.enable "67:67/udp");
 			};
 
 			networking.firewall = mkIf cfg.openFirewall {
 				allowedTCPPorts = [ 53 cfg.listenPortHTTP cfg.listenPortHTTPS ];
-				allowedUDPPorts = [ 53 67 ];
+				allowedUDPPorts = [ 53 ] ++ (optional cfg.dhcp.enable 67);
 			};
 		}
 	]);

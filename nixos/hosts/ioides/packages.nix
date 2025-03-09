@@ -1,8 +1,4 @@
 { pkgs, ... }: {
-	# I'm not sure if you actually need stuff like GTK4 to be
-	# in here when it's really only used with nix-shell and the
-	# amount of time it saves during installation is probably
-	# only like a few seconds
 	environment.systemPackages = with pkgs; [
 		# development
 		bun                                                      # Incredibly fast JavaScript runtime, bundler, transpiler and package manager – all in one
@@ -23,6 +19,7 @@
 		pnpm                                                     # Fast, disk space efficient package manager for JavaScript
 		python313                                                # High-level dynamically-typed programming language
 		vala                                                     # Compiler for GObject type system
+		wxwabbitemu                                              #!Cross-platform TI-8x emulator based on Wabbitemu
 		## language servers
 		mesonlsp             # Meson
 		nil                  # Nix

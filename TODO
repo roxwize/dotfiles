@@ -42,6 +42,8 @@
 [ ] Should you be using both libretro easyrpg and standalone easyrpg at the same time like you are now ????????
 [ ] FUN IDEA::: Do you see ? https://github.com/nix-community/raspberry-pi-nix/blob/master/rpi/default.nix ??? see if it might be worth trying to make an options set across your config for very non granular at a glance configurations ... (see also https://github.com/nanzhong/env/blob/master/machines/devpi/configuration.nix)
 [ ] FUN IDEA 2::: Hey Whats Up what if you did the same thing but built your regular host (ioides) as an ISO so that like. hoooly shit. you could like share it to the woRLD VIA AN ISO AND SHTUFF. Fucking massive bro
+[x] IMPORTANT!!!!: consolidate most system configurations since there seems to be the assumption that Everything Is Ioides (i.e. move packages.nix to ioides/)
+ +- [ ] Make things consolidated wherever possible, only generalize them/widen their scope once it becomes necessary (like when you turned part of base.nix into desktop.nix) (e.g. when you need to manage something identically across hosts, put it in an import file, otherwise put it in an attrset that both hosts import and configure it from there)
 
 [x] Get PulseAudio sound controls on polybar to work
 [x] Add desktop switching to windows (context menu?)

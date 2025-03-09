@@ -36,7 +36,6 @@
                 };
             in builtins.listToAttrs [
                 (mkSystem "ioides" "x86_64")    # main pc
-                (mkSystem "qemu"   "x86_64")    # emulatr...........
                 (mkSystem "near"   "aarch64")   # raspberry pi 5 home server
             ];
 

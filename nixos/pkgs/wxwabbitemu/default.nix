@@ -1,4 +1,4 @@
-{ stdenv, fetchFromGitHub, cmake, wxGTK32 }: stdenv.mkDerivation {
+{ stdenv, fetchFromGitHub, cmake, wxGTK32, lib }: stdenv.mkDerivation {
 	pname = "wxwabbitemu";
 	version = "0.1.0";
 

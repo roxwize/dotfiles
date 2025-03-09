@@ -37,7 +37,7 @@
 	networking = {
 		hostName = "ioides";
 		hosts = {
-			"10.0.0.39" = [ "near" "near.local" ];
+			"10.0.0.2" = [ "near" "near.local" ];
 		};
 	};
 

@@ -1,4 +1,4 @@
-{ inputs, pkgs, ... }: {
+{ inputs, pkgs, lib, ... }: {
 	imports = [
 		inputs.raspberry-pi-nix.nixosModules.raspberry-pi
 		inputs.raspberry-pi-nix.nixosModules.sd-image
@@ -6,8 +6,6 @@
 		../base.nix
 		../../docker
 	];
-
-	hardware.enableRedistributableFirmware = true;
 
 	users.users.root.openssh.authorizedKeys.keys = [
 		"ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPyZFWvrboUTM/dKzz5kQHEKjNqI410VJUGiVckhjOve rae@ioides"
@@ -17,44 +15,67 @@
 	virtualisation.docker.enable = true;
 	r5e.containers = {
 		pihole = {
-			enable = true;
+			enable = false;
 			openFirewall = true;
-			listenPortHTTP = 8081;
+			listenPortHTTP = 8080;
 			listenPortHTTPS = 8443;
 		};
 	};
 
 	services = {
-		# dnsmasq = {
-		# 	enable = true;
-		# 	extraConfig = ''
-		# 		interface=wlan0
-		# 		bind-interfaces
-		# 	'';
-		# };
+		dnsmasq = {
+			enable = true;
+			settings = {
+				dhcp-range = [ "192.168.14.10,192.168.14.254,24h" ];
+				interface = "wlan0";
+			};
+		};
 		hostapd = {
 			enable = true;
-			interface = "wlan0";
-			hwMode = "g";
-			ssid = "near";
-			wpaPassphrase = "RjkVTYUZE08HN"; #! world readable
+			radios.wlan0 = {
+				band = "2g";
+				channel = 7;
+				countryCode = "US";
+				networks.wlan0 = {
+					ssid = "near [2.4ghz]";
+					authentication = {
+						mode = "wpa2-sha256";
+						wpaPassword = "techcat8";
+					};
+				};
+				settings = {
+					ht_capab = lib.mkForce "[HT40][SHORT-GI-20]";
+				};
+			};
 		};
 	};
 
 	networking = {
-		bridges.br0.interfaces = [ "end0" "wlan0" ];
-		firewall.allowedTCPPorts = [ 22 ];
+		# bridges.br0 = {
+		# 	interfaces = [ "end0" "wlan0" ];
+		# };
+		defaultGateway.address = "10.0.0.1";
+		firewall.allowedTCPPorts = [ 53 22 ];
+		firewall.allowedUDPPorts = [ 53 67 68 ];
 		hostName = "near";
-		networkmanager.unmanaged = [ "interface-name:wlan0" ];
+		interfaces = {
+			# br0 = {
+			# 	ipv4.addresses = [
+			# 		{
+			# 			address = "10.0.0.2";
+			# 			prefixLength = 24;
+			# 		}
+			# 	];
+			# };
+			end0.useDHCP = true;
+			wlan0.useDHCP = true;
+		};
+		networkmanager.unmanaged = [ "interface-name:wlan*" ];
+		useDHCP = false;
 		wireless.enable = true;
 	};
 
-	environment.systemPackages = with pkgs; [
-		bridge-utils
-		# dnsmasq
-		git
-		hostapd
-	];
+	environment.etc."wpa_supplicant.conf".text = "";
 
 	time.timeZone = "America/New_York";
 

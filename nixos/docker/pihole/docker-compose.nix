@@ -27,6 +27,7 @@
     ];
     log-driver = "journald";
     extraOptions = [
+      "--cap-add=NET_ADMIN"
       "--cap-add=SYS_NICE"
       "--network-alias=pihole"
       "--network=pihole_default"

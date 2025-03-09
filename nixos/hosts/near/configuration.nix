@@ -20,7 +20,7 @@
 	r5e.containers = {
 		pihole = {
 			enable = true;
-			dhcp.enable = true;
+			dhcp.enable = false;
 			listenPortHTTP = 8080;
 			listenPortHTTPS = 8443;
 			openFirewall = true;

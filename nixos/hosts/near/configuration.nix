@@ -20,7 +20,7 @@
 	r5e.containers = {
 		pihole = {
 			enable = true;
-			dhcp.enable = false;
+			dhcp.enable = true;
 			listenPortHTTP = 8080;
 			listenPortHTTPS = 8443;
 			openFirewall = true;
@@ -28,37 +28,25 @@
 	};
 
 	services = {
-		create_ap = {
+		hostapd = {
 			enable = true;
-			settings = {
-				COUNTRY = "US";
-				GATEWAY = "10.0.0.1";
-				INTERNET_IFACE = "end0";
-				NO_DNS = 1;
-				PASSPHRASE = "techcat8";
-				SSID = "near";
-				WIFI_IFACE = "wlan0";
+			radios.wlan0 = {
+				band = "2g";
+				channel = 7;
+				countryCode = "US";
+				networks.wlan0 = {
+					authentication = {
+						mode = "wpa2-sha256";
+						wpaPassword = "techcat8";
+					};
+					logLevel = 1;
+					ssid = "near";
+				};
+				settings = {
+					ht_capab = lib.mkForce "[HT40][SHORT-GI-20]";
+				};
 			};
 		};
-		# hostapd = {
-		# 	enable = true;
-		# 	radios.wlan0 = {
-		# 		band = "2g";
-		# 		channel = 7;
-		# 		countryCode = "US";
-		# 		networks.wlan0 = {
-		# 			authentication = {
-		# 				mode = "wpa2-sha256";
-		# 				wpaPassword = "techcat8";
-		# 			};
-		# 			logLevel = 1;
-		# 			ssid = "near";
-		# 		};
-		# 		settings = {
-		# 			ht_capab = lib.mkForce "[HT40][SHORT-GI-20]";
-		# 		};
-		# 	};
-		# };
 	};
 
 	networking = {

@@ -1,5 +1,4 @@
-{ inputs, config, lib, pkgs, ... }:
-{
+{ inputs, config, lib, pkgs, ... }: {
 	imports = [
 		inputs.nix-flatpak.nixosModules.nix-flatpak
 		./hardware-configuration.nix
@@ -41,7 +40,6 @@
 	};
 
 	networking = {
-		hostName = "ioides";
 		hosts = {
 			"10.0.0.2" = [ "near" "near.local" ];
 		};
@@ -101,7 +99,6 @@
 			enable = true;
 			enableSSHSupport = true;
 		};
-		nix-ld.enable = true;
 		steam = {
 			enable = true;
 			remotePlay.openFirewall = true;
@@ -119,6 +116,7 @@
 		xserver = {
 			enable = true;
 			xkb.layout = "us";
+			#?TODO maybe put all nvidia settings into its own module (i.e. r5e.hardware.nvidia.enable) + x11 with xdg config
 			videoDrivers = [ "nvidia" ];
 			windowManager = {
 				cwm.enable = true;

@@ -59,7 +59,6 @@
 				iptables -t nat -A POSTROUTING -o end0 -j MASQUERADE
 			'';
 		};
-		hostName = "near";
 		interfaces = {
 			# br0 = {
 			# 	ipv4.addresses = [

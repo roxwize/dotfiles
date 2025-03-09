@@ -30,7 +30,7 @@
                     name = hostname;
                     value = lib.nixosSystem {
                         system = "${arch}-linux";
-                        specialArgs = { inherit inputs; };
+                        specialArgs = { inherit inputs; hostname = hostname; };
                         modules = [ ./hosts/${hostname}/configuration.nix ];
                     };
                 };

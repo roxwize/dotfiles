@@ -1,4 +1,4 @@
-{ inputs, pkgs, ... }: {
+{ inputs, hostname, pkgs, ... }: {
 	nix.settings = {
 		experimental-features = [ "nix-command" "flakes" ];
 		trusted-users = [ "root" "rae" ];
@@ -15,12 +15,15 @@
 		overlays = import ../overlays.nix inputs;
 	};
 
+	networking.hostName = hostname;
+
 	users.users.rae = {
 		isNormalUser = true;
 		extraGroups = [ "wheel" "docker" "jackaudio" ];
 		hashedPassword = "$y$j9T$YPq.Kl8rss1JmJ5Vg6cHE/$2kdfzCkkhaO.I4u714EQnS/ZFert5byisiRVxtC.9G2";
 	};
 
+	programs.nix-ld.enable = true;
 	services.openssh = {
 		enable = true;
 		knownHosts =

@@ -8,7 +8,7 @@ months = ("A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", 
 
 inception = 2024 # 30 nov 24 21:37
 now = datetime.now().timetuple()
-day = now.tm_yday
+day = now.tm_yday - 1
 
 month = day // 14
 if month >= 26:
@@ -16,7 +16,7 @@ if month >= 26:
 else:
 	month = months[month]
 
-out = str(now.tm_year - inception).zfill(2) + month + str(day % 14 - 1).zfill(2)
+out = str(now.tm_year - inception).zfill(2) + month + str(day % 14).zfill(2)
 try:
 	_ = argv.index("-y")
 	print("date|string|" + out + "\n")

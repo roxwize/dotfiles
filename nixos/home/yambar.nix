@@ -24,10 +24,7 @@
 								"--follow"
 								"metadata"
 								"--format"
-								''
-status|string|{{status}}
-artist|string|{{artist}}
-title|string|{{title}}''
+								"status|string|{{status}}\nartist|string|{{artist}}\ntitle|string|{{title}}\n"
 							];
 							content.map.conditions = {
 								"status == Playing && artist != \"\"" = {

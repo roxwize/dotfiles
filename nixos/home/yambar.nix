@@ -27,8 +27,7 @@
 								''
 status|string|{{status}}
 artist|string|{{artist}}
-title|string|{{title}}
-								''
+title|string|{{title}}''
 							];
 							content.map.conditions = {
 								"status == Playing && artist != \"\"" = {

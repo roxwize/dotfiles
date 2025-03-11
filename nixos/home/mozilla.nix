@@ -30,6 +30,7 @@
                     catppuccin-gh-file-explorer
                     indie-wiki-buddy
                     privacy-badger
+                    simple-tab-groups
                     stylus
                     tabliss
                     ublock-origin
@@ -57,9 +58,11 @@
                             label = "Wikipedia";
                         }
                     ];
+                    "browser.startup.page" = 3;
                     "datareporting.healthreport.uploadEnabled" = false;
                     "font.name.monospace.x-western" = "Fira Code";
                     "layout.css.prefers-color-scheme.content-override" = 0;
+                    "svg.context-properties.content.enabled" = true;
                 };
                 bookmarks = [
                     {

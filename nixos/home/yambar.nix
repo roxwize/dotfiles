@@ -13,6 +13,11 @@
 				left = [
 					{
 						# https://codeberg.org/dnkl/yambar/issues/53#issuecomment-264088
+						# nixos ONLY ignores indentations in strings if they're spaces. stupid fucking piece of shit.
+						# "Supporting tabs is wrong" MY ASS. supporting tabs is right. i can understand if you use
+						# spaces but if you actively call them "outlawed" (yaml) and make them seem impractical or strange
+						# then im sorry but i am going to smite you with the wrath of GOD. FUCK!!
+						# i refuse to concede. i will simply not indent the offending line at all. dickweeds
 						script = {
 							path = "${pkgs.playerctl}/bin/playerctl";
 							args = [
@@ -20,9 +25,9 @@
 								"metadata"
 								"--format"
 								''
-									status|string|{{status}}
-									artist|string|{{artist}}
-									title|string|{{title}}
+status|string|{{status}}
+artist|string|{{artist}}
+title|string|{{title}}
 								''
 							];
 							content.map.conditions = {
@@ -36,6 +41,16 @@
 									string.text = "god's in his heaven | all's right with the world";
 								};
 							};
+						};
+					}
+				];
+				center = [
+					{
+						script = {
+							path = builtins.toString ../../scripts/arvelie.py;
+							args = [ "-y" ];
+							poll-interval = 30 * 1000; # TODO maybe try to see if you can sync this with the changing of the day...
+							content.string.text = "{date}";
 						};
 					}
 				];

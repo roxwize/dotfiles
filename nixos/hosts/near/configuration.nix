@@ -4,11 +4,13 @@
 		inputs.raspberry-pi-nix.nixosModules.sd-image
 		./hardware-configuration.nix
 		../base.nix
-		../../docker
+		../../modules/docker
 	];
 
+	# Packet forwarding
 	boot.kernel.sysctl = {
-		"net.ipv4.ip_forward" = true;
+		"net.ipv6.conf.all.forwarding" = 1;
+		"net.ipv4.conf.all.forwarding" = 1;
 	};
 
 	users.users.root.openssh.authorizedKeys.keys = [
@@ -31,28 +33,30 @@
 		hostapd = {
 			enable = true;
 			radios.wlan0 = {
-				band = "2g";
-				channel = 7;
+				band = "5g";
+				channel = 32;
 				countryCode = "US";
 				networks.wlan0 = {
 					authentication = {
-						mode = "wpa2-sha256";
+						mode = "wpa2-sha1";
 						wpaPassword = "techcat8";
 					};
+					bssid = "6e:00:6a:7c:f4:db";
 					logLevel = 1;
+					settings.bridge = "br0";
 					ssid = "near";
 				};
-				settings = {
-					ht_capab = lib.mkForce "[HT40][SHORT-GI-20]";
+				wifi4.capabilities = [ "HT40+" "SHORT-GI-20" "SHORT-GI-40" "MAX-AMSDU-3839" "DSSS_CCK-40" ];
+				wifi5 = {
+					capabilities = [ "MAX-MPDU-3895" "SHORT-GI-80" "SU-BEAMFORMEE" ];
+					operatingChannelWidth = "80";
 				};
 			};
 		};
 	};
 
 	networking = {
-		# bridges.br0 = {
-		# 	interfaces = [ "end0" "wlan0" ];
-		# };
+		bridges.br0.interfaces = [ "end0" ];
 		firewall = {
 			allowedTCPPorts = [ 22 ];
 			extraCommands = ''
@@ -60,20 +64,17 @@
 			'';
 		};
 		interfaces = {
-			# br0 = {
-			# 	ipv4.addresses = [
-			# 		{
-			# 			address = "10.0.0.2";
-			# 			prefixLength = 24;
-			# 		}
-			# 	];
-			# };
-			end0.useDHCP = true;
-			wlan0.useDHCP = true;
+			br0 = {
+				# ipv4.addresses = [
+				# 	{
+				# 		address = "10.0.0.2";
+				# 		prefixLength = 24;
+				# 	}
+				# ];
+				macAddress = "2c:cf:67:04:a4:b8";
+			};
+			end0.macAddress = "2c:cf:67:04:a4:b8";
 		};
-		networkmanager.unmanaged = [ "interface-name:wlan*" ];
-		useDHCP = false;
-		wireless.enable = true;
 	};
 
 	environment.etc."wpa_supplicant.conf".text = "";

@@ -16,10 +16,10 @@
 		just                                                     # Handy way to save and run project-specific commands
 		meson                                                    # Open source, fast and friendly build system made in Python
 		nodejs_23                                                # Event-driven I/O framework for the V8 JavaScript engine
+		nurl                                                     # Command-line tool to generate Nix fetcher calls from repository URLs
 		pnpm                                                     # Fast, disk space efficient package manager for JavaScript
 		python313                                                # High-level dynamically-typed programming language
 		vala                                                     # Compiler for GObject type system
-		wxwabbitemu                                              #!Cross-platform TI-8x emulator based on Wabbitemu
 		## language servers
 		mesonlsp             # Meson
 		nil                  # Nix

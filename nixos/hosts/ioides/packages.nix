@@ -46,6 +46,7 @@
 			];
 		})
 		steam-run                                                # Run commands in the same FHS environment that is used for Steam
+		the-powder-toy                                           # Free 2D physics sandbox game
 		uxn                                                      # Assembler and emulator for the Uxn stack machine
 		x16                                                      # Official emulator of CommanderX16 8-bit computer
 		x16-rom                                                  # ROM file for CommanderX16 8-bit computer

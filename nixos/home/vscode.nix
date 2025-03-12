@@ -32,6 +32,7 @@
               # "editor.fontLigatures" = true;
                 "editor.formatOnSave" = false;
                 "editor.indentSize" = 4;
+                "editor.insertSpaces" = false;
                 "editor.tabSize" = 4;
                 "explorer.confirmDelete" = false;
                 "explorer.confirmDragAndDrop" = false;

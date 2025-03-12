@@ -3,6 +3,7 @@
 		inputs.nix-flatpak.nixosModules.nix-flatpak
 		./hardware-configuration.nix
 		./packages.nix
+		../base.nix
 	];
 
 	boot = {

@@ -13,10 +13,12 @@ stdenv.mkDerivation rec {
 
 	nativeBuildInputs = [ cmake ];
 
+	# output vasm6502, vasmm68k, and vasmz80
+
 	cmakeFlags = [ "-DVASM_CPU=m68k" "-DVASM_SYNTAX=psi-x" ];
 
 	meta = with lib; {
-		description = "Portable and retargetable assembler (Motorola 68000)";
+		description = "Portable and retargetable assembler";
 		homepage = "https://github.com/NaotoNTP/vasm-psi-x";
 		license = licenses.free;
 	};

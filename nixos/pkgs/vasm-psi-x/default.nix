@@ -1,7 +1,7 @@
 # TODO
 with import <nixpkgs> {};
 stdenv.mkDerivation rec {
-	pname = "vasm-psi-x-m68k";
+	pname = "vasm-psi-x";
 	version = "1.1.2";
 
 	src = fetchFromGitHub {

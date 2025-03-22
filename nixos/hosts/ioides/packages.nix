@@ -12,6 +12,7 @@
 		gnumake                                                  # Tool to control the generation of non-source files from sources
 		godot_4                                                  # Free and Open Source 2D and 3D game engine
 		gtk4                                                     # Multi-platform toolkit for creating graphical user interfaces
+		imhex                                                    # Hex Editor for Reverse Engineers, Programmers and people who value their retinas when working at 3 AM
 		jdk23                                                    # Open-source Java Development Kit
 		just                                                     # Handy way to save and run project-specific commands
 		meson                                                    # Open source, fast and friendly build system made in Python
@@ -28,6 +29,7 @@
 		# games
 		alvr                                                     # Stream VR games from your PC to your headset via Wi-Fi
 		easyrpg-player                                           # RPG Maker 2000/2003 and EasyRPG games interpreter
+		gzdoom                                                   # Modder-friendly OpenGL and Vulkan source port based on the DOOM engine
 		unstable.luanti                                          # An open source voxel game engine (formerly Minetest)
 		prismlauncher                                            # Free, open source launcher for Minecraft
 		(retroarch.override {                                    # Multi-platform emulator frontend for libretro cores
@@ -128,6 +130,7 @@
 		soteria                                                  # Polkit authentication agent written in GTK designed to be used with any desktop environment
 		temurin-jre-bin-23                                       # Eclipse Temurin, prebuilt OpenJDK binary
 		temurin-jre-bin-8                                        # Eclipse Temurin, prebuilt OpenJDK binary
+		tilem                                                    # Emulator and debugger for Texas Instruments Z80-based graphing calculators
 		vlc                                                      # Cross-platform media player and streaming server
 	];
 

@@ -86,7 +86,6 @@
 		hyfetch                                                  # neofetch with pride flags <3
 		kitty                                                    # Modern, hackable, featureful, OpenGL based terminal emulator
 		monitor                                                  # Manage processes and monitor system resources
-		timeshift                                                # System restore tool for Linux
 		unzip                                                    # Extraction utility for archives compressed in .zip format
 		usbutils                                                 # Tools for working with USB devices, such as lsusb
 		wineWowPackages.stable                                   # Open Source implementation of the Windows API on top of X, OpenGL, and Unix
@@ -99,13 +98,12 @@
 		alsa-utils                                               # ALSA, the Advanced Linux Sound Architecture utils
 		audacity                                                 # Sound editor with graphical UI
 		# TODO: consider getting rid of this (no mpd support makes me sad......)
-    fooyin                                                   # Customisable music player
+#       fooyin                                                   # Customisable music player
 		mpc                                                      # Minimalist command line interface to MPD
 		pavucontrol                                              # PulseAudio Volume Control
 		playerctl                                                # Command-line utility and library for controlling media players that implement MPRIS
 		reaper                                                   # Digital audio workstation
 		unstable.rmpc                                            # TUI music player client for MPD with album art support via kitty image protocol
-		sunvox                                                   # Small, fast and powerful modular synthesizer with pattern-based sequencer
 #   vcv-rack                                                 # Open-source virtual modular synthesizer
 		# X11
 		hsetroot                                                 # Allows you to compose wallpapers ('root pixmaps') for X
@@ -119,19 +117,23 @@
 		yambar                                                   # Modular status panel for X11 and Wayland
 		# misc
 		anki                                                     # Spaced repetition flashcard program
-		catppuccin-sddm                                          # Soothing pastel theme for SDDM
-		flips                                                    # Patcher for IPS and BPS files
 		unstable.kdePackages.kdenlive                            # Free and open source video editor, based on MLT Framework and KDE Frameworks
 		kicad-small                                              # Open Source Electronics Design Automation suite, without 3D models
 		mlt                                                      #! Open source multimedia framework, designed for television broadcasting (This is fucking stupid)
 		nmap                                                     # Free and open source utility for network discovery and security auditing
 		obs-studio                                               # Free and open source software for video recording and live streaming
 		qemu_kvm                                                 # Generic and open source machine emulator and virtualizer
-		soteria                                                  # Polkit authentication agent written in GTK designed to be used with any desktop environment
 		temurin-jre-bin-23                                       # Eclipse Temurin, prebuilt OpenJDK binary
 		temurin-jre-bin-8                                        # Eclipse Temurin, prebuilt OpenJDK binary
-		tilem                                                    # Emulator and debugger for Texas Instruments Z80-based graphing calculators
 		vlc                                                      # Cross-platform media player and streaming server
+		# programs to consider the retention of
+		catppuccin-sddm                                          # Soothing pastel theme for SDDM
+		flips                                                    # Patcher for IPS and BPS files
+		ghidra                                                   # Software reverse engineering (SRE) suite of tools
+		soteria                                                  # Polkit authentication agent written in GTK designed to be used with any desktop environment
+		sunvox                                                   # Small, fast and powerful modular synthesizer with pattern-based sequencer
+		tilem                                                    # Emulator and debugger for Texas Instruments Z80-based graphing calculators
+		timeshift                                                # System restore tool for Linux
 	];
 
 	services.flatpak.packages = [

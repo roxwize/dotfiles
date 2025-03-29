@@ -128,8 +128,10 @@
 		vlc                                                      # Cross-platform media player and streaming server
 		# programs to consider the retention of
 		catppuccin-sddm                                          # Soothing pastel theme for SDDM
+		cemu-ti                                                  # Third-party TI-84 Plus CE / TI-83 Premium CE emulator, focused on developer features
 		flips                                                    # Patcher for IPS and BPS files
 		ghidra                                                   # Software reverse engineering (SRE) suite of tools
+		plugdata                                                 # Plugin wrapper around Pure Data to allow patching in a wide selection of DAWs
 		soteria                                                  # Polkit authentication agent written in GTK designed to be used with any desktop environment
 		sunvox                                                   # Small, fast and powerful modular synthesizer with pattern-based sequencer
 		tilem                                                    # Emulator and debugger for Texas Instruments Z80-based graphing calculators

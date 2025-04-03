@@ -60,6 +60,7 @@
 			enable = true;
 			shellInit = ''
 				set -g fish_greeting
+				fish_add_path /opt/apps/_bin
 			'';
 			plugins = [
 				{
@@ -137,6 +138,14 @@
 							password.command = "pass show libera_chat";
 						};
 						tls = true;
+					}
+					# EFnet
+					{
+						addr = "irc.colosolutions.net";
+						join = [
+							"#cemetech"
+						];
+						port = 8080;
 					}
 				];
 				scrollback = 65535;

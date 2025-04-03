@@ -12,7 +12,6 @@
 		gnumake                                                  # Tool to control the generation of non-source files from sources
 		godot_4                                                  # Free and Open Source 2D and 3D game engine
 		gtk4                                                     # Multi-platform toolkit for creating graphical user interfaces
-		imhex                                                    # Hex Editor for Reverse Engineers, Programmers and people who value their retinas when working at 3 AM
 		jdk23                                                    # Open-source Java Development Kit
 		just                                                     # Handy way to save and run project-specific commands
 		meson                                                    # Open source, fast and friendly build system made in Python
@@ -131,6 +130,7 @@
 		cemu-ti                                                  # Third-party TI-84 Plus CE / TI-83 Premium CE emulator, focused on developer features
 		flips                                                    # Patcher for IPS and BPS files
 		ghidra                                                   # Software reverse engineering (SRE) suite of tools
+		libreoffice                                              # Comprehensive, professional-quality productivity suite, a variant of openoffice.org
 		plugdata                                                 # Plugin wrapper around Pure Data to allow patching in a wide selection of DAWs
 		soteria                                                  # Polkit authentication agent written in GTK designed to be used with any desktop environment
 		sunvox                                                   # Small, fast and powerful modular synthesizer with pattern-based sequencer

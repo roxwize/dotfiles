@@ -70,3 +70,4 @@
  +- [x] rust-analyzer doesn't fucking work (and you should probably use mkShell for this)
  +- [x] All of a sudden Nix won't let you run rustc or cargo due to some dynamically linked executable bullshit
 [x] Use pass <https://www.passwordstore.org/>? (See also https://elvishjerricco.github.io/2018/06/24/secure-declarative-key-management.html)
+[x] switch to 24 hour time

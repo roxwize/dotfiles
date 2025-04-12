@@ -85,7 +85,7 @@
 		hyfetch                                                  # neofetch with pride flags <3
 		kitty                                                    # Modern, hackable, featureful, OpenGL based terminal emulator
 		monitor                                                  # Manage processes and monitor system resources
-		unzip                                                    # Extraction utility for archives compressed in .zip format
+		p7zip                                                    # New p7zip fork with additional codecs and improvements (forked from https://sourceforge.net/projects/p7zip/)
 		usbutils                                                 # Tools for working with USB devices, such as lsusb
 		wineWowPackages.stable                                   # Open Source implementation of the Windows API on top of X, OpenGL, and Unix
 		xclip                                                    # Tool to access the X clipboard from a console application

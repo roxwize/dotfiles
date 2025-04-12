@@ -18,6 +18,25 @@
 			vadimcn.vscode-lldb
 			wakatime.vscode-wakatime
 		];
+		languageSnippets = {
+			nix = {
+				shell = {
+					body = [
+						"{ pkgs ? import <nixpkgs> {} }: pkgs.callPackage ("
+						"	{"
+						"		mkShell"
+						"	}: mkShell {"
+						"		strictDeps = true;"
+						"		nativeBuildInputs = [];"
+						"		buildInputs = [];"
+						"	}"
+						") {}"
+					];
+					description = "shell.nix boilerplate";
+					prefix = "__s";
+				}
+			};
+		};
 		userSettings = 
 			let
 				df = lang: formatter: {
@@ -32,6 +51,7 @@
 			  # "editor.fontLigatures" = true;
 				"editor.formatOnSave" = false;
 				"editor.indentSize" = 4;
+				"editor.inlayHints.enabled" = false;
 				"editor.insertSpaces" = false;
 				"editor.tabSize" = 4;
 				"explorer.confirmDelete" = false;

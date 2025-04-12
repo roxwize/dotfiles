@@ -34,7 +34,7 @@
 					];
 					description = "shell.nix boilerplate";
 					prefix = "__s";
-				}
+				};
 			};
 		};
 		userSettings = 

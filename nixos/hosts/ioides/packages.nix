@@ -96,6 +96,7 @@
 		# audio
 		alsa-utils                                               # ALSA, the Advanced Linux Sound Architecture utils
 		audacity                                                 # Sound editor with graphical UI
+		bespokesynth                                             # Software modular synth with controllers support, scripting and VST
 		# TODO: consider getting rid of this (no mpd support makes me sad......)
 #       fooyin                                                   # Customisable music player
 		mpc                                                      # Minimalist command line interface to MPD

@@ -41,6 +41,7 @@
 	};
 
 	networking = {
+		firewall.allowedTCPPorts = [ 80 443 8080 ];
 		hosts = {
 			"10.0.0.2" = [ "near" "near.local" ];
 		};

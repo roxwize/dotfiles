@@ -98,7 +98,7 @@
 		audacity                                                 # Sound editor with graphical UI
 		unstable.bespokesynth                                    # Software modular synth with controllers support, scripting and VST
 		# TODO: consider getting rid of this (no mpd support makes me sad......)
-#       fooyin                                                   # Customisable music player
+		fooyin                                                   # Customisable music player
 		mpc                                                      # Minimalist command line interface to MPD
 		pavucontrol                                              # PulseAudio Volume Control
 		playerctl                                                # Command-line utility and library for controlling media players that implement MPRIS

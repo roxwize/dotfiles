@@ -145,7 +145,9 @@
 						join = [
 							"#cemetech"
 						];
+						nicks = [ "roxwize" ];
 						port = 8080;
+						realname = "rae 5e";
 					}
 				];
 				scrollback = 65535;

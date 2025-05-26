@@ -1,4 +1,4 @@
-{ inputs, config, lib, pkgs, ... }: {
+{ inputs, config, pkgs, ... }: {
 	imports = [
 		inputs.nix-flatpak.nixosModules.nix-flatpak
 		./hardware-configuration.nix
@@ -27,21 +27,21 @@
 		supportedFilesystems = [ "ntfs" ];
 	};
 
-	# Music pendrive
-	fileSystems."/mnt/world" = {
-		device = "/dev/disk/by-uuid/639bae80-0f5d-481c-ae4e-d2c70f754a1c";
-		fsType = "ext4";
-		neededForBoot = false;
-	};
-	# Big fucking thing
-	fileSystems."/mnt/rae2" = {
-		device = "/dev/disk/by-uuid/fbbcc72f-34af-425c-9151-ef8919a6ae07";
-		fsType = "ext4";
-		neededForBoot = false;
-	};
+#	# Music pendrive
+#	fileSystems."/mnt/world" = {
+#		device = "/dev/disk/by-uuid/639bae80-0f5d-481c-ae4e-d2c70f754a1c";
+#		fsType = "ext4";
+#		neededForBoot = false;
+#	};
+#	# Big fucking thing
+#	fileSystems."/mnt/rae2" = {
+#		device = "/dev/disk/by-uuid/fbbcc72f-34af-425c-9151-ef8919a6ae07";
+#		fsType = "ext4";
+#		neededForBoot = false;
+#	};
 
 	networking = {
-		firewall.allowedTCPPorts = [ 80 443 8080 ];
+		firewall.allowedTCPPorts = [ 80 443 8080 19132 25565 ];
 		hosts = {
 			"10.0.0.2" = [ "near" "near.local" ];
 		};
@@ -53,22 +53,24 @@
 			enable = true;
 			powerOnBoot = true;
 		};
-		graphics = {
-			enable = true;
-			extraPackages = with pkgs; [
-				intel-media-sdk
-			];
-		};
-		nvidia = {
-			modesetting.enable = true;
-			powerManagement = {
-				enable = false;
-				finegrained = false;
-			};
-			open = false;
-			nvidiaSettings = true;
-			package = config.boot.kernelPackages.nvidiaPackages.stable;
-		};
+#		graphics = {
+#			enable = true;
+#			extraPackages = with pkgs; [
+#				intel-media-sdk
+#			];
+#		};
+#		nvidia = {
+#			modesetting.enable = true;
+#			powerManagement = {
+#				enable = false;
+#				finegrained = false;
+#			};
+#			open = false;
+#			nvidiaSettings = true;
+#			package = config.boot.kernelPackages.nvidiaPackages.stable;
+#			# temp
+#			package = config.boot.kernelPackages.nvidiaPackages.legacy_390;
+#		};
 		opentabletdriver.enable = true;
 	};
 	
@@ -119,7 +121,7 @@
 			enable = true;
 			xkb.layout = "us";
 			#?TODO maybe put all nvidia settings into its own module (i.e. r5e.hardware.nvidia.enable) + x11 with xdg config
-			videoDrivers = [ "nvidia" ];
+#			videoDrivers = [ "nvidia" ];
 			windowManager = {
 				cwm.enable = true;
 				openbox.enable = true;

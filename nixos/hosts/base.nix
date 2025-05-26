@@ -11,7 +11,10 @@
 		];
 	};
 	nixpkgs = {
-		config.allowUnfree = true;
+		config = {
+			allowUnfree = true;
+			nvidia.acceptLicense = true;
+		};
 		overlays = import ../overlays.nix inputs;
 	};
 

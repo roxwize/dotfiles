@@ -62,6 +62,8 @@
 					"browser.tabs.closeWindowWithLastTab" = false;
 					"browser.tabs.insertAfterCurrent" = true;
 					"datareporting.healthreport.uploadEnabled" = false;
+					"extensions.pocket.enabled" = false;
+					"extensions.pocket.showHome" = false;
 					"extensions.webextensions.restrictedDomains" = "";
 					"font.name.monospace.x-western" = "Fira Code";
 					"general.autoScroll" = true;

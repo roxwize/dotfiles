@@ -6,6 +6,64 @@
 		../base.nix
 	];
 
+	r5e.system = {
+		graphics = {
+			display.x11 = {
+				enable = true;
+				windowManagers = [ "twm" "openbox" ];
+				displayManager.autologin = {
+					enable = true;
+					session = "none+openbox";
+				};
+			};
+			hardwareAcceleration = {
+				enable = true;
+				intel = {
+					# TODO: change these when you get to your desktop pc
+					videoPlayback = {
+						enable = true;
+						package = pkgs.intel-vaapi-driver;
+					};
+					qsv = {
+						enable = true;
+						package = pkgs.intel-media-sdk;
+					};
+				};
+				nvidia = {
+					enable = true;
+					# TODO: this also needs to be changed back to default on your desktop
+					package = config.boot.kernelPackages.nvidiaPackages.legacy_390;
+				};
+			};
+		};
+	};
+# TODO: when you get home
+#       + try to make a configuration for your desktop host specifically maybe
+#	r5e.system = {
+#		graphics = {
+#			display.x11 = {
+#				enable = true;
+#				windowManagers = {
+#					twm.enable = true;
+#					openbox.enable = true;
+#				};
+#				displayManager.autologin = {
+#					enable = true;
+#					session = "none+openbox";
+#				};
+#			};
+#		};
+#
+#		hardwareAcceleration = {
+#			enable = true;
+#			intel = {
+#				videoPlayback.enable = true;
+#				qsv.enable = true;
+#			};
+#			nvidia.enable = true;
+#		};
+#	};
+
 	boot = {
 		binfmt.emulatedSystems = [ "aarch64-linux" ];
 		extraModulePackages = with config.boot.kernelPackages; [ v4l2loopback ];
@@ -117,29 +175,29 @@
 
 	services = {
 		# Xorg
-		xserver = {
-			enable = true;
-			xkb.layout = "us";
+#		xserver = {
+#			enable = true;
+#			xkb.layout = "us";
 			#?TODO maybe put all nvidia settings into its own module (i.e. r5e.hardware.nvidia.enable) + x11 with xdg config
 #			videoDrivers = [ "nvidia" ];
-			windowManager = {
-				cwm.enable = true;
-				openbox.enable = true;
-				twm.enable = true;
-			};
-		};
-		displayManager = {
-			sddm = {
-				enable = true;
-				settings = {
-					Autologin = {
-						User = "rae";
-						Session = "none+openbox";
-					};
-				};
-				theme = "catppuccin-mocha";
-			};
-		};
+#			windowManager = {
+#				cwm.enable = true;
+#				openbox.enable = true;
+#				twm.enable = true;
+#			};
+#		};
+#		displayManager = {
+#			sddm = {
+#				enable = true;
+#				settings = {
+#					Autologin = {
+#						User = "rae";
+#						Session = "none+openbox";
+#					};
+#				};
+#				theme = "catppuccin-mocha";
+#			};
+#		};
 
 		# Touchpad support
 		libinput.enable = true;

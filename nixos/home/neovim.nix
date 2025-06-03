@@ -15,11 +15,13 @@
 			vim-wakatime
 		];
 		extraLuaConfig = ''
+			--vim.lsp.enable("ts_ls")
+			--vim.lsp.enable("vala_ls")
+
 			vim.opt.tabstop = 4
 			vim.opt.softtabstop = 4
 			vim.opt.shiftwidth = 4
 			vim.opt.expandtab = true
-			
 			vim.opt.number = true
 
 			-- cmp
@@ -63,16 +65,8 @@
 				capabilities = caps,
 				cmd = { "nil" }
 			}
-			lc.typescript_ls.setup {
-				autostart = true,
-				capabilities = caps,
-				cmd = { "typescript-language-server" }
-			}
-			lc.vala_ls.setup {
-				autostart = true,
-				capabilities = caps,
-				cmd = { "vala-language-server" }
-			}
+			lc.ts_ls.setup {}
+			lc.vala_ls.setup {}
 		'';
 	};
 }

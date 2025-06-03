@@ -92,7 +92,8 @@
 		xclip                                                    # Tool to access the X clipboard from a console application
 		zellij                                                   # Terminal workspace with batteries included
 		# text editors
-		neovim                                                   # Vim text editor fork focused on extensibility and agility
+		# TODO: remove unstable when you upgrade to 25.05
+		unstable.neovim                                                   # Vim text editor fork focused on extensibility and agility
 		vscodium                                                 # Open source source code editor developed by Microsoft for Windows, Linux and macOS (VS Code without MS branding/telemetry/licensing)
 		# audio
 		alsa-utils                                               # ALSA, the Advanced Linux Sound Architecture utils

@@ -5,8 +5,9 @@ in with lib; {
 		graphics = {
 			display.x11 = {
 				enable = mkEnableOption "X11";
-				windowManagers = {
-					twm.enable = mkEnableOption "twm";
+				windowManagers = mkOption {
+					type = types.listOf	types.str;
+					default = [ "twm" ];
 				};
 				displayManager = {
 					# enable = mkEnableOption "SDDM";
@@ -30,30 +31,17 @@ in with lib; {
 					videoPlayback = {
 						# TODO wiki.nixos.org/wiki/Intel_Graphics
 						enable = mkEnableOption "accelerated video playback";
-						package = mkPackageOption pkgs "intel-media-driver";
+						package = mkPackageOption pkgs "intel-media-driver" {};
 					};
 					qsv = {
 						enable = mkEnableOption "Intel Quick Sync Video";
-						package = mkPackageOption pkgs "vpl-gpu-rt";
+						package = mkPackageOption pkgs "Intel Quick Sync Video" { default = [ "vpl-gpu-rt" ]; };
 					};
 				};
 				nvidia = {
 					enable = mkEnableOption "NVIDIA drivers";
-					package = mkPackageOption config.boot.kernelPackages.nvidiaPackages "stable";
+					package = mkPackageOption config.boot.kernelPackages.nvidiaPackages "NVIDIA driver" { default = [ "stable" ]; };
 				};
-			};
-		};
-
-		programs = {
-			steam = {
-				enable = mkEnableOption "Steam";
-				openFirewall = mkOption {
-					type = types.bool;
-					default = false;
-				};
-			};
-			thunderbird = {
-				enable = mkEnableOption "Mozilla Thunderbird";
 			};
 		};
 	};
@@ -89,8 +77,8 @@ in with lib; {
 			xserver = {
 				enable = cfg.graphics.display.x11.enable;
 				xkb.layout = "us";
-				windowManager = cfg.graphics.display.x11.windowManagers;
-				videoDrivers = optional cfg.graphics.hardwareAcceleration.nvidia.enable "nvidia";
+				windowManager = builtins.listToAttrs (builtins.map (x: { name = x; value = { enable = true; }; }) cfg.graphics.display.x11.windowManagers);
+				videoDrivers = (optional cfg.graphics.hardwareAcceleration.nvidia.enable "nvidia") ++ [ "modesetting" ];
 			};
 			displayManager.sddm = {
 				enable = cfg.graphics.display.x11.enable;
@@ -98,19 +86,6 @@ in with lib; {
 					User = cfg.graphics.display.x11.displayManager.autologin.user;
 					Session = cfg.graphics.display.x11.displayManager.autologin.session;
 				};
-			};
-		};
-
-		programs = {
-			steam = {
-				enable = cfg.programs.steam.enable;
-				remotePlay.openFirewall = cfg.programs.steam.openFirewall;
-				dedicatedServer.openFirewall = cfg.programs.steam.openFirewall;
-				localNetworkGameTransfers.openFirewall = cfg.programs.steam.openFirewall;
-			};
-			thunderbird = {
-				enable = cfg.programs.thunderbird.enable;
-				policies.DisableTelemetry = true;
 			};
 		};
 	};

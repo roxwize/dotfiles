@@ -4,6 +4,7 @@
 		./hardware-configuration.nix
 		./packages.nix
 		../base.nix
+		../../modules/system
 	];
 
 	r5e.system = {

@@ -24,6 +24,7 @@
 		mesonlsp             # Meson
 		nil                  # Nix
 		rust-analyzer        # Rust
+		typescript-language-server # TS/JS
 		vala-language-server # Vala
 		# games
 		alvr                                                     # Stream VR games from your PC to your headset via Wi-Fi

@@ -114,6 +114,14 @@
 				search = {
 					default = "DuckDuckGo";
 					engines = {
+						"Noogle" = {
+							urls = [{
+								template = "https://noogle.dev/q";
+								params = [
+									{ name = "term"; value = "{searchTerms}"; }
+								];
+							}];
+						};
 						"Nix packages" = {
 							urls = [{
 								template = "https://search.nixos.org/packages";
@@ -145,7 +153,7 @@
 						"Bing".metaData.hidden = true;
 						"Google".metaData.hidden = true;
 					};
-					order = [ "DuckDuckGo" "Nix packages" ];
+					order = [ "DuckDuckGo" "Noogle" "Nix packages" ];
 					force = true;
 				};
 			};

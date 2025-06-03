@@ -59,6 +59,7 @@
 		imagemagick                                              # Software suite to create, edit, compose, or convert bitmap images
 		krita                                                    # Free and open source painting application
 		maim                                                     # Command-line screenshot utility
+		sxiv                                                     # Simple X Image Viewer
 		# gtk
 		posy-cursors                                             # Posy's Improved Cursors for Linux
 		pantheon.elementary-gtk-theme                            # GTK theme designed to be smooth, attractive, fast, and usable

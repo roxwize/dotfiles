@@ -226,14 +226,57 @@
 
 	security.polkit.enable = true;
 
-	xdg.portal = {
-		enable = true;
-		config = {
-			common = {
-				default = [ "gtk" ];
+	xdg = {
+		mime = {
+			defaultApplications = let
+				audio = [ "vlc.desktop" "org.fooyin.fooyin.desktop" ];
+				browser = "firefox.desktop";
+				image = [ "sxiv.desktop" "gimp.desktop" ];
+				text = "nvim.desktop";
+				video = "vlc.desktop";
+			in {
+				"application/json" = text;
+				"application/x-c++src" = text;
+				"application/x-shellscript" = "kitty-open.desktop";
+				"application/x-xcf" = "gimp.desktop";
+				"audio/flac" = audio;
+				"audio/mp2" = audio;
+				"audio/mp3" = audio;
+				"audio/wav" = audio;
+				"audio/x-vorbis" = audio;
+				"audio/x-vorbis+ogg" = audio;
+				"image/avif" = image;
+				"image/bmp" = image;
+				"image/gif" = image;
+				"image/jpeg" = image;
+				"image/png" = image;
+				"image/svg+xml" = [ "sxiv.desktop" "nvim.desktop" ];
+				"image/tiff" = image;
+				"image/webp" = image;
+				"inode/directory" = "org.kde.dolphin.desktop";
+				"text/html" = browser;
+				"text/markdown" = text;
+				"text/plain" = text;
+				"text/x-c" = text;
+				"video/avi" = video;
+				"video/mp4" = video;
+				"video/quicktime" = video;
+				"video/webm" = video;
+				"video/x-matroska" = video;
+				"x-scheme-handler/http" = browser;
+				"x-scheme-handler/https" = browser;
+				"x-scheme-handler/mailto" = "thunderbird.desktop";
 			};
 		};
-		extraPortals = with pkgs; [ xdg-desktop-portal-gtk ];
+		portal = {
+			enable = true;
+			config = {
+				common = {
+					default = [ "gtk" ];
+				};
+			};
+			extraPortals = with pkgs; [ xdg-desktop-portal-gtk ];
+		};
 	};
 
 	users.users.rae.shell = pkgs.fish;

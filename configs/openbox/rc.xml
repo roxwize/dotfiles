@@ -1,286 +1,292 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <openbox_config xmlns="http://openbox.org/3.4/rc" xmlns:xi="http://www.w3.org/2001/XInclude">
-    <resistance>
-        <strength>40</strength>
-        <screen_edge_strength>80</screen_edge_strength>
-    </resistance>
-    <theme>
-        <name>neralie</name>
-        <titleLayout>LIMC</titleLayout>
-        <font place="ActiveWindow">
-            <name>GohuFont</name>
-            <size>11</size>
-        </font>
-        <font place="InactiveWindow">
-            <name>GohuFont</name>
-            <size>11</size>
-        </font>
-        <font place="MenuHeader">
-            <name>GohuFont</name>
-            <size>11</size>
-        </font>
-        <font place="MenuItem">
-            <name>GohuFont</name>
-            <size>11</size>
-        </font>
-        <font place="OnScreenDisplay">
-            <name>GohuFont</name>
-            <size>11</size>
-        </font>
-    </theme>
-    <desktops>
-        <!-- just use 4 until the need for more arises -->
-        <number>6</number>
-        <firstdesk>1</firstdesk>
-        <popupTime>0</popupTime>
-        <names>
-            <name>1</name>
-            <name>2</name>
-            <name>3</name>
-            <name>4</name>
-            <name>5</name>
-            <name>6</name>
-        </names>
-    </desktops>
-    <keyboard>
-        <keybind key="A-d">
-            <action name="Execute">
-                <command>rofi -show combi -modes combi -combi-modes "window,drun,run"</command>
-            </action>
-        </keybind>
-        <keybind key="A-S-question">
-            <action name="Execute">
-                <command>rofi -show run -modes run</command>
-            </action>
-        </keybind>
-        <keybind key="A-question">
-            <action name="Execute">
-                <command>rofi-pass</command>
-            </action>
-        </keybind>
-        <keybind key="A-period">
-            <action name="Execute">
-                <command>rofi -show ssh -modes ssh</command>
-            </action>
-        </keybind>
-        <keybind key="A-c">
-            <action name="ShowMenu">
-                <menu>client-menu</menu>
-            </action>
-        </keybind>
+	<resistance>
+		<strength>40</strength>
+		<screen_edge_strength>80</screen_edge_strength>
+	</resistance>
+	<theme>
+		<name>neralie</name>
+		<titleLayout>LIMC</titleLayout>
+		<font place="ActiveWindow">
+			<name>GohuFont</name>
+			<size>11</size>
+		</font>
+		<font place="InactiveWindow">
+			<name>GohuFont</name>
+			<size>11</size>
+		</font>
+		<font place="MenuHeader">
+			<name>GohuFont</name>
+			<size>11</size>
+		</font>
+		<font place="MenuItem">
+			<name>GohuFont</name>
+			<size>11</size>
+		</font>
+		<font place="OnScreenDisplay">
+			<name>GohuFont</name>
+			<size>11</size>
+		</font>
+	</theme>
+	<desktops>
+		<!-- just use 4 until the need for more arises -->
+		<number>6</number>
+		<firstdesk>1</firstdesk>
+		<popupTime>0</popupTime>
+		<names>
+			<name>1</name>
+			<name>2</name>
+			<name>3</name>
+			<name>4</name>
+			<name>5</name>
+			<name>6</name>
+		</names>
+	</desktops>
+	<keyboard>
+		<keybind key="A-d">
+			<action name="Execute">
+				<command>rofi -show combi -modes combi -combi-modes "window,drun,run"</command>
+			</action>
+		</keybind>
+		<keybind key="A-S-question">
+			<action name="Execute">
+				<command>rofi -show run -modes run</command>
+			</action>
+		</keybind>
+		<keybind key="A-question">
+			<action name="Execute">
+				<command>rofi-pass</command>
+			</action>
+		</keybind>
+		<keybind key="A-period">
+			<action name="Execute">
+				<command>rofi -show ssh -modes ssh</command>
+			</action>
+		</keybind>
+		<keybind key="A-c">
+			<action name="ShowMenu">
+				<menu>client-menu</menu>
+			</action>
+		</keybind>
 
-        <keybind key="A-Return">
-            <action name="Iconify"/>
-        </keybind>
-        <keybind key="A-Up">
-            <action name="Raise"/>
-        </keybind>
-        <keybind key="A-Down">
-            <action name="Lower"/>
-        </keybind>
-        <keybind key="C-A-x">
-            <action name="Close"/>
-        </keybind>
-        <keybind key="C-A-f">
-            <action name="ToggleFullscreen"/>
-        </keybind>
-        <keybind key="C-A-m">
-            <action name="ToggleMaximize"/>
-        </keybind>
+		<keybind key="A-Return">
+			<action name="Iconify"/>
+		</keybind>
+		<keybind key="A-Up">
+			<action name="Raise"/>
+		</keybind>
+		<keybind key="A-Down">
+			<action name="Lower"/>
+		</keybind>
+		<keybind key="C-A-x">
+			<action name="Close"/>
+		</keybind>
+		<keybind key="C-A-f">
+			<action name="ToggleFullscreen"/>
+		</keybind>
+		<keybind key="C-A-m">
+			<action name="ToggleMaximize"/>
+		</keybind>
 
 
-        <keybind key="A-h">
-            <action name="MoveRelative">
-                <x>-5</x>
-                <y>0</y>
-            </action>
-        </keybind>
-        <keybind key="A-j">
-            <action name="MoveRelative">
-                <x>0</x>
-                <y>5</y>
-            </action>
-        </keybind>
-        <keybind key="A-k">
-            <action name="MoveRelative">
-                <x>0</x>
-                <y>-5</y>
-            </action>
-        </keybind>
-        <keybind key="A-l">
-            <action name="MoveRelative">
-                <x>5</x>
-                <y>0</y>
-            </action>
-        </keybind>
+		<keybind key="A-h">
+			<action name="MoveRelative">
+				<x>-5</x>
+				<y>0</y>
+			</action>
+		</keybind>
+		<keybind key="A-j">
+			<action name="MoveRelative">
+				<x>0</x>
+				<y>5</y>
+			</action>
+		</keybind>
+		<keybind key="A-k">
+			<action name="MoveRelative">
+				<x>0</x>
+				<y>-5</y>
+			</action>
+		</keybind>
+		<keybind key="A-l">
+			<action name="MoveRelative">
+				<x>5</x>
+				<y>0</y>
+			</action>
+		</keybind>
 
-        <keybind key="A-F12">
-            <action name="Execute">
-                <command>flameshot gui</command>
-            </action>
-        </keybind>
-        <keybind key="C-A-Return">
-            <action name="Execute">
-                <command>kitty</command>
-            </action>
-        </keybind>
-        <keybind key="C-A-S-r">
-            <action name="Execute">
-                <command>shutdown -r now</command>
-                <prompt>Really shutdown the computer?</prompt>
-            </action>
-        </keybind>
+		<keybind key="A-F12">
+			<action name="Execute">
+				<command>flameshot gui</command>
+			</action>
+		</keybind>
+		<keybind key="C-A-Return">
+			<action name="Execute">
+				<command>kitty</command>
+			</action>
+		</keybind>
+		<keybind key="C-A-S-r">
+			<action name="Execute">
+				<command>shutdown -r now</command>
+				<prompt>Really shutdown the computer?</prompt>
+			</action>
+		</keybind>
 
-        <keybind key="A-Left">
-            <action name="GoToDesktop">
-                <to>previous</to>
-            </action>
-        </keybind>
-        <keybind key="A-S-Left">
-            <action name="PreviousWindow">
-                <dialog>none</dialog>
-                <linear>yes</linear>
-                <interactive>no</interactive>
-            </action>
-        </keybind>
-        <keybind key="A-Right">
-            <action name="GoToDesktop">
-                <to>next</to>
-            </action>
-        </keybind>
-        <keybind key="A-S-Right">
-            <action name="NextWindow">
-                <dialog>none</dialog>
-                <linear>yes</linear>
-                <interactive>no</interactive>
-            </action>
-        </keybind>
-        <keybind key="A-Tab">
-            <action name="NextWindow">
-                <dialog>list</dialog>
-                <raise>yes</raise>
-                <allDesktops>yes</allDesktops>
-                <linear>no</linear>
-                <interactive>yes</interactive>
-            </action>
-        </keybind>
-        <keybind key="A-1">
-            <action name="GoToDesktop">
-                <to>1</to>
-            </action>
-        </keybind>
-        <keybind key="A-2">
-            <action name="GoToDesktop">
-                <to>2</to>
-            </action>
-        </keybind>
-        <keybind key="A-3">
-            <action name="GoToDesktop">
-                <to>3</to>
-            </action>
-        </keybind>
-        <keybind key="A-4">
-            <action name="GoToDesktop">
-                <to>4</to>
-            </action>
-        </keybind>
-        <keybind key="A-5">
-            <action name="GoToDesktop">
-                <to>5</to>
-            </action>
-        </keybind>
-        <keybind key="A-6">
-            <action name="GoToDesktop">
-                <to>6</to>
-            </action>
-        </keybind>
-    </keyboard>
-    <mouse>
-        <context name="Frame">
-            <mousebind button="A-Left" action="Press">
-                <action name="Focus"/>
-            </mousebind>
-            <mousebind button="A-Left" action="Click">
-                <action name="Raise"/>
-            </mousebind>
-            <mousebind button="A-Left" action="Drag">
-                <action name="Move"/>
-            </mousebind>
-            <mousebind button="A-Right" action="Click">
-                <action name="ShowMenu">
-                    <menu>root</menu>
-                </action>
-            </mousebind>
-            <mousebind button="A-Right" action="Drag">
-                <action name="Resize"/>
-            </mousebind>
-        </context>
+		<keybind key="A-Left">
+			<action name="GoToDesktop">
+				<to>previous</to>
+			</action>
+		</keybind>
+		<keybind key="A-S-Left">
+			<action name="PreviousWindow">
+				<dialog>none</dialog>
+				<linear>yes</linear>
+				<interactive>no</interactive>
+			</action>
+		</keybind>
+		<keybind key="A-Right">
+			<action name="GoToDesktop">
+				<to>next</to>
+			</action>
+		</keybind>
+		<keybind key="A-S-Right">
+			<action name="NextWindow">
+				<dialog>none</dialog>
+				<linear>yes</linear>
+				<interactive>no</interactive>
+			</action>
+		</keybind>
+		<keybind key="A-Tab">
+			<action name="NextWindow">
+				<dialog>list</dialog>
+				<raise>yes</raise>
+				<allDesktops>yes</allDesktops>
+				<linear>no</linear>
+				<interactive>yes</interactive>
+			</action>
+		</keybind>
+		<keybind key="A-1">
+			<action name="GoToDesktop">
+				<to>1</to>
+			</action>
+		</keybind>
+		<keybind key="A-2">
+			<action name="GoToDesktop">
+				<to>2</to>
+			</action>
+		</keybind>
+		<keybind key="A-3">
+			<action name="GoToDesktop">
+				<to>3</to>
+			</action>
+		</keybind>
+		<keybind key="A-4">
+			<action name="GoToDesktop">
+				<to>4</to>
+			</action>
+		</keybind>
+		<keybind key="A-5">
+			<action name="GoToDesktop">
+				<to>5</to>
+			</action>
+		</keybind>
+		<keybind key="A-6">
+			<action name="GoToDesktop">
+				<to>6</to>
+			</action>
+		</keybind>
+	</keyboard>
+	<mouse>
+		<context name="Frame">
+			<mousebind button="A-Left" action="Press">
+				<action name="Focus"/>
+			</mousebind>
+			<mousebind button="A-Left" action="Click">
+				<action name="Raise"/>
+			</mousebind>
+			<mousebind button="A-Left" action="Drag">
+				<action name="Move"/>
+			</mousebind>
+			<mousebind button="A-Right" action="Click">
+				<action name="ShowMenu">
+					<menu>root</menu>
+				</action>
+			</mousebind>
+			<mousebind button="A-Right" action="Drag">
+				<action name="Resize"/>
+			</mousebind>
+			<mousebind button="Left" action="Press">
+				<action name="Focus"/>
+			</mousebind>
+			<mousebind button="Left" action="Click">
+				<action name="Raise"/>
+			</mousebind>
+		</context>
 
-        <context name="Titlebar">
-            <mousebind button="Left" action="Press">
-                <action name="Focus"/>
-            </mousebind>
-            <mousebind button="Left" action="Click">
-                <action name="Raise"/>
-            </mousebind>
-            <mousebind button="Left" action="DoubleClick">
-                <action name="ToggleMaximizeFull"/>
-            </mousebind>
-            <mousebind button="Left" action="Drag">
-                <action name="Move"/>
-            </mousebind>
-            <mousebind button="Right" action="Drag">
-                <action name="Resize"/>
-            </mousebind>
-            <mousebind button="A-Left" action="Press">
-                <action name="Focus"/>
-            </mousebind>
-            <mousebind button="A-Left" action="Click">
-                <action name="Raise"/>
-            </mousebind>
-            <mousebind button="A-Left" action="Drag">
-                <action name="Move"/>
-            </mousebind>
-            <mousebind button="A-Right" action="Drag">
-                <action name="Resize"/>
-            </mousebind>
-            <mousebind button="C-Right" action="Click">
-                <action name="ShowMenu">
-                    <menu>client-menu</menu>
-                </action>
-            </mousebind>
-        </context>
+		<context name="Titlebar">
+			<mousebind button="Left" action="Press">
+				<action name="Focus"/>
+			</mousebind>
+			<mousebind button="Left" action="Click">
+				<action name="Raise"/>
+			</mousebind>
+			<mousebind button="Left" action="DoubleClick">
+				<action name="ToggleMaximizeFull"/>
+			</mousebind>
+			<mousebind button="Left" action="Drag">
+				<action name="Move"/>
+			</mousebind>
+			<mousebind button="Right" action="Drag">
+				<action name="Resize"/>
+			</mousebind>
+			<mousebind button="A-Left" action="Press">
+				<action name="Focus"/>
+			</mousebind>
+			<mousebind button="A-Left" action="Click">
+				<action name="Raise"/>
+			</mousebind>
+			<mousebind button="A-Left" action="Drag">
+				<action name="Move"/>
+			</mousebind>
+			<mousebind button="A-Right" action="Drag">
+				<action name="Resize"/>
+			</mousebind>
+			<mousebind button="C-Right" action="Click">
+				<action name="ShowMenu">
+					<menu>client-menu</menu>
+				</action>
+			</mousebind>
+		</context>
 
-        <context name="Iconify">
-            <mousebind button="Left" action="Click">
-                <action name="Iconify"/>
-            </mousebind>
-        </context>
+		<context name="Iconify">
+			<mousebind button="Left" action="Click">
+				<action name="Iconify"/>
+			</mousebind>
+		</context>
 
-        <context name="Maximize">
-            <mousebind button="Left" action="Click">
-                <action name="ToggleMaximizeFull"/>
-            </mousebind>
-            <mousebind button="Middle" action="Click">
-                <action name="ToggleMaximizeVert"/>
-            </mousebind>
-            <mousebind button="Right" action="Click">
-                <action name="ToggleMaximizeHorz"/>
-            </mousebind>
-        </context>
+		<context name="Maximize">
+			<mousebind button="Left" action="Click">
+				<action name="ToggleMaximizeFull"/>
+			</mousebind>
+			<mousebind button="Middle" action="Click">
+				<action name="ToggleMaximizeVert"/>
+			</mousebind>
+			<mousebind button="Right" action="Click">
+				<action name="ToggleMaximizeHorz"/>
+			</mousebind>
+		</context>
 
-        <context name="Close">
-            <mousebind button="Left" action="Click">
-                <action name="Close"/>
-            </mousebind>
-        </context>
+		<context name="Close">
+			<mousebind button="Left" action="Click">
+				<action name="Close"/>
+			</mousebind>
+		</context>
 
-        <context name="Root">
-            <mousebind button="Right" action="Click">
-                <action name="ShowMenu">
-                    <menu>root</menu>
-                </action>
-            </mousebind>
-        </context>
-    </mouse>
+		<context name="Root">
+			<mousebind button="Right" action="Click">
+				<action name="ShowMenu">
+					<menu>root</menu>
+				</action>
+			</mousebind>
+		</context>
+	</mouse>
 </openbox_config>

@@ -65,8 +65,8 @@
 				capabilities = caps,
 				cmd = { "nil" }
 			}
-			lc.ts_ls.setup {}
-			lc.vala_ls.setup {}
+			lc.ts_ls.setup { capabilities = caps }
+			lc.vala_ls.setup { capabilities = caps }
 		'';
 	};
 }

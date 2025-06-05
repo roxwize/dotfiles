@@ -1,0 +1,97 @@
+--vim.lsp.enable("ts_ls")
+--vim.lsp.enable("vala_ls")
+
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
+vim.opt.number = true
+
+-- TODO: run :Neotree on VimEnter autocmd
+-- neo-tree
+require("neo-tree").setup {
+	default_component_configs = {
+		git_status = {
+			symbols = {
+				added = "+",
+				conflict = "!"
+				deleted = "-",
+				ignored = ".",
+				modified = "/",
+				renamed = ">",
+				staged = "S",
+				unstaged = "U",
+				untracked = "U",
+			}
+		}
+		icon = {
+			folder_closed = "-",
+			folder_open = "+",
+			folder_empty = "-",
+			folder_empty_open = "-"
+		}
+	},
+	sources = {
+		"filesystem",
+		"buffers",
+		"git_status",
+		"document_symbols"
+	},
+	source_selector = {
+		winbar = true,
+		sources = {
+			{ source = "filesystem" },
+			{ source = "buffers" },
+			{ source = "git_status" },
+			{ source = "document_symbols" }
+		}
+	}
+}
+vim.api.nvim_create_autocmd({"VimEnter"}, {
+	command = "Neotree action=show position=right reveal=true"
+})
+
+---- language servers + intellisense
+-- cmp
+local cmp = require("cmp")
+cmp.setup {
+	snippet = {
+		expand = function(args)
+			require("luasnip").lsp_expand(args.body)
+		end
+	},
+	mapping = {
+		['<C-up>'] = cmp.mapping.select_prev_item(),
+		['<C-down>'] = cmp.mapping.select_next_item(),
+		['<C-space>'] = cmp.mapping.complete(),
+		['<C-e>'] = cmp.mapping.close(),
+		['<tab>'] = cmp.mapping.confirm { select = true }
+	},
+	sources = cmp.config.sources({
+		{ name = "nvim_lsp" },
+		{ name = "luasnip" }
+	})
+}
+
+local caps = vim.tbl_deep_extend(
+	"force",
+	vim.lsp.protocol.make_client_capabilities(),
+	require("cmp_nvim_lsp").default_capabilities(),
+	{ workspace = { didChangeWatchedFiles = { dynamicRegistration = true } } }
+)
+
+-- lspconfig
+local lc = require("lspconfig")
+
+lc.clangd.setup {
+	autostart = true,
+	capabilities = caps,
+	cmd = { "clangd" }
+}
+lc.nil_ls.setup {
+	autostart = true,
+	capabilities = caps,
+	cmd = { "nil" }
+}
+lc.ts_ls.setup { capabilities = caps }
+lc.vala_ls.setup { capabilities = caps }

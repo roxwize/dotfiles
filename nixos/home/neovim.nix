@@ -15,7 +15,6 @@
 			vim-sleuth      # Indentation detection
 			vim-wakatime    # Wakatime support
 		];
-		# TODO make path agnostic
-		extraLuaConfig = builtins.readFile /home/rae/.dotfiles/configs/neovim.lua;
+		extraLuaConfig = builtins.readFile ../../configs/neovim.lua;
 	};
 }

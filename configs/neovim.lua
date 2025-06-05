@@ -7,23 +7,22 @@ vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 vim.opt.number = true
 
--- TODO: run :Neotree on VimEnter autocmd
 -- neo-tree
 require("neo-tree").setup {
 	default_component_configs = {
 		git_status = {
 			symbols = {
 				added = "+",
-				conflict = "!"
+				conflict = "!",
 				deleted = "-",
 				ignored = ".",
 				modified = "/",
 				renamed = ">",
 				staged = "S",
-				unstaged = "U",
-				untracked = "U",
+				unstaged = "u",
+				untracked = "U"
 			}
-		}
+		},
 		icon = {
 			folder_closed = "-",
 			folder_open = "+",
@@ -88,6 +87,8 @@ lc.clangd.setup {
 	capabilities = caps,
 	cmd = { "clangd" }
 }
+lc.lua_ls.setup { capabilities = caps }
+lc.mesonlsp.setup { capabilities = caps }
 lc.nil_ls.setup {
 	autostart = true,
 	capabilities = caps,
@@ -95,3 +96,4 @@ lc.nil_ls.setup {
 }
 lc.ts_ls.setup { capabilities = caps }
 lc.vala_ls.setup { capabilities = caps }
+

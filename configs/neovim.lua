@@ -1,11 +1,11 @@
 --vim.lsp.enable("ts_ls")
 --vim.lsp.enable("vala_ls")
 
+vim.opt.list = true -- indent guides
+vim.opt.number = true -- line numbers
+
 vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
-vim.opt.expandtab = true
-vim.opt.number = true
 
 -- neo-tree
 require("neo-tree").setup {
@@ -28,6 +28,14 @@ require("neo-tree").setup {
 			folder_open = "+",
 			folder_empty = "-",
 			folder_empty_open = "-"
+		}
+	},
+	filesystem = {
+		window = {
+			filtered_items = {
+				visible = true,
+				hide_dotfiles = false
+			}
 		}
 	},
 	sources = {

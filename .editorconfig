@@ -8,4 +8,7 @@ indent_style = tab
 indent_size = 4
 
 [*.{yml, yaml}]
-indent_style = space # stupid cocksucking motherfucking piece of shit
+# stupid cocksucking motherfucking piece of shit
+indent_style = space
+indent_size = 1
+

@@ -19,18 +19,18 @@ LeftTitleButton "wmenu.xbm"     = f.nop
 RightTitleButton "minimize.xbm" = f.iconify
 RightTitleButton "close.xbm"    = f.delete
 Color {
-  BorderColor           "#0d8778"
-  DefaultBackground     "#0d8778"
-  DefaultForeground     "#ffffff"
-  TitleBackground       "#0d8778"
-  TitleForeground       "#ffffff"
-  MenuTitleBackground   "#b52f62"
-  MenuTitleForeground   "#ffffff"
-  MenuBackground        "#b52f62"
-  MenuForeground        "#ffffff"
-  MenuBorderColor       "#b52f62"
-  IconManagerBackground "#b52f62"
-  IconManagerForeground "#ffffff"
+	BorderColor           "#0d8778"
+	DefaultBackground     "#0d8778"
+	DefaultForeground     "#ffffff"
+	TitleBackground       "#0d8778"
+	TitleForeground       "#ffffff"
+	MenuTitleBackground   "#b52f62"
+	MenuTitleForeground   "#ffffff"
+	MenuBackground        "#b52f62"
+	MenuForeground        "#ffffff"
+	MenuBorderColor       "#b52f62"
+	IconManagerBackground "#b52f62"
+	IconManagerForeground "#ffffff"
 }
 # window actions
 Button1 =   : root   : f.menu "TwmWindows"
@@ -41,23 +41,24 @@ Function "raise-lower-move" { f.move f.raiselower }
 # menus
 menu "System"
 {
-  "System"            f.title
-  "Icon manager"      f.showiconmgr
-  "Restart twm"       f.restart
-  "Take screenshot"   !"flameshot gui&"
-  ""                  f.nop
-  "Applications"      f.menu "Applications"
-  "Processes"         !"kitty btop&"
-  ""                  f.nop
-  "Shutdown"          !"shutdown now&"
-  "Restart"           !"reboot&"
+	"System"            f.title
+	"Icon manager"      f.showiconmgr
+	"Restart twm"       f.restart
+	"Take screenshot"   !"flameshot gui&"
+	""                  f.nop
+	"Applications"      f.menu "Applications"
+	"Processes"         !"kitty btop&"
+	""                  f.nop
+	"Shutdown"          !"shutdown now&"
+	"Restart"           !"reboot&"
 }
 menu "Applications"
 {
-  "Applications"      f.title
-  "Dolphin"           !"dolphin&"
-  "Konsole"           !"konsole&"
-  "Firefox"           !"firefox&"
-  "Kate"              !"kate&"
-  "VSCodium"          !"codium&"
+	"Applications"      f.title
+	"Dolphin"           !"dolphin&"
+	"Konsole"           !"konsole&"
+	"Firefox"           !"firefox&"
+	"Kate"              !"kate&"
+	"VSCodium"          !"codium&"
 }
+

@@ -38,32 +38,6 @@
 			};
 		};
 	};
-# TODO: when you get home
-#       + try to make a configuration for your desktop host specifically maybe
-#	r5e.system = {
-#		graphics = {
-#			display.x11 = {
-#				enable = true;
-#				windowManagers = {
-#					twm.enable = true;
-#					openbox.enable = true;
-#				};
-#				displayManager.autologin = {
-#					enable = true;
-#					session = "none+openbox";
-#				};
-#			};
-#		};
-#
-#		hardwareAcceleration = {
-#			enable = true;
-#			intel = {
-#				videoPlayback.enable = true;
-#				qsv.enable = true;
-#			};
-#			nvidia.enable = true;
-#		};
-#	};
 
 	boot = {
 		binfmt.emulatedSystems = [ "aarch64-linux" ];
@@ -112,24 +86,6 @@
 			enable = true;
 			powerOnBoot = true;
 		};
-#		graphics = {
-#			enable = true;
-#			extraPackages = with pkgs; [
-#				intel-media-sdk
-#			];
-#		};
-#		nvidia = {
-#			modesetting.enable = true;
-#			powerManagement = {
-#				enable = false;
-#				finegrained = false;
-#			};
-#			open = false;
-#			nvidiaSettings = true;
-#			package = config.boot.kernelPackages.nvidiaPackages.stable;
-#			# temp
-#			package = config.boot.kernelPackages.nvidiaPackages.legacy_390;
-#		};
 		opentabletdriver.enable = true;
 	};
 	
@@ -175,31 +131,6 @@
 	};
 
 	services = {
-		# Xorg
-#		xserver = {
-#			enable = true;
-#			xkb.layout = "us";
-			#?TODO maybe put all nvidia settings into its own module (i.e. r5e.hardware.nvidia.enable) + x11 with xdg config
-#			videoDrivers = [ "nvidia" ];
-#			windowManager = {
-#				cwm.enable = true;
-#				openbox.enable = true;
-#				twm.enable = true;
-#			};
-#		};
-#		displayManager = {
-#			sddm = {
-#				enable = true;
-#				settings = {
-#					Autologin = {
-#						User = "rae";
-#						Session = "none+openbox";
-#					};
-#				};
-#				theme = "catppuccin-mocha";
-#			};
-#		};
-
 		# Touchpad support
 		libinput.enable = true;
 		# Sound
@@ -287,3 +218,4 @@
 	
 	system.stateVersion = "24.11";
 }
+

@@ -1,12 +1,14 @@
 { pkgs, lib, config, ... }: let
 	cfg = config.r5e.system;
 in with lib; {
+	imports = [ ./home.nix ];
+
 	options.r5e.system = {
 		graphics = {
 			display.x11 = {
 				enable = mkEnableOption "X11";
 				windowManagers = mkOption {
-					type = types.listOf	types.str;
+					type = types.listOf types.str;
 					default = [ "twm" ];
 				};
 				displayManager = {

@@ -95,6 +95,10 @@ lc.clangd.setup {
 	capabilities = caps,
 	cmd = { "clangd" }
 }
+lc.jsonls.setup {
+	capabilities = caps,
+	cmd = { "vscode-json-languageserver", "--stdio" }
+}
 lc.lua_ls.setup { capabilities = caps }
 lc.mesonlsp.setup { capabilities = caps }
 lc.nil_ls.setup {

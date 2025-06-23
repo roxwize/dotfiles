@@ -16,7 +16,7 @@
 				FirefoxHome = {
 					SponsoredTopSites = false;
 					Highlights = false;
-					Pocket = false;
+					Pocket = false; # rip bozo
 					SponsoredPocket = false;
 				};
 				FirefoxSuggest = {
@@ -61,6 +61,7 @@
 					"browser.startup.page" = 3;
 					"browser.tabs.closeWindowWithLastTab" = false;
 					"browser.tabs.insertAfterCurrent" = true;
+					"devtools.editor.tabsize" = 4;
 					"datareporting.healthreport.uploadEnabled" = false;
 					"extensions.pocket.enabled" = false;
 					"extensions.pocket.showHome" = false;
@@ -147,6 +148,11 @@
 								params = [
 									{ name = "q"; value = "{searchTerms}"; }
 								];
+							}];
+						};
+						"ArchWiki" = {
+							urls = [{
+								template = "https://wiki.archlinux.org/index.php?title=Special:Search&search={searchTerms}";
 							}];
 						};
 

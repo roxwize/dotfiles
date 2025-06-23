@@ -4,7 +4,8 @@ log=$(mktemp /tmp/wmas-openbox-XXXXXXXX.txt)
 echo "Openbox autostart file" > $log
 echo -e "Executed @ $(date)\n" >> $log
 
-hsetroot -cover ~/.dotfiles/assets/wallpapers/current >> $log 2>&1
+#hsetroot -cover ~/.dotfiles/assets/wallpapers/current >> $log 2>&1
+hsetroot -cover %WALLPAPER% >> $log 2>&1
 xcompmgr >> $log 2>&1 &
 soteria >> $log 2>&1 &
 
@@ -15,3 +16,4 @@ sleep 1
 yambar >> $log 2>&1 &
 sleep 1
 kill $temp
+

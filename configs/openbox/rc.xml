@@ -214,12 +214,12 @@
 			<mousebind button="A-Right" action="Drag">
 				<action name="Resize"/>
 			</mousebind>
-			<mousebind button="Left" action="Press">
+			<!--<mousebind button="Left" action="Press">
 				<action name="Focus"/>
 			</mousebind>
 			<mousebind button="Left" action="Click">
 				<action name="Raise"/>
-			</mousebind>
+			</mousebind>-->
 		</context>
 
 		<context name="Titlebar">

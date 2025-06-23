@@ -21,6 +21,7 @@
 		python313                                                # High-level dynamically-typed programming language
 		vala                                                     # Compiler for GObject type system
 		## language servers
+		nodePackages.vscode-json-languageserver # JSON
 		lua-language-server  # Lua
 		mesonlsp             # Meson
 		nil                  # Nix

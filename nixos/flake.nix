@@ -2,7 +2,7 @@
 	description = "rae's nixOS config flake";
 
 	inputs = {
-		nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
+		nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
 		nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 		nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
 		home-manager = {
@@ -21,6 +21,8 @@
 		};
 		# Raspberry Pi support
 		raspberry-pi-nix.url = "github:nix-community/raspberry-pi-nix";
+		# Real-time audio
+		musnix.url = "github:musnix/musnix";
 	};
 
 	outputs = { self, nixpkgs, home-manager, nix-flatpak, ... }@inputs: {

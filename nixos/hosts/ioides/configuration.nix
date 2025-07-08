@@ -1,5 +1,6 @@
 { inputs, config, pkgs, ... }: {
 	imports = [
+		inputs.musnix.nixosModules.musnix
 		inputs.nix-flatpak.nixosModules.nix-flatpak
 		./hardware-configuration.nix
 		./packages.nix
@@ -20,19 +21,11 @@
 			hardwareAcceleration = {
 				enable = true;
 				intel = {
-					# TODO: change these when you get to your desktop pc
-					videoPlayback = {
-						enable = true;
-						package = pkgs.intel-vaapi-driver;
-					};
-					qsv = {
-						enable = true;
-						package = pkgs.intel-media-sdk;
-					};
+					videoPlayback.enable = true;
+					qsv.enable = true;
 				};
 				nvidia = {
 					enable = true;
-					# TODO: this also needs to be changed back to default on your desktop
 					package = config.boot.kernelPackages.nvidiaPackages.legacy_390;
 				};
 			};
@@ -60,12 +53,12 @@
 		supportedFilesystems = [ "ntfs" ];
 	};
 
-#	# Music pendrive
-#	fileSystems."/mnt/world" = {
-#		device = "/dev/disk/by-uuid/639bae80-0f5d-481c-ae4e-d2c70f754a1c";
-#		fsType = "ext4";
-#		neededForBoot = false;
-#	};
+	# Music pendrive
+	fileSystems."/mnt/world" = {
+		device = "/dev/disk/by-uuid/639bae80-0f5d-481c-ae4e-d2c70f754a1c";
+		fsType = "ext4";
+		neededForBoot = false;
+	};
 #	# Big fucking thing
 #	fileSystems."/mnt/rae2" = {
 #		device = "/dev/disk/by-uuid/fbbcc72f-34af-425c-9151-ef8919a6ae07";
@@ -208,6 +201,12 @@
 			};
 			extraPortals = with pkgs; [ xdg-desktop-portal-gtk ];
 		};
+	};
+
+	musnix = {
+		enable = true;
+		rtcqs.enable = true;
+		soundcardPciId = "00:1f.3";
 	};
 
 	users.users.rae.shell = pkgs.fish;

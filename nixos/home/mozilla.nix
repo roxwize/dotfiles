@@ -81,8 +81,8 @@
 								url = "http://127.0.0.1:631/";
 							}
 							{
-								name = "Pinky & Pepper Forever";
-								url = "https://www.silversprocket.net/2020/05/02/pinky-and-pepper-forever-by-eddy-atoms-part-1-of-2/";
+								name = "Battle of the Bits";
+								url = "https://battleofthebits.com/";
 							}
 						];
 					}

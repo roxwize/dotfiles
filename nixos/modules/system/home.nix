@@ -2,7 +2,7 @@
 { pkgs, config, lib, ... }: let
 	cfg = config.r5e.home;
 in with lib; {
-	options.r5e.home = mkOption {
+	options.r5e.user = mkOption {
 		type = types.attrsOf {
 			wallpaper = mkOption {
 				type = types.str;

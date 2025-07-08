@@ -73,7 +73,7 @@
 		qbittorrent                                              # Featureful free software BitTorrent client
 		slack                                                    # Desktop client for Slack
 		tiny                                                     # Console IRC client
-		vesktop                                                  # Alternate client for Discord with Vencord built-in
+		unstable.vesktop                                                  # Alternate client for Discord with Vencord built-in
 		yt-dlp                                                   # Command-line tool to download videos from YouTube.com and other sites (youtube-dl fork)
 		# system tools
 		android-tools                                            # Android SDK platform tools
@@ -109,6 +109,7 @@
 		playerctl                                                # Command-line utility and library for controlling media players that implement MPRIS
 		reaper                                                   # Digital audio workstation
 		unstable.rmpc                                            # TUI music player client for MPD with album art support via kitty image protocol
+		supercollider                                            # Programming language for real time audio synthesis
 #   vcv-rack                                                 # Open-source virtual modular synthesizer
 		# X11
 		hsetroot                                                 # Allows you to compose wallpapers ('root pixmaps') for X

@@ -15,7 +15,7 @@
 		jdk23                                                    # Open-source Java Development Kit
 		just                                                     # Handy way to save and run project-specific commands
 		meson                                                    # Open source, fast and friendly build system made in Python
-		nodejs_23                                                # Event-driven I/O framework for the V8 JavaScript engine
+		nodejs_24                                                # Event-driven I/O framework for the V8 JavaScript engine
 		nurl                                                     # Command-line tool to generate Nix fetcher calls from repository URLs
 		pnpm                                                     # Fast, disk space efficient package manager for JavaScript
 		python313                                                # High-level dynamically-typed programming language
@@ -34,8 +34,8 @@
 		gzdoom                                                   # Modder-friendly OpenGL and Vulkan source port based on the DOOM engine
 		unstable.luanti                                          # An open source voxel game engine (formerly Minetest)
 		prismlauncher                                            # Free, open source launcher for Minecraft
-		(retroarch.override {                                    # Multi-platform emulator frontend for libretro cores
-			cores = with libretro; [
+		(retroarch.withCores (                                   # Multi-platform emulator frontend for libretro cores
+			cores: with cores; [
 				blastem                                            	# Sega Genesis
 				dosbox                                            	# MS-DOS
 				easyrpg                                           	# RPG Maker 2000/2003
@@ -47,8 +47,8 @@
 				ppsspp                                            	# PlayStation Portable
 				snes9x                                            	# Super Nintendo Entertainment System
 				yabause                                           	# Sega Saturn
-			];
-		})
+			]
+		))
 		steam-run                                                # Run commands in the same FHS environment that is used for Steam
 		the-powder-toy                                           # Free 2D physics sandbox game
 		uxn                                                      # Assembler and emulator for the Uxn stack machine
@@ -69,11 +69,12 @@
 		cachix                                                   # Command-line client for Nix binary cache hosting
 		ngrok                                                    # Allows you to expose a web server running on your local machine to the internet
 		nicotine-plus                                            # Graphical client for the SoulSeek peer-to-peer system
-		playit-agent                                             # The playit program
+		# doesn't work at the moment (and port forwarding works now anyways)
+#		playit-agent                                             # The playit program
 		qbittorrent                                              # Featureful free software BitTorrent client
 		slack                                                    # Desktop client for Slack
 		tiny                                                     # Console IRC client
-		unstable.vesktop                                                  # Alternate client for Discord with Vencord built-in
+		vesktop                                                  # Alternate client for Discord with Vencord built-in
 		yt-dlp                                                   # Command-line tool to download videos from YouTube.com and other sites (youtube-dl fork)
 		# system tools
 		android-tools                                            # Android SDK platform tools
@@ -95,13 +96,12 @@
 		xclip                                                    # Tool to access the X clipboard from a console application
 		zellij                                                   # Terminal workspace with batteries included
 		# text editors
-		# TODO: remove unstable when you upgrade to 25.05
-		unstable.neovim                                                   # Vim text editor fork focused on extensibility and agility
+		neovim                                                   # Vim text editor fork focused on extensibility and agility
 		vscodium                                                 # Open source source code editor developed by Microsoft for Windows, Linux and macOS (VS Code without MS branding/telemetry/licensing)
 		# audio
 		alsa-utils                                               # ALSA, the Advanced Linux Sound Architecture utils
 		audacity                                                 # Sound editor with graphical UI
-		unstable.bespokesynth                                    # Software modular synth with controllers support, scripting and VST
+		bespokesynth                                    # Software modular synth with controllers support, scripting and VST
 		# TODO: consider getting rid of this (no mpd support makes me sad......)
 		fooyin                                                   # Customisable music player
 		mpc                                                      # Minimalist command line interface to MPD
@@ -123,7 +123,7 @@
 		yambar                                                   # Modular status panel for X11 and Wayland
 		# misc
 		anki                                                     # Spaced repetition flashcard program
-		unstable.kdePackages.kdenlive                            # Free and open source video editor, based on MLT Framework and KDE Frameworks
+		kdePackages.kdenlive                                     # Free and open source video editor, based on MLT Framework and KDE Frameworks
 		kicad-small                                              # Open Source Electronics Design Automation suite, without 3D models
 		mlt                                                      #! Open source multimedia framework, designed for television broadcasting (This is fucking stupid)
 		nmap                                                     # Free and open source utility for network discovery and security auditing
@@ -133,16 +133,16 @@
 		temurin-jre-bin-8                                        # Eclipse Temurin, prebuilt OpenJDK binary
 		vlc                                                      # Cross-platform media player and streaming server
 		# programs to consider the retention of
-		catppuccin-sddm                                          # Soothing pastel theme for SDDM
+#		catppuccin-sddm                                          # Soothing pastel theme for SDDM
 		cemu-ti                                                  # Third-party TI-84 Plus CE / TI-83 Premium CE emulator, focused on developer features
-		flips                                                    # Patcher for IPS and BPS files
-		ghidra                                                   # Software reverse engineering (SRE) suite of tools
+#		flips                                                    # Patcher for IPS and BPS files
+#		ghidra                                                   # Software reverse engineering (SRE) suite of tools
 		libreoffice                                              # Comprehensive, professional-quality productivity suite, a variant of openoffice.org
 		plugdata                                                 # Plugin wrapper around Pure Data to allow patching in a wide selection of DAWs
 		soteria                                                  # Polkit authentication agent written in GTK designed to be used with any desktop environment
 		sunvox                                                   # Small, fast and powerful modular synthesizer with pattern-based sequencer
-		tilem                                                    # Emulator and debugger for Texas Instruments Z80-based graphing calculators
-		timeshift                                                # System restore tool for Linux
+#		tilem                                                    # Emulator and debugger for Texas Instruments Z80-based graphing calculators
+#		timeshift                                                # System restore tool for Linux
 	];
 
 	services.flatpak.packages = [

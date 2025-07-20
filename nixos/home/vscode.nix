@@ -51,7 +51,7 @@
 			  # "editor.fontLigatures" = true;
 				"editor.formatOnSave" = false;
 				"editor.indentSize" = 4;
-				"editor.inlayHints.enabled" = false;
+				"editor.inlayHints.enabled" = "off";
 				"editor.insertSpaces" = false;
 				"editor.tabSize" = 4;
 				"explorer.confirmDelete" = false;
@@ -62,12 +62,14 @@
 				"prettier.singleAttributePerLine" = false;
 				"prettier.useEditorConfig" = true;
 				"prettier.useTabs" = true;
+				"SourcePawnLanguageServer.includeDirectories" = [ "/mnt/rae2/steamcmd/css_ds/cstrike/addons/sourcemod/scripting/include" ];
 				"svelte.enable-ts-plugin" = true;
 				"telemetry.telemetryLevel" = "off";
 				"workbench.activityBar.iconClickBehavior" = "toggle";
 				"workbench.activityBar.location" = "bottom";
 				"workbench.colorTheme" = "Catppuccin Frappé";
 				"workbench.iconTheme" = "catppuccin-frappe";
+				"workbench.sideBar.location" = "right";
 				"workbench.startupEditor" = "none";
 			} // builtins.listToAttrs [
 				(df "css"        "esbenp.prettier-vscode")

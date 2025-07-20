@@ -27,7 +27,7 @@
 				isDefault = true;
 				extensions = with pkgs.nur.repos.rycee.firefox-addons; [
 					canvasblocker
-					catppuccin-gh-file-explorer
+					catppuccin-web-file-icons
 					indie-wiki-buddy
 					privacy-badger
 					simple-tab-groups
@@ -39,6 +39,8 @@
 				];
 				settings = {
 					"browser.aboutConfig.showWarning" = false;
+					"browser.ml.chat.enabled" = false;
+					"browser.ml.enable" = false;
 					"browser.newtabpage.activity-stream.default.sites" = "https://en.wikipedia.org/";
 					"browser.newtabpage.activity-stream.discoverystream.enabled" = false;
 					"browser.newtabpage.activity-stream.feeds.telemetry" = false;
@@ -61,6 +63,7 @@
 					"browser.startup.page" = 3;
 					"browser.tabs.closeWindowWithLastTab" = false;
 					"browser.tabs.insertAfterCurrent" = true;
+					"browser.urlbar.suggest.quicksuggest.sponsored" = false;
 					"devtools.editor.tabsize" = 4;
 					"datareporting.healthreport.uploadEnabled" = false;
 					"extensions.pocket.enabled" = false;
@@ -69,6 +72,7 @@
 					"font.name.monospace.x-western" = "Fira Code";
 					"general.autoScroll" = true;
 					"layout.css.prefers-color-scheme.content-override" = 0;
+					"sidebar.visibility" = "hide-sidebar";
 					"svg.context-properties.content.enabled" = true;
 				};
 				bookmarks = [

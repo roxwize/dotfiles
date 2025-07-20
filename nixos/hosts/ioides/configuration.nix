@@ -26,7 +26,7 @@
 				};
 				nvidia = {
 					enable = true;
-					package = config.boot.kernelPackages.nvidiaPackages.legacy_390;
+					package = config.boot.kernelPackages.nvidiaPackages.stable;
 				};
 			};
 		};
@@ -59,15 +59,15 @@
 		fsType = "ext4";
 		neededForBoot = false;
 	};
-#	# Big fucking thing
-#	fileSystems."/mnt/rae2" = {
-#		device = "/dev/disk/by-uuid/fbbcc72f-34af-425c-9151-ef8919a6ae07";
-#		fsType = "ext4";
-#		neededForBoot = false;
-#	};
+	# Big fucking thing
+	fileSystems."/mnt/rae2" = {
+		device = "/dev/disk/by-uuid/fbbcc72f-34af-425c-9151-ef8919a6ae07";
+		fsType = "ext4";
+		neededForBoot = false;
+	};
 
 	networking = {
-		firewall.allowedTCPPorts = [ 80 443 5900 8080 19132 25565 ];
+		firewall.allowedTCPPorts = [ 80 443 5900 8080 19132 25565 27015 ];
 		hosts = {
 			"10.0.0.2" = [ "near" "near.local" ];
 		};
@@ -148,7 +148,10 @@
 		flatpak.enable = true;
 	};
 
-	security.polkit.enable = true;
+	security = {
+		polkit.enable = true;
+		sudo.package = pkgs.sudo.override { withInsults = true; };
+	};
 
 	xdg = {
 		mime = {

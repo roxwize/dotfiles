@@ -80,7 +80,7 @@ in with lib; {
 				enable = cfg.graphics.display.x11.enable;
 				xkb.layout = "us";
 				windowManager = builtins.listToAttrs (builtins.map (x: { name = x; value = { enable = true; }; }) cfg.graphics.display.x11.windowManagers);
-				videoDrivers = (optional cfg.graphics.hardwareAcceleration.nvidia.enable "nvidia") ++ [ "modesetting" ];
+				videoDrivers = if cfg.graphics.hardwareAcceleration.nvidia.enable then [ "nvidia" ] else [ "modesetting" ];
 			};
 			displayManager.sddm = {
 				enable = cfg.graphics.display.x11.enable;

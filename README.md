@@ -19,7 +19,7 @@ from my experience the process is more involved, but it ultimately boils down to
 - **DM** [SDDM](https://github.com/sddm/sddm)
 - **launcher** [rofi](https://github.com/davatorium/rofi)
 - **statusbar** [yambar](https://codeberg.org/dnkl/yambar)
-- **WM** [openbox](https://openbox/org/)
+- **WM** [openbox](https://openbox.org/)
 
 <!--## raspberry PI devices
 

@@ -17,7 +17,6 @@
 [ ] Maybe convert some of your configuration files and themes into derivations
 [x] Get a music player + get MPD to work
  +- [ ] +last.fm with mpdscribble
-[ ] Dig polybar's grave (you're not using it anymore so why keep it around?)
 [ ] Get a pager/systray <https://wiki.gentoo.org/wiki/Openbox/Guide#Pagers_and_systrays>
 [ ] Host-dependent home configurations (e.g. don't assume MPD music is in `/mnt/world/music` for every machine)
  +- [ ] Maybe symlink your music to a music folder in your home directory or something (i.e. `~/Music -> /mnt/world/music` or perhaps a subdirectory of that?)
@@ -75,4 +74,5 @@
 [x] Switch over to using tabs for indents
 [x] music tagging - ex falso or kid3???
 [x] Test out bluetooth (https://nixos.wiki/wiki/Bluetooth)
+[x] Dig polybar's grave (you're not using it anymore so why keep it around?)
 

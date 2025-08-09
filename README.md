@@ -49,7 +49,7 @@ M corresponds to super/meta key (usually inbetween Ctrl and Alt)
 
 ```
 Menus
-    M-d
+    M-Tab
         Main menu
     M-/
         Passwords
@@ -79,7 +79,7 @@ Window actions
         Switch focus to previous window
     SM-Right
         Switch focus to previous window
-    M-Tab
+    A-Tab
         Cycle focus to windows in all workspaces
 
 Workspace management

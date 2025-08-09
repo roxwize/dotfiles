@@ -1,8 +1,5 @@
---vim.lsp.enable("ts_ls")
---vim.lsp.enable("vala_ls")
-
-vim.opt.list = true -- indent guides
-vim.opt.number = true -- line numbers
+vim.opt.list = true
+vim.opt.number = true
 
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
@@ -28,6 +25,12 @@ require("neo-tree").setup {
 			folder_open = "+",
 			folder_empty = "-",
 			folder_empty_open = "-"
+		},
+		indent = {
+			indent_size = 4,
+		},
+		name = {
+			trailing_slash = true
 		}
 	},
 	filesystem = {
@@ -52,6 +55,9 @@ require("neo-tree").setup {
 			{ source = "git_status" },
 			{ source = "document_symbols" }
 		}
+	},
+	window = {
+		position = "right"
 	}
 }
 vim.api.nvim_create_autocmd({"VimEnter"}, {
@@ -88,16 +94,19 @@ local caps = vim.tbl_deep_extend(
 )
 
 -- lspconfig
-local lc = require("lspconfig")
+vim.lsp.config("*", { capabilities = caps })
+vim.lsp.config("jsonls", { cmd = { "vscode-json-languageserver", "--stdio" } })
 
-vim.lsp.config("clangd", { capabilities = caps })
-lc.jsonls.setup {
-	capabilities = caps,
-	cmd = { "vscode-json-languageserver", "--stdio" }
+local lc = {
+	"clangd",
+	"jsonls",
+	"lua_ls",
+	"mesonlsp",
+	"nil_ls",
+	"ts_ls",
+	"vala_ls"
 }
-lc.lua_ls.setup { capabilities = caps }
-lc.mesonlsp.setup { capabilities = caps }
-lc.nil_ls.setup { capabilities = caps }
-lc.ts_ls.setup { capabilities = caps }
-lc.vala_ls.setup { capabilities = caps }
+for _, l in ipairs(lc) do
+	vim.lsp.enable(l)
+end
 

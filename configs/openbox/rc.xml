@@ -43,7 +43,7 @@
 		</names>
 	</desktops>
 	<keyboard>
-		<keybind key="W-d">
+		<keybind key="W-Tab">
 			<action name="Execute">
 				<command>rofi -show combi -modes combi -combi-modes "window,drun,run"</command>
 			</action>
@@ -155,7 +155,7 @@
 				<interactive>no</interactive>
 			</action>
 		</keybind>
-		<keybind key="W-Tab">
+		<keybind key="A-Tab">
 			<action name="NextWindow">
 				<dialog>list</dialog>
 				<raise>yes</raise>

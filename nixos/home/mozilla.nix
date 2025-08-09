@@ -25,7 +25,7 @@
 			};
 			profiles.default = {
 				isDefault = true;
-				extensions = with pkgs.nur.repos.rycee.firefox-addons; [
+				extensions.packages = with pkgs.nur.repos.rycee.firefox-addons; [
 					canvasblocker
 					catppuccin-web-file-icons
 					indie-wiki-buddy
@@ -66,6 +66,7 @@
 					"browser.urlbar.suggest.quicksuggest.sponsored" = false;
 					"devtools.editor.tabsize" = 4;
 					"datareporting.healthreport.uploadEnabled" = false;
+					"extensions.autoDisableScopes" = 0;
 					"extensions.pocket.enabled" = false;
 					"extensions.pocket.showHome" = false;
 					"extensions.webextensions.restrictedDomains" = "";
@@ -75,53 +76,56 @@
 					"sidebar.visibility" = "hide-sidebar";
 					"svg.context-properties.content.enabled" = true;
 				};
-				bookmarks = [
-					{
-						name = "Toolbar";
-						toolbar = true;
-						bookmarks = [
-							{
-								name = "CUPS interface";
-								url = "http://127.0.0.1:631/";
-							}
-							{
-								name = "Battle of the Bits";
-								url = "https://battleofthebits.com/";
-							}
-							{
-								name = "patchstorage";
-								url = "https://patchstorage.com/";
-							}
-						];
-					}
-					{
-						name = "Nix sites";
-						bookmarks = [
-							{
-								name = "NixOS search";
-								url = "https://search.nixos.org/packages";
-							}
-							{
-								name = "Home Manager search";
-								url = "https://home-manager-options.extranix.com/";
-							}
-							{
-								name = "NUR search";
-								url = "https://nur.nix-community.org/";
-							}
-							{
-								name = "NixOS wiki";
-								url = "https://wiki.nixos.org/";
-							}
-							{
-								name = "Nix functions";
-								url = "https://teu5us.github.io/nix-lib.html";
-							}
-						];
-					}
-				];
+				bookmarks = {
+					force = true;
+					settings = [
+						{
+							name = "Toolbar";
+							toolbar = true;
+							bookmarks = [
+								{
+									name = "CUPS interface";
+									url = "http://127.0.0.1:631/";
+								}
+								{
+									name = "Battle of the Bits";
+									url = "https://battleofthebits.com/";
+								}
+								{
+									name = "patchstorage";
+									url = "https://patchstorage.com/";
+								}
+							];
+						}
+						{
+							name = "Nix sites";
+							bookmarks = [
+								{
+									name = "NixOS search";
+									url = "https://search.nixos.org/packages";
+								}
+								{
+									name = "Home Manager search";
+									url = "https://home-manager-options.extranix.com/";
+								}
+								{
+									name = "NUR search";
+									url = "https://nur.nix-community.org/";
+								}
+								{
+									name = "NixOS wiki";
+									url = "https://wiki.nixos.org/";
+								}
+								{
+									name = "Nix functions";
+									url = "https://teu5us.github.io/nix-lib.html";
+								}
+							];
+						}
+					];
+				};
 				search = {
-					default = "DuckDuckGo";
+					default = "ddg";
 					engines = {
 						"Noogle" = {
 							urls = [{
@@ -169,10 +173,10 @@
 							}];
 						};
 
-						"Bing".metaData.hidden = true;
-						"Google".metaData.hidden = true;
+						"bing".metaData.hidden = true;
+						"google".metaData.hidden = true;
 					};
-					order = [ "DuckDuckGo" "Noogle" "Nix packages" ];
+					order = [ "ddg" "Noogle" "Nix packages" ];
 					force = true;
 				};
 			};

@@ -1,10 +1,20 @@
 { pkgs, inputs, ... }: {
-	nixpkgs.overlays = import ../overlays.nix inputs;
+	imports = [ ../nix-config.nix ];
 
 	home = {
-		stateVersion = "24.11";
 		username = "rae";
 		homeDirectory = "/home/rae";
+
+		pointerCursor = {
+			enable = true;
+			package = pkgs.posy-cursors;
+			name = "Posy_Cursor_Black";
+			size = 24;
+
+			gtk.enable = true;
+			x11.enable = true;
+		};
+
 		sessionVariables = {
 			BROWSER = "firefox";
 			TERM = "kitty";
@@ -190,4 +200,7 @@
 		cursorTheme.name = "Posy's Cursor";
 		theme.name = "io.elementary.stylesheet.blueberry";
 	};
+
+	home.stateVersion = "24.11";
 }
+

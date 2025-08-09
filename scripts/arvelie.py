@@ -22,3 +22,4 @@ try:
 	print("date|string|" + out + "\n")
 except ValueError:
 	print(out)
+

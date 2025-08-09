@@ -45,55 +45,57 @@ ssh isnt automatically setup in a way that lets you do this from the start, you 
 
 # openbox hotkeys
 
+M corresponds to super/meta key (usually inbetween Ctrl and Alt)
+
 ```
 Menus
-    A-d
+    M-d
         Main menu
-    A-/
+    M-/
         Passwords
-    A-? (SA-/)
+    M-? (SM-/)
         Application menu
-    A-.
+    M-.
         ssh menu
-    A-c
+    M-c
         Client (window) menu
 
 Window actions
-    A-Return
+    M-Return
         Iconify
-    A-Up
+    M-Up
         Raise
-    A-Down
+    M-Down
         Lower
-    A-[hjkl]
+    M-[hjkl]
         Move
-    CA-x
+    CM-x
         Close
-    CA-f
+    CM-f
         Fullscreen
-    CA-m
+    CM-m
         Maximize
-    SA-Left
+    SM-Left
         Switch focus to previous window
-    SA-Right
+    SM-Right
         Switch focus to previous window
-    A-Tab
+    M-Tab
         Cycle focus to windows in all workspaces
 
 Workspace management
-    A-Left
+    M-Left
         Switch to previous workspace
-    A-Right
+    M-Right
         Switch to next workspace
-    A-[123456]
+    M-[123456]
         Switch to specific workspace
 
 Miscellaneous
-    A-F12
+    M-F12
         Take screenshot
-    CA-Return
+    CM-Return
         Open terminal (kitty)
-    CAS-r
+    CMS-r
         Restart
 ```
 
@@ -102,3 +104,4 @@ Miscellaneous
 here is the very first finalized version of this config that was originally tested on a qemu vm. it took 14 hours to set up. after running it on the machine itself and switching over to the configuration in its entirety i realized that it was complete and utter HORSESHIT. making things look nice again took another like four hours.
 
 ![image](https://github.com/user-attachments/assets/f0f66913-2616-4a3c-ac7f-55db6fc27116)
+

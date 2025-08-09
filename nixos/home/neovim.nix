@@ -9,7 +9,7 @@
 			luasnip         # Snippet engine
 			neo-tree-nvim   # Filesystem tree
 			nvim-cmp        # Code completion
-			nvim-lspconfig
+			nvim-lspconfig  # LSP
 			rustaceanvim    # Rust support
 			vim-just        # Syntax [just]
 			vim-sleuth      # Indentation detection
@@ -18,3 +18,4 @@
 		extraLuaConfig = builtins.readFile ../../configs/neovim.lua;
 	};
 }
+

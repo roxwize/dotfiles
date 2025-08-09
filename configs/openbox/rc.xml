@@ -43,119 +43,119 @@
 		</names>
 	</desktops>
 	<keyboard>
-		<keybind key="A-d">
+		<keybind key="W-d">
 			<action name="Execute">
 				<command>rofi -show combi -modes combi -combi-modes "window,drun,run"</command>
 			</action>
 		</keybind>
-		<keybind key="A-S-question">
+		<keybind key="W-S-question">
 			<action name="Execute">
 				<command>rofi -show run -modes run</command>
 			</action>
 		</keybind>
-		<keybind key="A-question">
+		<keybind key="W-question">
 			<action name="Execute">
 				<command>rofi-pass</command>
 			</action>
 		</keybind>
-		<keybind key="A-period">
+		<keybind key="W-period">
 			<action name="Execute">
 				<command>rofi -show ssh -modes ssh</command>
 			</action>
 		</keybind>
-		<keybind key="A-c">
+		<keybind key="W-c">
 			<action name="ShowMenu">
 				<menu>client-menu</menu>
 			</action>
 		</keybind>
 
-		<keybind key="A-Return">
+		<keybind key="W-Return">
 			<action name="Iconify"/>
 		</keybind>
-		<keybind key="A-Up">
+		<keybind key="W-Up">
 			<action name="Raise"/>
 		</keybind>
-		<keybind key="A-Down">
+		<keybind key="W-Down">
 			<action name="Lower"/>
 		</keybind>
-		<keybind key="C-A-x">
+		<keybind key="C-W-x">
 			<action name="Close"/>
 		</keybind>
-		<keybind key="C-A-f">
+		<keybind key="C-W-f">
 			<action name="ToggleFullscreen"/>
 		</keybind>
-		<keybind key="C-A-m">
+		<keybind key="C-W-m">
 			<action name="ToggleMaximize"/>
 		</keybind>
 
 
-		<keybind key="A-h">
+		<keybind key="W-h">
 			<action name="MoveRelative">
 				<x>-5</x>
 				<y>0</y>
 			</action>
 		</keybind>
-		<keybind key="A-j">
+		<keybind key="W-j">
 			<action name="MoveRelative">
 				<x>0</x>
 				<y>5</y>
 			</action>
 		</keybind>
-		<keybind key="A-k">
+		<keybind key="W-k">
 			<action name="MoveRelative">
 				<x>0</x>
 				<y>-5</y>
 			</action>
 		</keybind>
-		<keybind key="A-l">
+		<keybind key="W-l">
 			<action name="MoveRelative">
 				<x>5</x>
 				<y>0</y>
 			</action>
 		</keybind>
 
-		<keybind key="A-F12">
+		<keybind key="W-F12">
 			<action name="Execute">
 				<command>flameshot gui</command>
 			</action>
 		</keybind>
-		<keybind key="C-A-Return">
+		<keybind key="C-W-Return">
 			<action name="Execute">
 				<command>kitty</command>
 			</action>
 		</keybind>
-		<keybind key="C-A-S-r">
+		<keybind key="C-W-S-r">
 			<action name="Execute">
 				<command>shutdown -r now</command>
 				<prompt>Really shutdown the computer?</prompt>
 			</action>
 		</keybind>
 
-		<keybind key="A-Left">
+		<keybind key="W-Left">
 			<action name="GoToDesktop">
 				<to>previous</to>
 			</action>
 		</keybind>
-		<keybind key="A-S-Left">
+		<keybind key="W-S-Left">
 			<action name="PreviousWindow">
 				<dialog>none</dialog>
 				<linear>yes</linear>
 				<interactive>no</interactive>
 			</action>
 		</keybind>
-		<keybind key="A-Right">
+		<keybind key="W-Right">
 			<action name="GoToDesktop">
 				<to>next</to>
 			</action>
 		</keybind>
-		<keybind key="A-S-Right">
+		<keybind key="W-S-Right">
 			<action name="NextWindow">
 				<dialog>none</dialog>
 				<linear>yes</linear>
 				<interactive>no</interactive>
 			</action>
 		</keybind>
-		<keybind key="A-Tab">
+		<keybind key="W-Tab">
 			<action name="NextWindow">
 				<dialog>list</dialog>
 				<raise>yes</raise>
@@ -164,32 +164,32 @@
 				<interactive>yes</interactive>
 			</action>
 		</keybind>
-		<keybind key="A-1">
+		<keybind key="W-1">
 			<action name="GoToDesktop">
 				<to>1</to>
 			</action>
 		</keybind>
-		<keybind key="A-2">
+		<keybind key="W-2">
 			<action name="GoToDesktop">
 				<to>2</to>
 			</action>
 		</keybind>
-		<keybind key="A-3">
+		<keybind key="W-3">
 			<action name="GoToDesktop">
 				<to>3</to>
 			</action>
 		</keybind>
-		<keybind key="A-4">
+		<keybind key="W-4">
 			<action name="GoToDesktop">
 				<to>4</to>
 			</action>
 		</keybind>
-		<keybind key="A-5">
+		<keybind key="W-5">
 			<action name="GoToDesktop">
 				<to>5</to>
 			</action>
 		</keybind>
-		<keybind key="A-6">
+		<keybind key="W-6">
 			<action name="GoToDesktop">
 				<to>6</to>
 			</action>
@@ -197,21 +197,21 @@
 	</keyboard>
 	<mouse>
 		<context name="Frame">
-			<mousebind button="A-Left" action="Press">
+			<mousebind button="W-Left" action="Press">
 				<action name="Focus"/>
 			</mousebind>
-			<mousebind button="A-Left" action="Click">
+			<mousebind button="W-Left" action="Click">
 				<action name="Raise"/>
 			</mousebind>
-			<mousebind button="A-Left" action="Drag">
+			<mousebind button="W-Left" action="Drag">
 				<action name="Move"/>
 			</mousebind>
-			<mousebind button="A-Right" action="Click">
+			<mousebind button="W-Right" action="Click">
 				<action name="ShowMenu">
 					<menu>root</menu>
 				</action>
 			</mousebind>
-			<mousebind button="A-Right" action="Drag">
+			<mousebind button="W-Right" action="Drag">
 				<action name="Resize"/>
 			</mousebind>
 			<!--<mousebind button="Left" action="Press">
@@ -238,16 +238,16 @@
 			<mousebind button="Right" action="Drag">
 				<action name="Resize"/>
 			</mousebind>
-			<mousebind button="A-Left" action="Press">
+			<mousebind button="W-Left" action="Press">
 				<action name="Focus"/>
 			</mousebind>
-			<mousebind button="A-Left" action="Click">
+			<mousebind button="W-Left" action="Click">
 				<action name="Raise"/>
 			</mousebind>
-			<mousebind button="A-Left" action="Drag">
+			<mousebind button="W-Left" action="Drag">
 				<action name="Move"/>
 			</mousebind>
-			<mousebind button="A-Right" action="Drag">
+			<mousebind button="W-Right" action="Drag">
 				<action name="Resize"/>
 			</mousebind>
 			<mousebind button="C-Right" action="Click">

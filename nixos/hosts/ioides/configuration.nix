@@ -67,7 +67,15 @@
 	};
 
 	networking = {
-		firewall.allowedTCPPorts = [ 80 443 5900 8080 19132 25565 27015 ];
+		firewall.allowedTCPPorts = [
+			80    # HTTP
+			443   # HTTPS
+			5900  # VNC
+			8080  # HTTP
+			19132 # Minecraft Bedrock
+			25565 # Minecraft Java
+			27015 # Source Dedicated Server
+		];
 		hosts = {
 			"10.0.0.2" = [ "near" "near.local" ];
 		};
@@ -212,12 +220,12 @@
 		soundcardPciId = "00:1f.3";
 	};
 
+	environment.variables.LS_COLORS = "ow=1;34:";
+
 	users.users.rae.shell = pkgs.fish;
-
 	virtualisation.docker.enable = true;
-
 	time.timeZone = "America/New_York";
-	
+
 	system.stateVersion = "24.11";
 }
 

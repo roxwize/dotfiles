@@ -63,7 +63,6 @@
 		maim                                                     # Command-line screenshot utility
 		sxiv                                                     # Simple X Image Viewer
 		# gtk
-		posy-cursors                                             # Posy's Improved Cursors for Linux
 		pantheon.elementary-gtk-theme                            # GTK theme designed to be smooth, attractive, fast, and usable
 		# network
 		cachix                                                   # Command-line client for Nix binary cache hosting
@@ -137,6 +136,7 @@
 		cemu-ti                                                  # Third-party TI-84 Plus CE / TI-83 Premium CE emulator, focused on developer features
 #		flips                                                    # Patcher for IPS and BPS files
 #		ghidra                                                   # Software reverse engineering (SRE) suite of tools
+		kid3                                                     # Simple and powerful audio tag editor
 		libreoffice                                              # Comprehensive, professional-quality productivity suite, a variant of openoffice.org
 		plugdata                                                 # Plugin wrapper around Pure Data to allow patching in a wide selection of DAWs
 		soteria                                                  # Polkit authentication agent written in GTK designed to be used with any desktop environment

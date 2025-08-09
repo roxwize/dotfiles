@@ -88,6 +88,10 @@
 								name = "Battle of the Bits";
 								url = "https://battleofthebits.com/";
 							}
+							{
+								name = "patchstorage";
+								url = "https://patchstorage.com/";
+							}
 						];
 					}
 					{
@@ -157,6 +161,11 @@
 						"ArchWiki" = {
 							urls = [{
 								template = "https://wiki.archlinux.org/index.php?title=Special:Search&search={searchTerms}";
+							}];
+						};
+						"Just Solve The File Format Problem" = {
+							urls = [{
+								template = "http://fileformats.archiveteam.org/index.php?title=Special:Search&search={searchTerms}";
 							}];
 						};
 

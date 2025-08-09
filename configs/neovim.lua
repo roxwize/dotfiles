@@ -90,22 +90,14 @@ local caps = vim.tbl_deep_extend(
 -- lspconfig
 local lc = require("lspconfig")
 
-lc.clangd.setup {
-	autostart = true,
-	capabilities = caps,
-	cmd = { "clangd" }
-}
+vim.lsp.config("clangd", { capabilities = caps })
 lc.jsonls.setup {
 	capabilities = caps,
 	cmd = { "vscode-json-languageserver", "--stdio" }
 }
 lc.lua_ls.setup { capabilities = caps }
 lc.mesonlsp.setup { capabilities = caps }
-lc.nil_ls.setup {
-	autostart = true,
-	capabilities = caps,
-	cmd = { "nil" }
-}
+lc.nil_ls.setup { capabilities = caps }
 lc.ts_ls.setup { capabilities = caps }
 lc.vala_ls.setup { capabilities = caps }
 

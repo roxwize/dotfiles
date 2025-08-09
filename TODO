@@ -15,7 +15,6 @@
 [ ] You could try making a GTK4 application that lets you manage/view packages in packages.nix
 [ ] Theme your SDDM (you should make one yourself ;w;;;)
 [ ] Maybe convert some of your configuration files and themes into derivations
-[x] Test out bluetooth (https://nixos.wiki/wiki/Bluetooth)
 [x] Get a music player + get MPD to work
  +- [ ] +last.fm with mpdscribble
 [ ] Dig polybar's grave (you're not using it anymore so why keep it around?)
@@ -38,13 +37,10 @@
 [ ] make https://github.com/addy-dclxvi/openbox-theme-collections.git into a derivation????
  +- [ ] numix-clone + vermello
 [ ] YNFG derivations
-[x] Switch over to using tabs for indents
-[ ] music tagging - ex falso or kid3???
 [ ] MEGA MEGA TODO: Get your custom cursor to work :((((( It was working on the vm???
-[ ] Personally i think your desktop fucking sucks and you should just switch to kde plasma
+[x] Personally i think your desktop fucking sucks and you should just switch to kde plasma (Edit: no)
  +- [ ] Just see if you can write a yambar plugin that gives you a taskbar...........
 [ ] Should you be using both libretro easyrpg and standalone easyrpg at the same time like you are now ????????
-[x] FUN IDEA::: Do you see ? https://github.com/nix-community/raspberry-pi-nix/blob/master/rpi/default.nix ??? see if it might be worth trying to make an options set across your config for very non granular at a glance configurations ... (see also https://github.com/nanzhong/env/blob/master/machines/devpi/configuration.nix)
 [ ] FUN IDEA 2::: Hey Whats Up what if you did the same thing but built your regular host (ioides) as an ISO so that like. hoooly shit. you could like share it to the woRLD VIA AN ISO AND SHTUFF. Fucking massive bro
 [x] IMPORTANT!!!!: consolidate most system configurations since there seems to be the assumption that Everything Is Ioides (i.e. move packages.nix to ioides/)
  +- [ ] Make things consolidated wherever possible, only generalize them/widen their scope once it becomes necessary (like when you turned part of base.nix into desktop.nix) (e.g. when you need to manage something identically across hosts, put it in an import file, otherwise put it in an attrset that both hosts import and configure it from there)
@@ -75,3 +71,8 @@
  +- [x] All of a sudden Nix won't let you run rustc or cargo due to some dynamically linked executable bullshit
 [x] Use pass <https://www.passwordstore.org/>? (See also https://elvishjerricco.github.io/2018/06/24/secure-declarative-key-management.html)
 [x] switch to 24 hour time
+[x] FUN IDEA::: Do you see ? https://github.com/nix-community/raspberry-pi-nix/blob/master/rpi/default.nix ??? see if it might be worth trying to make an options set across your config for very non granular at a glance configurations ... (see also https://github.com/nanzhong/env/blob/master/machines/devpi/configuration.nix)
+[x] Switch over to using tabs for indents
+[x] music tagging - ex falso or kid3???
+[x] Test out bluetooth (https://nixos.wiki/wiki/Bluetooth)
+

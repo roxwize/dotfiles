@@ -16,10 +16,10 @@ from my experience the process is more involved, but it ultimately boils down to
 # default applications
 
 - **compositor** xcompmgr
-- **DM** SDDM
-- **launcher** rofi
-- **statusbar** yambar
-- **WM** openbox
+- **DM** [SDDM](https://github.com/sddm/sddm)
+- **launcher** [rofi](https://github.com/davatorium/rofi)
+- **statusbar** [yambar](https://codeberg.org/dnkl/yambar)
+- **WM** [openbox](https://openbox/org/)
 
 <!--## raspberry PI devices
 

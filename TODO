@@ -1,5 +1,6 @@
 [ ] you should really look over your neovim config because i dont think you understand or even wrote half of it besides the neotree part
 [ ] stylix might help with making your desktop look consistent but itll probably require a lot of refactoring (check the commented code in flake.nix and base.nix)
+[ ] when you get the time please try to clean up your config and its system ! :(( i know you tend to overanalyze and maybe have really bad decision paralysis but trust me you will be happier once ur sure everything is as efficient as it could pawssibly be ...
 
 == old stuff
 

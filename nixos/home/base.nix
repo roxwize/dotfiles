@@ -15,7 +15,6 @@
 		file = {
 			".twmrc".source = ../../configs/twm;
 			".local/share/themes".source = ../../configs/openbox/themes;
-			#! dumb (see todo)
 			".local/share/PrismLauncher" = {
 				source = ../../assets/minecraft;
 				recursive = true;
@@ -104,7 +103,7 @@
 		};
 		rofi = {
 			enable = true;
-			font = lib.mkForce "Fira Code Light 11";
+#			font = lib.mkForce "Fira Code Light 11";
 			terminal = "kitty";
 			pass = {
 				enable = true;
@@ -197,22 +196,25 @@
 			name = "Posy_Cursor_Black";
 			size = 24;
 		};
-		base16Scheme = "${pkgs.base16-schemes}/share/themes/ayu-dark.yaml";
+		base16Scheme = "${pkgs.base16-schemes}/share/themes/chalk.yaml";
 		image = ../../assets/wallpapers/2kki_rainy_apartments.png;
 		polarity = "dark";
 		fonts = rec {
 			monospace = {
-#				package = pkgs.fira-code;
-#				name = "Fira Code Light";
-				package = pkgs.gohufont;
-				name = "GohuFont";
+				package = pkgs.atkinson-hyperlegible-next;
+				name = "Atkinson Hyperlegible Next";
+#				package = pkgs.gohufont;
+#				name = "GohuFont";
 			};
-			serif = monospace;
-			sansSerif = monospace;
+			serif = {
+				package = pkgs.fira-code;
+				name = "Fira Code Light";
+			};
+			sansSerif = serif;
 
 			sizes = {
-				applications = 10.5;
-				desktop = 10.5;
+				applications = 10;
+				desktop = 10;
 			};
 		};
 
@@ -238,7 +240,10 @@
 			xresources.enable = true;
 		};
 	};
-#	xresources.properties."*.faceSize" = lib.mkForce "9";
+	xresources.properties = {
+		"XTerm*faceName" = lib.mkForce "GohuFont";
+		"XTerm*faceSize" = lib.mkForce "9.5";
+	};
 
 	# don't change this
 	home.stateVersion = "24.11";

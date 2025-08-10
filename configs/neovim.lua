@@ -4,8 +4,6 @@ vim.opt.number = true
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 
-vim.cmd.colorscheme("habamax")
-
 -- neo-tree
 require("neo-tree").setup {
 	default_component_configs = {

@@ -70,7 +70,7 @@
 					"extensions.pocket.enabled" = false;
 					"extensions.pocket.showHome" = false;
 					"extensions.webextensions.restrictedDomains" = "";
-					"font.name.monospace.x-western" = "Fira Code";
+#					"font.name.monospace.x-western" = "Fira Code";
 					"general.autoScroll" = true;
 					"layout.css.prefers-color-scheme.content-override" = 0;
 					"sidebar.visibility" = "hide-sidebar";
@@ -149,7 +149,7 @@
 							urls = [{
 								template = "https://home-manager-options.extranix.com/";
 								params = [
-									{ name = "release"; value = "release-24.11"; }
+									{ name = "release"; value = "release-25.05"; }
 									{ name = "query"; value = "{searchTerms}"; }
 								];
 							}];

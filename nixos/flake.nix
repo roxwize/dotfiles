@@ -9,6 +9,10 @@
 			url = "github:nix-community/home-manager/release-25.05";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
+		stylix = {
+			url = "github:nix-community/stylix/release-25.05";
+			inputs.nixpkgs.follows = "nixpkgs";
+		};
 		# Nix User Repository
 		nur = {
 			url = "github:nix-community/NUR";

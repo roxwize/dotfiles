@@ -1,19 +1,12 @@
-{ pkgs, ... }: {
-	imports = [ ../nix-config.nix ];
+{ pkgs, inputs, lib, ... }: {
+	imports = [
+		inputs.stylix.homeModules.stylix
+		../nix-config.nix
+	];
 
 	home = {
 		username = "rae";
 		homeDirectory = "/home/rae";
-
-		pointerCursor = {
-			enable = true;
-			package = pkgs.posy-cursors;
-			name = "Posy_Cursor_Black";
-			size = 24;
-
-			gtk.enable = true;
-			x11.enable = true;
-		};
 
 		sessionVariables = {
 			BROWSER = "firefox";
@@ -96,7 +89,7 @@
 		};
 		kitty = {
 			enable = true;
-			font = {
+			font = lib.mkForce {
 				name = "GohuFont";
 				size = 10.5;
 			};
@@ -111,7 +104,7 @@
 		};
 		rofi = {
 			enable = true;
-			font = "Fira Code Light 11";
+			font = lib.mkForce "Fira Code Light 11";
 			terminal = "kitty";
 			pass = {
 				enable = true;
@@ -195,11 +188,57 @@
 		mpris-proxy.enable = true;
 	};
 
-	gtk = {
+	stylix = {
 		enable = true;
-		cursorTheme.name = "Posy's Cursor";
-		theme.name = "io.elementary.stylesheet.blueberry";
+		autoEnable = false;
+
+		cursor = {
+			package = pkgs.posy-cursors;
+			name = "Posy_Cursor_Black";
+			size = 24;
+		};
+		base16Scheme = "${pkgs.base16-schemes}/share/themes/ayu-dark.yaml";
+		image = ../../assets/wallpapers/2kki_rainy_apartments.png;
+		polarity = "dark";
+		fonts = rec {
+			monospace = {
+#				package = pkgs.fira-code;
+#				name = "Fira Code Light";
+				package = pkgs.gohufont;
+				name = "GohuFont";
+			};
+			serif = monospace;
+			sansSerif = monospace;
+
+			sizes = {
+				applications = 10.5;
+				desktop = 10.5;
+			};
+		};
+
+		targets = {
+#			anki.enable = true;
+			bat.enable = true;
+			btop.enable = true;
+			firefox = {
+				enable = true;
+				profileNames = [ "default" ];
+			};
+			fish.enable = true;
+			gtk = {
+				enable = true;
+				flatpakSupport.enable = true;
+			};
+			kitty.enable = true;
+			neovim.enable = true;
+			qt.enable = true;
+			rofi.enable = true;
+			sxiv.enable = true;
+			vesktop.enable = true;
+			xresources.enable = true;
+		};
 	};
+#	xresources.properties."*.faceSize" = lib.mkForce "9";
 
 	# don't change this
 	home.stateVersion = "24.11";

@@ -114,7 +114,7 @@
 			</action>
 		</keybind>
 
-		<keybind key="W-F12">
+		<keybind key="Print">
 			<action name="Execute">
 				<command>flameshot gui</command>
 			</action>

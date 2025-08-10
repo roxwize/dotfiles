@@ -4,6 +4,8 @@ vim.opt.number = true
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 
+vim.cmd.colorscheme("habamax")
+
 -- neo-tree
 require("neo-tree").setup {
 	default_component_configs = {
@@ -60,7 +62,7 @@ require("neo-tree").setup {
 		position = "right"
 	}
 }
-vim.api.nvim_create_autocmd({"VimEnter"}, {
+vim.api.nvim_create_autocmd({ "VimEnter" }, {
 	command = "Neotree action=show position=right reveal=true"
 })
 
@@ -96,6 +98,21 @@ local caps = vim.tbl_deep_extend(
 -- lspconfig
 vim.lsp.config("*", { capabilities = caps })
 vim.lsp.config("jsonls", { cmd = { "vscode-json-languageserver", "--stdio" } })
+vim.lsp.config("lua_ls", {
+	settings = {
+		Lua = {
+			diagnostics = {
+				globals = { "vim" }
+			},
+			telemetry = {
+				enable = false
+			},
+			workspace = {
+				library = vim.api.nvim_get_runtime_file("", true)
+			}
+		}
+	}
+})
 
 local lc = {
 	"clangd",

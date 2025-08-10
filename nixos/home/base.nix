@@ -1,8 +1,5 @@
-{ pkgs, inputs, ... }: {
-	imports = [
-		inputs.stylix.homeModules.stylix
-		../nix-config.nix
-	];
+{ pkgs, ... }: {
+	imports = [ ../nix-config.nix ];
 
 	home = {
 		username = "rae";
@@ -202,38 +199,6 @@
 		enable = true;
 		cursorTheme.name = "Posy's Cursor";
 		theme.name = "io.elementary.stylesheet.blueberry";
-	};
-
-	stylix = {
-		enable = true;
-		autoEnable = false;
-
-		cursor = {
-			package = pkgs.posy-cursors;
-			name = "Posy_Cursor_Black";
-			size = 24;
-		};
-		# base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyodark.yaml";
-		image = ../../assets/wallpapers/current;
-		polarity = "dark";
-		fonts = rec {
-			monospace = {
-				package = pkgs.gohufont;
-				name = "GohuFont";
-			};
-			serif = monospace;
-			sansSerif = monospace;
-
-			sizes = {
-				applications = 10.5;
-				desktop = 10.5;
-			};
-		};
-
-		targets = {
-			fish.enable = true;
-			kitty.enable = true;
-		};
 	};
 
 	# don't change this

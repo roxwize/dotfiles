@@ -1,3 +1,5 @@
+moved to https://git.sr.ht/~roxwize/.dotfiles
+
 ![image](https://github.com/user-attachments/assets/2ab0e4f6-6a94-437b-9598-4396500d1f5b)
 
 # installation
